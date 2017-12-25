@@ -1,0 +1,2305 @@
+[ 2017-12-22T14:55:21+08:00 ] 127.0.0.1 /jianye_garden//admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_pages` [ RunTime:0.0020s ]
+SQL: SELECT `user_nickname`,`page_id`,`page_title`,`page_time` FROM `w_pages` INNER JOIN w_users on w_users.ID=w_pages.page_author  WHERE `page_status` = 'open' AND `w_user_level` <= '10' ORDER BY page_time desc LIMIT 0,5   [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_pages` WHERE `page_status` = 'open' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_post` [ RunTime:0.0021s ]
+SQL: SELECT w_post.ID as id,`post_date`,`post_title`,`user_nickname`,`post_status` FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' ORDER BY post_date desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `w_logs` [ RunTime:0.0015s ]
+SQL: SELECT w_logs.*,user_nickname as name FROM `w_logs` LEFT JOIN w_users on w_users.ID=w_logs.user_id  ORDER BY login_time desc LIMIT 0,5   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_logs` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013114s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000543s ]
+
+[ 2017-12-22T14:55:34+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 95 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 102 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 102 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 109 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 118 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 118 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 123 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 123 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 123 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 123 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 133 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 133 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 135 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 135 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 139 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 139 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 147 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 147 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 148 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 148 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 149 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 149 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 150 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 150 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 157 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 157 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010262s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2017-12-22T15:08:18+08:00 ] 127.0.0.1 /jianye_garden/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_pages` [ RunTime:0.0018s ]
+SQL: SELECT `user_nickname`,`page_id`,`page_title`,`page_time` FROM `w_pages` INNER JOIN w_users on w_users.ID=w_pages.page_author  WHERE `page_status` = 'open' AND `w_user_level` <= '10' ORDER BY page_time desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_pages` WHERE `page_status` = 'open' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `w_post` [ RunTime:0.0019s ]
+SQL: SELECT w_post.ID as id,`post_date`,`post_title`,`user_nickname`,`post_status` FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' ORDER BY post_date desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `w_logs` [ RunTime:0.0015s ]
+SQL: SELECT w_logs.*,user_nickname as name FROM `w_logs` LEFT JOIN w_users on w_users.ID=w_logs.user_id  ORDER BY login_time desc LIMIT 0,5   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_logs` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016078s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016116s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000845s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000946s ]
+
+[ 2017-12-22T15:08:22+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT *,concat(date,time) as s,concat(edate,etime) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009185s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000617s ]
+
+[ 2017-12-22T15:08:32+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0023s ]
+SQL: SELECT *,concat(date,time) as s,concat(edate,etime) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009268s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2017-12-22T15:08:50+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000410s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0024s ]
+SQL: SELECT *,concat(date,time) as s,concat(edate,etime) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009190s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009228s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000155s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000542s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2017-12-22T15:10:06+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+ERR: syntax error, unexpected '',time) as s,concat(edate,'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ')'
+
+[ 2017-12-22T15:11:31+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+ERR: syntax error, unexpected '',time)) as s,concat(edate,'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ')'
+
+[ 2017-12-22T15:11:43+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date,time)) as s,concat(edate,etime) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0158s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010282s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010322s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000754s ]
+
+[ 2017-12-22T15:12:06+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SELECT *,(concat(date,time)) as s,concat(edate,etime) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008937s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000501s ]
+
+[ 2017-12-22T15:13:22+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000803s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001079s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SELECT *,(concat(date,time)) as s,concat(edate,etime) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019205s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000687s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000972s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001043s ]
+
+[ 2017-12-22T15:15:02+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000871s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+ERR: syntax error, unexpected '',date,time)) as s,concat(edat' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ')'
+
+[ 2017-12-22T15:15:27+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+NOTIC: [2] A non-numeric value encountered /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 13 行.
+NOTIC: [2] A non-numeric value encountered /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 13 行.
+SQL: SELECT * FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012370s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012405s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000316s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000979s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001023s ]
+
+[ 2017-12-22T15:18:30+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000941s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000981s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT *,concat(date,"",time) as s,concat(edate,etime) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001048s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001285s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001364s ]
+
+[ 2017-12-22T15:18:39+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT *,concat(date," ",time) as s,concat(edate,etime) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010465s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000630s ]
+
+[ 2017-12-22T15:19:51+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0023s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010147s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010188s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000665s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000714s ]
+
+[ 2017-12-22T15:22:33+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0023s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056555s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000522s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000561s ]
+
+[ 2017-12-22T15:25:35+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000806s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069974s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000577s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php:14) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000875s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000922s ]
+
+[ 2017-12-22T15:25:54+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009131s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009168s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000546s ]
+
+[ 2017-12-22T15:25:57+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077490s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077531s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2017-12-22T15:26:01+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: edate /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 38 行.
+NOTIC: [8] Undefined index: etime /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 39 行.
+SQL: UPDATE `w_activity` SET `name`='活动测试2',`titleimg`='2017-12-19/5a38f2436c0d3.jpg',`date`='2017-12-29',`time`='18:30',`edate`=NULL,`etime`=NULL,`address`='金水区国基路国家知识产权产业设计园区',`limitnum`='100',`carrynum`='1',`costtype`='1',`cost`='20',`isfree`='1',`status`='3',`detail`='&lt;p&gt;活动测试内容&lt;/p&gt;&lt;p&gt;虚构&lt;/p&gt;',`atime`='1513927561' WHERE `uid` = '00000003' [ RunTime:0.0034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2017-12-22T15:26:03+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010937s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000534s ]
+
+[ 2017-12-22T15:26:05+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0023s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008942s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2017-12-22T15:26:33+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0017s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010720s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010760s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000627s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000666s ]
+
+[ 2017-12-22T15:26:43+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009278s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000503s ]
+
+[ 2017-12-22T15:26:46+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000004
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000004' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2017-12-22T15:26:53+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: edate /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 38 行.
+NOTIC: [8] Undefined index: etime /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 39 行.
+SQL: UPDATE `w_activity` SET `name`='花园里活动测试数据',`titleimg`='2017-12-19/5a38f2436c0d3.jpg',`date`='2017-12-21',`time`='18:30',`edate`=NULL,`etime`=NULL,`address`='金水区国基路国家知识产权产业设计园区',`limitnum`='100',`carrynum`='1',`costtype`='0',`cost`='0',`isfree`='2',`status`='4',`detail`='&lt;p&gt;活动测试内容&lt;/p&gt;&lt;p&gt;虚构&lt;/p&gt;',`atime`='1513927613' WHERE `uid` = '00000004' [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000546s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000607s ]
+
+[ 2017-12-22T15:26:55+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000004
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000004' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008318s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008352s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2017-12-22T15:26:57+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010881s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010919s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2017-12-22T15:27:17+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007787s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000448s ]
+
+[ 2017-12-22T15:27:19+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011717s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2017-12-22T15:28:28+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001111s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0027s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000935s ]
+
+[ 2017-12-22T15:29:26+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0017s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055903s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055938s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000645s ]
+
+[ 2017-12-22T15:29:54+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008547s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2017-12-22T15:30:23+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0017s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000793s ]
+
+[ 2017-12-22T15:31:40+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041147s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000562s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2017-12-22T15:31:42+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010651s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010691s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000477s ]
+
+[ 2017-12-22T15:32:27+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042778s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000451s ]
+
+[ 2017-12-22T15:33:25+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0017s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062365s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062419s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000968s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001022s ]
+
+[ 2017-12-22T15:33:51+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0029s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039479s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000494s ]
+
+[ 2017-12-22T15:34:32+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045052s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000745s ]
+
+[ 2017-12-22T15:35:15+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039989s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000768s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000812s ]
+
+[ 2017-12-22T15:36:38+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041370s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000607s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
+[ 2017-12-22T15:36:57+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0017s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044738s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000582s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2017-12-22T15:37:10+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0027s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010518s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000447s ]
+
+[ 2017-12-22T15:37:32+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008795s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000394s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2017-12-22T15:37:42+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009377s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000613s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000684s ]
+
+[ 2017-12-22T15:38:08+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 95 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 102 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 102 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 109 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 118 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 118 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 123 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 123 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 123 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 123 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 133 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 133 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 135 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 135 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 139 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 139 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 147 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 147 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 148 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 148 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 149 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 149 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 156 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010385s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2017-12-22T15:38:09+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000422s ]
+
+[ 2017-12-22T15:38:10+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 95 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 95 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 102 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 102 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 109 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 118 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 118 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 123 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 123 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 123 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 123 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 133 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 133 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 135 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 135 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 139 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 139 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 147 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 147 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 148 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 148 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 149 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 149 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 156 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010792s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000585s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000631s ]
+
+[ 2017-12-22T15:38:11+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010452s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010547s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000570s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000612s ]
+
+[ 2017-12-22T15:38:12+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/attend.html?act_uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `w_act_attend` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `w_act_attend` WHERE `act_uid` = '00000002' LIMIT 0,20   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_act_attend` WHERE `act_uid` = '00000002' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044856s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000156s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000517s ]
+
+[ 2017-12-22T15:38:15+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/attend.html?act_uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `w_act_attend` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_act_attend` WHERE `act_uid` = '00000003' LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_act_attend` WHERE `act_uid` = '00000003' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000518s ]
+
+[ 2017-12-22T15:38:20+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/attend.html?act_uid=00000001
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `w_act_attend` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_act_attend` WHERE `act_uid` = '00000001' LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_act_attend` WHERE `act_uid` = '00000001' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000534s ]
+
+[ 2017-12-22T15:38:33+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000004
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000004' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008596s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008628s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2017-12-22T15:38:38+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: edate /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 38 行.
+NOTIC: [8] Undefined index: etime /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 39 行.
+SQL: UPDATE `w_activity` SET `name`='花园里活动测试数据',`titleimg`='2017-12-19/5a38f2436c0d3.jpg',`date`='2017-12-21',`time`='18:30',`edate`=NULL,`etime`=NULL,`address`='金水区国基路国家知识产权产业设计园区',`limitnum`='100',`carrynum`='1',`costtype`='0',`cost`='0',`isfree`='2',`status`='2',`detail`='&lt;p&gt;活动测试内容&lt;/p&gt;&lt;p&gt;虚构&lt;/p&gt;',`atime`='1513928318' WHERE `uid` = '00000004' [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000498s ]
+
+[ 2017-12-22T15:38:39+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000004
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000004' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008564s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000854s ]
+
+[ 2017-12-22T15:38:42+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009701s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2017-12-22T15:39:06+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008183s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008216s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000487s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000517s ]
+
+[ 2017-12-22T15:39:10+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000416s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: edate /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 38 行.
+NOTIC: [8] Undefined index: etime /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 39 行.
+SQL: UPDATE `w_activity` SET `name`='活动测试2',`titleimg`='2017-12-19/5a38f2436c0d3.jpg',`date`='2017-12-29',`time`='18:30',`edate`=NULL,`etime`=NULL,`address`='金水区国基路国家知识产权产业设计园区',`limitnum`='100',`carrynum`='1',`costtype`='1',`cost`='20',`isfree`='1',`status`='2',`detail`='&lt;p&gt;活动测试内容&lt;/p&gt;&lt;p&gt;虚构&lt;/p&gt;',`atime`='1513928350' WHERE `uid` = '00000003' [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000452s ]
+
+[ 2017-12-22T15:39:12+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008032s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000574s ]
+
+[ 2017-12-22T15:39:49+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: edate /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 38 行.
+NOTIC: [8] Undefined index: etime /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 39 行.
+SQL: UPDATE `w_activity` SET `name`='活动测试2',`titleimg`='2017-12-19/5a38f2436c0d3.jpg',`date`='2017-12-29',`time`='18:30',`edate`=NULL,`etime`=NULL,`address`='金水区国基路国家知识产权产业设计园区',`limitnum`='100',`carrynum`='1',`costtype`='1',`cost`='20',`isfree`='1',`status`='2',`detail`='&lt;p&gt;活动测试内容&lt;/p&gt;&lt;p&gt;虚构&lt;/p&gt;',`atime`='1513928389' WHERE `uid` = '00000003' [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000511s ]
+
+[ 2017-12-22T15:39:51+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078843s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2017-12-22T15:39:53+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0023s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011288s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011327s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000485s ]
+
+[ 2017-12-22T15:39:55+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0017s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011339s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011384s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000609s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000657s ]
+
+[ 2017-12-22T15:39:58+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008865s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008907s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000587s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2017-12-22T15:40:02+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: edate /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 38 行.
+NOTIC: [8] Undefined index: etime /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 39 行.
+SQL: UPDATE `w_activity` SET `name`='活动测试2',`titleimg`='2017-12-19/5a38f2436c0d3.jpg',`date`='2017-12-29',`time`='18:30',`edate`=NULL,`etime`=NULL,`address`='金水区国基路国家知识产权产业设计园区',`limitnum`='100',`carrynum`='1',`costtype`='1',`cost`='20',`isfree`='1',`status`='1',`detail`='&lt;p&gt;活动测试内容&lt;/p&gt;&lt;p&gt;虚构&lt;/p&gt;',`atime`='1513928402' WHERE `uid` = '00000003' [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2017-12-22T15:40:03+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009669s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000876s ]
+
+[ 2017-12-22T15:40:06+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009485s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009521s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2017-12-22T15:40:08+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009589s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009636s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000398s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2017-12-22T15:40:09+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008282s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000554s ]
+
+[ 2017-12-22T15:40:12+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007389s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007420s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2017-12-22T15:40:28+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000757s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014105s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014166s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000850s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000901s ]
+
+[ 2017-12-22T15:40:30+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007870s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007902s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000385s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2017-12-22T15:42:12+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 84 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 84 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 99 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 99 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 106 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 106 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 113 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 113 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 120 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 120 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 129 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 129 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 144 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 144 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 145 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 145 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 146 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 146 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 150 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 150 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 158 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 158 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 159 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 159 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 160 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 160 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.090852s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.090889s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000537s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2017-12-22T15:42:12+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 84 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 84 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 99 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 99 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 106 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 106 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 113 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 113 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 120 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 120 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 129 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 129 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 144 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 144 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 145 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 145 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 146 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 146 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 150 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 150 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 158 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 158 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 159 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 159 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 160 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 160 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000391s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000437s ]
+
+[ 2017-12-22T15:43:25+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 84 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 84 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 99 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 99 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 106 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 106 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 113 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 113 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 120 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 120 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 129 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 129 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 144 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 144 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 145 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 145 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 146 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 146 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 150 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 150 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 158 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 158 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 159 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 159 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 160 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 160 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079299s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079327s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000392s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000419s ]
+
+[ 2017-12-22T15:43:36+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 61 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 66 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 73 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 77 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 84 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 84 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 88 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 99 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 99 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 106 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 106 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 113 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 113 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 120 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 120 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 129 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 129 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 134 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 144 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 144 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 145 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 145 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 146 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 146 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 150 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 150 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 158 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 158 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 159 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 159 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 160 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 160 行.
+NOTIC: [8] Undefined index: info /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+NOTIC: [8] Trying to get property of non-object /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009409s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009441s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000527s ]
+
+[ 2017-12-22T15:44:57+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009677s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009724s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000668s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000909s ]
+
+[ 2017-12-22T15:44:59+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080056s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000494s ]
+
+[ 2017-12-22T15:45:16+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: edate /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 38 行.
+SQL: UPDATE `w_activity` SET `name`='活动测试2',`titleimg`='2017-12-19/5a38f2436c0d3.jpg',`date`='2017-12-29',`time`='18:30',`edate`=NULL,`etime`='19:30',`address`='金水区国基路国家知识产权产业设计园区',`limitnum`='100',`carrynum`='1',`costtype`='1',`cost`='20',`isfree`='1',`status`='3',`detail`='&lt;p&gt;活动测试内容&lt;/p&gt;&lt;p&gt;虚构&lt;/p&gt;',`atime`='1513928716' WHERE `uid` = '00000003' [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000568s ]
+
+[ 2017-12-22T15:45:17+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000460s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000489s ]
+
+[ 2017-12-22T15:45:47+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: edate /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 38 行.
+SQL: UPDATE `w_activity` SET `name`='活动测试2',`titleimg`='2017-12-19/5a38f2436c0d3.jpg',`date`='2017-12-29',`time`='18:30',`edate`=NULL,`etime`='19:30',`address`='金水区国基路国家知识产权产业设计园区',`limitnum`='100',`carrynum`='1',`costtype`='1',`cost`='20',`isfree`='1',`status`='3',`detail`='&lt;p&gt;活动测试内容&lt;/p&gt;&lt;p&gt;虚构&lt;/p&gt;',`atime`='1513928747' WHERE `uid` = '00000003' [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2017-12-22T15:45:48+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081450s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081486s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2017-12-22T15:45:58+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008743s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2017-12-22T15:46:27+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000416s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008510s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2017-12-22T15:46:34+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+SQL: UPDATE `w_activity` SET `name`='活动测试2',`titleimg`='2017-12-19/5a38f2436c0d3.jpg',`date`='2017-12-29',`time`='18:30',`edate`='2017-12-29',`etime`='19:30',`address`='金水区国基路国家知识产权产业设计园区',`limitnum`='100',`carrynum`='1',`costtype`='1',`cost`='20',`isfree`='1',`status`='3',`detail`='&lt;p&gt;活动测试内容&lt;/p&gt;&lt;p&gt;虚构&lt;/p&gt;',`atime`='1513928794' WHERE `uid` = '00000003' [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000622s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000667s ]
+
+[ 2017-12-22T15:46:35+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011092s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000448s ]
+
+[ 2017-12-22T15:46:58+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000003' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009753s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000648s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2017-12-22T15:47:02+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009965s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000619s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000667s ]
+
+[ 2017-12-22T15:47:08+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008044s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008074s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000479s ]
+

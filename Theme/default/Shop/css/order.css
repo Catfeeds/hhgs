@@ -1,0 +1,85 @@
+@import url('common.css');
+body{
+	background-color: rgb(242,246,247);
+}
+img{
+	display: block;
+}
+.info{
+	display: flex;
+	background-color: #fff;
+	align-items: center;
+}
+.info .img{
+	flex: 2;
+}
+.info .text{
+	padding-left: 12px;
+	flex: 3;
+}
+.info .text .t{
+	font-size: 14px;
+	padding: 5px 0;
+}
+.info .text .s{
+	padding: 8px 0 12px;
+	color: #9a999e;
+}
+.info .text .c span{
+	color: rgb(235,199,144);
+	border-radius: 2px;
+	border:1px solid rgb(235,199,144);
+}
+
+
+.groups{
+	background-color:#fff;
+	margin: 8px 0;
+	min-height: 20px;
+	padding: 0px 20px;
+}
+.groups .item{
+	padding:3px;
+	display: flex;
+}
+.groups .item p{
+	margin:10px 0;
+	flex: 1;
+}
+.groups .item:not(:nth-last-child(1)){
+	border-bottom: 1px solid rgba(199,199,199,0.2);
+}
+.groups input{
+	text-align: right;
+    -webkit-appearance: none;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    flex: 1;
+    width: 100%;
+    /* line-height: 25px; */
+    font-size: 12px;
+    font-weight: 500;
+}
+.btn_wrap{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+}
+.btn_wrap p:nth-of-type(1){
+	flex: 1;
+	background-color: #fff;
+	padding: 8px 25px;
+	color: rgb(207,166,108);
+	font-weight: 800;
+}
+.btn_wrap p:nth-of-type(1) span{
+	font-size: 16px;
+}
+.btn_wrap .btn{
+	background: -webkit-linear-gradient(left, rgb(207,166,108), rgb(238,210,170));
+	color: #fff;
+	padding:12px 25px;
+}

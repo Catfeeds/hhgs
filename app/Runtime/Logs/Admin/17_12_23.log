@@ -1,0 +1,1513 @@
+[ 2017-12-23T16:46:18+08:00 ] 127.0.0.1 /jianye_garden/admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+
+[ 2017-12-23T16:46:19+08:00 ] 127.0.0.1 /jianye_garden/admin/index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010578s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000241s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000612s ]
+
+[ 2017-12-23T16:46:20+08:00 ] 127.0.0.1 /jianye_garden/admin/index/login_submit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `w_users` WHERE ( user_login="admin" ) LIMIT 1   [ RunTime:0.0015s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `w_logs` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `w_logs` (`user_id`,`login_time`,`login_ip`,`login_referer`) VALUES ('1','1514018780','127.0.0.1','http://127.0.0.1/jianye_garden/admin/index/login.html') [ RunTime:0.0023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000536s ]
+
+[ 2017-12-23T16:46:20+08:00 ] 127.0.0.1 /jianye_garden/admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_pages` [ RunTime:0.0019s ]
+SQL: SELECT `user_nickname`,`page_id`,`page_title`,`page_time` FROM `w_pages` INNER JOIN w_users on w_users.ID=w_pages.page_author  WHERE `page_status` = 'open' AND `w_user_level` <= '10' ORDER BY page_time desc LIMIT 0,5   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_pages` WHERE `page_status` = 'open' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_post` [ RunTime:0.0020s ]
+SQL: SELECT w_post.ID as id,`post_date`,`post_title`,`user_nickname`,`post_status` FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' ORDER BY post_date desc LIMIT 0,5   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_logs` [ RunTime:0.0024s ]
+SQL: SELECT w_logs.*,user_nickname as name FROM `w_logs` LEFT JOIN w_users on w_users.ID=w_logs.user_id  ORDER BY login_time desc LIMIT 0,5   [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_logs` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011188s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000599s ]
+
+[ 2017-12-23T16:46:23+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013088s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000708s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000750s ]
+
+[ 2017-12-23T16:46:26+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.087477s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000585s ]
+
+[ 2017-12-23T16:46:39+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077070s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077113s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000451s ]
+
+[ 2017-12-23T16:47:41+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: hexiao /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.076384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076414s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000390s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000415s ]
+
+[ 2017-12-23T16:49:09+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: hexiao /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.150919s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.150958s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000975s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001026s ]
+
+[ 2017-12-23T16:49:23+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: hexiao /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.091769s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.091803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000189s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000598s ]
+
+[ 2017-12-23T16:52:15+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: hexiao /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075405s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2017-12-23T16:52:20+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: hexiao /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009477s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2017-12-23T16:53:24+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: hexiao /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077829s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077863s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000236s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000737s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000789s ]
+
+[ 2017-12-23T16:53:28+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: hexiao /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009129s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000548s ]
+
+[ 2017-12-23T16:53:59+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: hexiao /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082131s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082168s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000164s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000567s ]
+
+[ 2017-12-23T16:54:08+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: hexiao /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008833s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008863s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2017-12-23T16:54:34+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: hexiao /Applications/MAMP/htdocs/jianye_garden/app/Runtime/Cache/a9d2885e653fe85bbc673c89a126c11fe0ada68b.file.act_new.tpl.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.096692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.096731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2017-12-23T16:56:34+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078064s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000428s ]
+
+[ 2017-12-23T16:56:39+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010821s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010854s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000476s ]
+
+[ 2017-12-23T16:56:59+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079610s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000617s ]
+
+[ 2017-12-23T16:57:03+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: limit /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 45 行.
+SQL: UPDATE `w_activity` SET `name`='活动测试1',`titleimg`='2017-12-19/5a38f2436c0d3.jpg',`date`='2017-12-29',`time`='18:30',`edate`='2017-12-29',`etime`='20:30',`address`='金水区国基路国家知识产权产业设计园区',`limitnum`='100',`carrynum`='1',`costtype`='0',`cost`='0',`isfree`=NULL,`status`='1',`detail`='&lt;p&gt;活动测试内容&lt;/p&gt;&lt;p&gt;虚构&lt;/p&gt;',`hexiao`='1234',`atime`='1514019423' WHERE `uid` = '00000002' [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000519s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2017-12-23T16:57:04+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011051s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011098s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000904s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001306s ]
+
+[ 2017-12-23T17:49:14+08:00 ] 127.0.0.1 /jianye_garden/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_pages` [ RunTime:0.0021s ]
+SQL: SELECT `user_nickname`,`page_id`,`page_title`,`page_time` FROM `w_pages` INNER JOIN w_users on w_users.ID=w_pages.page_author  WHERE `page_status` = 'open' AND `w_user_level` <= '10' ORDER BY page_time desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_pages` WHERE `page_status` = 'open' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `w_post` [ RunTime:0.0019s ]
+SQL: SELECT w_post.ID as id,`post_date`,`post_title`,`user_nickname`,`post_status` FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' ORDER BY post_date desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `w_logs` [ RunTime:0.0019s ]
+SQL: SELECT w_logs.*,user_nickname as name FROM `w_logs` LEFT JOIN w_users on w_users.ID=w_logs.user_id  ORDER BY login_time desc LIMIT 0,5   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_logs` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051912s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051967s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001143s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001201s ]
+
+[ 2017-12-23T18:05:38+08:00 ] 127.0.0.1 /jianye_garden/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_pages` [ RunTime:0.0024s ]
+SQL: SELECT `user_nickname`,`page_id`,`page_title`,`page_time` FROM `w_pages` INNER JOIN w_users on w_users.ID=w_pages.page_author  WHERE `page_status` = 'open' AND `w_user_level` <= '10' ORDER BY page_time desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_pages` WHERE `page_status` = 'open' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `w_post` [ RunTime:0.0033s ]
+SQL: SELECT w_post.ID as id,`post_date`,`post_title`,`user_nickname`,`post_status` FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' ORDER BY post_date desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_logs` [ RunTime:0.0023s ]
+SQL: SELECT w_logs.*,user_nickname as name FROM `w_logs` LEFT JOIN w_users on w_users.ID=w_logs.user_id  ORDER BY login_time desc LIMIT 0,5   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_logs` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.084075s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084124s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002292s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002344s ]
+
+[ 2017-12-23T18:07:46+08:00 ] 127.0.0.1 /jianye_garden/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000844s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_pages` [ RunTime:0.0029s ]
+SQL: SELECT `user_nickname`,`page_id`,`page_title`,`page_time` FROM `w_pages` INNER JOIN w_users on w_users.ID=w_pages.page_author  WHERE `page_status` = 'open' AND `w_user_level` <= '10' ORDER BY page_time desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_pages` WHERE `page_status` = 'open' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `w_post` [ RunTime:0.0025s ]
+SQL: SELECT w_post.ID as id,`post_date`,`post_title`,`user_nickname`,`post_status` FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' ORDER BY post_date desc LIMIT 0,5   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_logs` [ RunTime:0.0026s ]
+SQL: SELECT w_logs.*,user_nickname as name FROM `w_logs` LEFT JOIN w_users on w_users.ID=w_logs.user_id  ORDER BY login_time desc LIMIT 0,5   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_logs` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080577s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080661s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000765s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000832s ]
+
+[ 2017-12-23T18:11:13+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0028s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009195s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009255s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2017-12-23T18:11:36+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0034s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057952s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000456s ]
+
+[ 2017-12-23T18:11:39+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+ERR: Think\Controller:dispaly方法不存在！
+
+[ 2017-12-23T18:12:01+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+ERR: 模板不存在:./ThemeAdmin/default/Member/index.tpl
+
+[ 2017-12-23T18:12:04+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008898s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008935s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000603s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000639s ]
+
+[ 2017-12-23T18:23:41+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+ERR: 模板不存在:./ThemeAdmin/default/Member/index.tpl
+
+[ 2017-12-23T18:28:38+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for ./app/Runtime/Cache/f240b027b2987582312b800f9429590741dc1bf8.file.index.tpl.php /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./app/Runtime/Cache/f240b027b2987582312b800f9429590741dc1bf8.file.index.tpl.php): No such file or directory /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.090591s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.090632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2017-12-23T18:28:43+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for ./app/Runtime/Cache/7d05f80e5ea434865190274a75ff0499108f21cd.file.h_list.tpl.php /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./app/Runtime/Cache/7d05f80e5ea434865190274a75ff0499108f21cd.file.h_list.tpl.php): No such file or directory /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027180s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2017-12-23T18:28:45+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+ERR: 模板不存在:./ThemeAdmin/default/Member/h_new.tpl
+
+[ 2017-12-23T18:30:21+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008288s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008324s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000505s ]
+
+[ 2017-12-23T18:30:31+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007075s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007105s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2017-12-23T18:34:53+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008172s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008220s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000663s ]
+
+[ 2017-12-23T18:34:56+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007238s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000405s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000450s ]
+
+[ 2017-12-23T18:35:25+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033951s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000505s ]
+
+[ 2017-12-23T18:39:17+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0028s ]
+NOTIC: [8] Undefined variable: mem /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/MemberController.class.php 第 15 行.
+ERR: Call to a member function field() on null
+
+[ 2017-12-23T18:40:01+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0032s ]
+NOTIC: [8] Undefined variable: mem /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/MemberController.class.php 第 15 行.
+ERR: Call to a member function field() on null
+
+[ 2017-12-23T18:40:33+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0017s ]
+ERR: 1054:Unknown column 'pro_consulant' in 'field list'
+ [ SQL语句 ] : SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consulant`,`g_time` FROM `w_members` LIMIT 0,20  
+ERR: 1054:Unknown column 'pro_consulant' in 'field list'
+ [ SQL语句 ] : SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consulant`,`g_time` FROM `w_members` LIMIT 0,20  
+
+[ 2017-12-23T18:40:52+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0023s ]
+ERR: 1054:Unknown column 'g_time' in 'field list'
+ [ SQL语句 ] : SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`g_time` FROM `w_members` LIMIT 0,20  
+ERR: 1054:Unknown column 'g_time' in 'field list'
+ [ SQL语句 ] : SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`g_time` FROM `w_members` LIMIT 0,20  
+
+[ 2017-12-23T18:40:59+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0021s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030493s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000414s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000448s ]
+
+[ 2017-12-23T18:42:26+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0020s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010524s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010568s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2017-12-23T18:43:22+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0034s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` LIMIT 0,20   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033187s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000543s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2017-12-23T18:45:52+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0026s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041886s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2017-12-23T18:46:30+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0027s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038952s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2017-12-23T18:46:54+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0020s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042167s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042228s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000472s ]
+
+[ 2017-12-23T18:47:05+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0021s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` LIMIT 0,20   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000578s ]
+
+[ 2017-12-23T18:47:30+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0022s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` LIMIT 0,2   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009084s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009123s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000752s ]
+
+[ 2017-12-23T18:47:32+08:00 ] 127.0.0.1 /jianye_garden/admin/member/index/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0027s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` LIMIT 2,2   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008868s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000474s ]
+
+[ 2017-12-23T18:47:33+08:00 ] 127.0.0.1 /jianye_garden/admin/member/index/p/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0020s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` LIMIT 4,2   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008282s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2017-12-23T18:47:35+08:00 ] 127.0.0.1 /jianye_garden/admin/member/index/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0025s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` LIMIT 0,2   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009017s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009055s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000487s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2017-12-23T18:47:42+08:00 ] 127.0.0.1 /jianye_garden/admin/member/index/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0025s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009360s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009394s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000469s ]
+
+[ 2017-12-23T18:49:34+08:00 ] 127.0.0.1 /jianye_garden/admin/member/index/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0030s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000423s ]
+
+[ 2017-12-23T18:50:05+08:00 ] 127.0.0.1 /jianye_garden/admin/member/index/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0028s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` ORDER BY is_authen desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010283s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010324s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000598s ]
+
+[ 2017-12-23T18:50:10+08:00 ] 127.0.0.1 /jianye_garden/admin/member/index/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0024s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` ORDER BY is_authen  LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009194s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2017-12-23T18:50:13+08:00 ] 127.0.0.1 /jianye_garden/admin/member/index/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0020s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` ORDER BY is_authen desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010730s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010773s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000560s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000601s ]
+
+[ 2017-12-23T18:55:44+08:00 ] 127.0.0.1 /jianye_garden/admin/member/index/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000784s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0026s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` ORDER BY is_authen desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023614s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023664s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001173s ]
+
+[ 2017-12-23T18:55:47+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/info.html?uid=00000001
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0019s ]
+ERR: 模板不存在:./ThemeAdmin/default/Member/info.tpl
+
+[ 2017-12-23T18:56:47+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/info.html?uid=00000001
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for ./app/Runtime/Cache/ae37c94fb6ca87635099f8a14788b6db166c61b0.file.info.tpl.php /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./app/Runtime/Cache/ae37c94fb6ca87635099f8a14788b6db166c61b0.file.info.tpl.php): No such file or directory /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046769s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000534s ]
+
+[ 2017-12-23T18:56:52+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037035s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037069s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000415s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000443s ]
+
+[ 2017-12-23T18:56:57+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0027s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` ORDER BY is_authen desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008538s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000470s ]
+
+[ 2017-12-23T18:56:59+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/info.html?uid=00000001
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000487s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000519s ]
+
+[ 2017-12-23T18:57:20+08:00 ] 127.0.0.1 /jianye_garden/Admin/Archive/trash.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+NOTIC: [2] Declaration of Admin\Controller\ArchiveController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ArchiveController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_post` [ RunTime:0.0022s ]
+SQL: SELECT w_post.ID as id,`post_date`,`post_content`,`post_title`,`post_describe`,`post_thumbnail`,`post_seqencing`,`user_nickname`,`post_status`,w_users.ID as userid FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'closed' AND `w_user_level` <= '10' ORDER BY post_date DESC LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'closed' AND `w_user_level` <= '10' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009915s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000482s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2017-12-23T18:57:24+08:00 ] 127.0.0.1 /jianye_garden/Admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_pages` [ RunTime:0.0021s ]
+SQL: SELECT `user_nickname`,`page_id`,`page_title`,`page_time` FROM `w_pages` INNER JOIN w_users on w_users.ID=w_pages.page_author  WHERE `page_status` = 'open' AND `w_user_level` <= '10' ORDER BY page_time desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_pages` WHERE `page_status` = 'open' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `w_post` [ RunTime:0.0024s ]
+SQL: SELECT w_post.ID as id,`post_date`,`post_title`,`user_nickname`,`post_status` FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' ORDER BY post_date desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_logs` [ RunTime:0.0026s ]
+SQL: SELECT w_logs.*,user_nickname as name FROM `w_logs` LEFT JOIN w_users on w_users.ID=w_logs.user_id  ORDER BY login_time desc LIMIT 0,5   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_logs` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009153s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2017-12-23T18:57:26+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0025s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010709s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010747s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2017-12-23T18:58:04+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0031s ]
+SQL: SELECT `uid`,`uname`,`sex`,`birth`,`phone_num`,`houseinfo`,`is_authen`,`pro_consultant`,`rg_time` FROM `w_members` ORDER BY is_authen desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_members` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009449s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2017-12-23T18:58:06+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/info.html?uid=00000001
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007464s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000679s ]
+
+[ 2017-12-23T18:58:11+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/info.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007467s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000430s ]
+
+[ 2017-12-23T18:59:12+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/info.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_members` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008559s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008591s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000122s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2017-12-23T19:00:40+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/info.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_members` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027420s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027456s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/MemberController.class.php:27) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/MemberController.class.php:27) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/MemberController.class.php:27) /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000607s ]
+

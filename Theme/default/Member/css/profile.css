@@ -1,0 +1,112 @@
+@import url('common.css');
+body{
+	background-color: rgb(247,248,249);
+}
+.header{
+	background-image: url(../img/p_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.header{
+	display: flex;
+	padding: 35px 15px;
+	align-items : center;
+	justify-content : center;
+}
+
+.header .headimg{
+	position: relative;
+	border-radius: 50%;
+	background-color: #fff;
+	width: 80px;
+	height: 80px;
+	padding: 1px;
+	text-align: center;
+}
+.headimg img{
+	border-radius: 50%;
+	width: 80px;
+}
+.headimg .vip{
+	margin: 0;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	right: 8px;
+	bottom: 3px;
+}
+.header .info{
+	width: 100px;
+}
+.header .info p{
+	margin: 3px 0;
+	padding-left: 8px;
+}
+.header .info .iname{
+	font-size: 16px;
+	font-weight: 500;
+}
+.header .info .iauthen{
+	color: rgb(116,117,118);
+	font-weight: 500;
+}
+.header .clockin{
+	flex: 2;
+	text-align: right;
+}
+
+.levelgrounp{
+	display: flex;
+	background-color: #fff;
+	margin-top: 6px;
+	padding: 5px 0;
+}
+.levelgrounp .l-item{
+	flex:1;
+	text-align: center;
+}
+.levelgrounp .l-item:nth-of-type(2){
+	border-left: 1px solid  rgba(116,117,118,0.2);
+	border-right: 1px solid  rgba(116,117,118,0.2);
+}
+.levelgrounp .l-item p{
+	margin: 0;
+}
+.levelgrounp .l-item .p-label{
+	color: rgb(228,199,146);
+	font-size: 14px;
+}
+.levelgrounp .l-item .p-info{
+	font-size: 16px;
+	font-weight: 500;
+	color: rgb(116,117,118);
+}
+.groups{
+	background-color:#fff;
+	margin: 8px 0;
+	min-height: 20px;
+	padding: 0 0 0 25px;
+}
+.groups .item a{
+	padding:3px;
+	display: flex;
+	text-decoration: none;
+	color: #000;
+}
+.groups .item p{
+	margin:10px 0;
+}
+.groups .item:not(:nth-last-child(1)){
+	border-bottom: 1px solid rgba(199,199,199,0.2);
+}
+.groups .item p:nth-of-type(1),.groups .item p:nth-of-type(3){
+	width: 20px;
+}
+.groups .item p:nth-of-type(3){
+	padding-right: 25px;
+	width: 14px;
+}
+.groups .item p:nth-of-type(2){
+	flex: 1;
+	padding-left: 15px;
+}

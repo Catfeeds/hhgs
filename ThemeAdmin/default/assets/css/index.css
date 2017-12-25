@@ -1,0 +1,17 @@
+.panel-body{
+	min-height: 200px;
+}
+.list-ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.label{
+	display: inline-block;
+	font-size: 75%;
+	color: #fff;
+}
+.label a{
+	color: #fff;
+	text-decoration: none;
+}

@@ -1,0 +1,167 @@
+@import url('common.css');
+body{
+	background-color: rgb(242,246,247);
+}
+.content{
+	position: relative;
+}
+/*基本信息*/
+.info{
+	position: absolute;
+	width: 90%;
+	min-height:150px;
+	top: -80px;
+	left: 5%;
+	padding: 25px;
+	background-color: rgba(255,255,255,0.85);
+	border-radius: 5px;
+}
+.info p{
+	background-color:transparent;
+}
+.info .title{
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+.info .info-line label{
+	margin-right: 10px;
+	font-size: 14px;
+}
+.info .info-line label img{
+	width: 18px;
+}
+.info .info-line{
+	line-height: 18px;
+	display: flex;
+	padding: 5px 0;
+}
+
+/*详情信息*/
+.detail{
+	min-height: 200px;
+	padding: 130px 0 0;
+	width: 90%;
+	margin: 0 auto;
+}
+.detail *{
+	background-color: transparent;
+}
+.detail .phead{
+	font-size: 14px;
+}
+.detail .pcontent{
+	padding: 15px 8px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+/*报名表单*/
+p.bline{
+	position: relative;
+	width: 100%;
+	height: 1px;
+	margin: 20px 0 45px;
+	background-color: rgba(0,0,0,0.2);
+}
+p.bline span{
+	position: absolute;
+	width: 70px;
+	left: 50%;
+	margin-left: -30px;
+	background-color: rgb(242,246,247);
+	top: -11px;
+	text-align: center;
+	font-size: 16px;
+}
+/*文本框样式*/
+.line{
+	margin: 30px 40px;
+	padding: 5px 15px;
+	border:1px solid rgb(187,187,187);
+	border-radius: 5px;
+	display: flex;
+}
+.line label{
+	line-height: 25px;
+	max-width: 70px;
+	min-width: 40px;
+}
+.line input{
+	text-align: right;
+	-webkit-appearance:none;
+	background-color: transparent;
+	outline: none;
+	border:0;
+	flex: 1;
+	width: 100%;	
+	font-size: 12px;
+	font-weight: 500;
+}
+p.btn_wrap{
+	background-color: transparent;
+	text-align: center;
+	margin: 20px 40px;
+	padding-top: 20px;
+}
+.btn_wrap .btn{
+	width: 100%;
+	background: -webkit-linear-gradient(left, rgb(207,166,108), rgb(238,210,170));
+	color: #fff;
+	padding:10px;
+	border-radius: 5px;
+}
+.qrcode{
+	background-color: transparent;
+	text-align: center;
+}
+.qrcode img{
+	width: 200px;
+	margin:0 auto;
+}
+#error{
+	background-color: transparent;
+	text-align: center;
+}
+label.error{
+	text-align: center;
+	color: #eea236;
+}
+.cover{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.3);
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.message_box{
+	position: relative;
+	width: 85%;
+	min-height: 160px;
+	background-color: #fff;
+	margin:80px auto;
+	border-radius: 5px;
+	padding: 20px ;
+	text-align: center;
+	color: rgb(207,166,108);
+}
+.message_box img{
+	width: 180px;
+}
+.message_box .content{
+	min-height: 90px;
+	padding: 20px;
+	/*font-size: 14px;*/
+
+}
+.message_box .btn{
+	position: absolute;
+	left: 50%;
+	margin-left: -32px;
+	bottom: 20px;
+}
+.message_box .btn button{
+	background: -webkit-linear-gradient(left, rgb(207,166,108), rgb(238,210,170));
+	padding: 6px 20px;
+	color: #fff;
+}

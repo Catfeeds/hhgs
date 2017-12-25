@@ -1,0 +1,92 @@
+@import url('common.css');
+body{
+	background-color: rgb(242,246,247);
+}
+.family_mem{
+	display: flex;
+	position: relative;
+	background-color: #fff;
+	margin: 10px 15px;
+	min-height: 100px;
+	padding: 10px 15px;
+	align-items : center;
+}
+.content a{
+	text-decoration: none;
+}
+.family_mem p{
+	margin: 0;
+}
+.circle{
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	background-color:rgb(242,246,247); 
+	border-radius: 50%;
+}
+.circle_l{
+	left: -9px;
+	top: 50%;
+	margin-top: -8px;
+}
+.circle_r{
+	right: -9px;
+	top: 50%;
+	margin-top: -8px;
+}
+
+.headimg{
+	width: 90px;
+	height: 90px;
+	background-color: rgb(242,232,211);
+	padding:3px;
+	border-radius: 50%;
+}
+.headimg img{
+	border-radius: 50%;
+}
+.family_mem .rbg{
+	width: 50px;
+	height: 24px;
+	line-height: 24px;
+	background-image: url(../img/relation_bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #fff;
+	text-align: center;
+}
+.family_mem .info{
+	padding-left: 10px;
+	letter-spacing: 1px;
+	flex: 1;
+}
+.family_mem .info p{
+	line-height: 22px;
+	font-weight: 400;
+	color: rgb(90,90,90);
+}
+.family_mem .info p .ispan{
+	display: inline-block;
+	width: 52px;
+	font-weight: 400;
+}
+.family_mem .relation{
+	padding-left: 10px;
+}
+
+
+/*添加按钮*/
+.add{
+	margin-top: 30px;
+	text-align: center;
+}
+.add a{
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+}
+.add img{
+	width: 40px;
+	margin-top: 30px
+}

@@ -1,0 +1,48 @@
+@import url('common.css');
+body{
+	background-color: rgb(242,246,247);
+}
+.container a{
+	text-decoration: none;
+	color: #000;
+}
+.bottom{
+	position: absolute;
+	color: #fff;
+	font-size: 14px;
+	background: -webkit-linear-gradient(left, rgb(207,166,108), rgb(238,210,170));
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	padding: 12px;
+	text-align: center;
+}
+.title{
+	display: flex;
+	padding: 5px 10px;
+	font-size: 14px;
+	justify-content: center;
+	align-items: center;
+}
+.title .line{
+	height: 35px;
+    width: 6px;
+    background: -webkit-linear-gradient(rgb(207,166,108), rgb(238,210,170));
+    margin-right: 10px;
+}
+.tname{
+	flex: 1;
+}
+.coin{
+	padding: 5px 10px;
+	font-size: 16px;
+	background: -webkit-linear-gradient(left, rgb(207,166,108), rgb(238,210,170));
+	color: #fff;
+	text-align: right;
+}
+.content{
+	margin:5px 10px 50px;
+
+	padding: 15px 0; 
+	border-top: 1px solid rgba(130,130,130,0.1)
+}

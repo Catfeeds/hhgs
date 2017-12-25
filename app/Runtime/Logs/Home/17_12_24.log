@@ -1,0 +1,15 @@
+[ 2017-12-24T14:33:33+08:00 ] 127.0.0.1 /jianye_garden/ThemeAdmin/default/assets/css/progress.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+
+[ 2017-12-24T15:00:56+08:00 ] 127.0.0.1 /jianye_garden/ThemeAdmin/default/assets/css/progress.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+
+[ 2017-12-24T15:09:44+08:00 ] 127.0.0.1 /jianye_garden/upload/headimg/2017-12-19/5a3f50a8de0bd.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+
