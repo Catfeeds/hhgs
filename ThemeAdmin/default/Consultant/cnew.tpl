@@ -43,7 +43,7 @@
 							<div class='col-xs-12 col-md-11'>
 								<div class="radio">
 									<label>
-										<input type="radio" name="sex" class="sex" value="1" {if $info['sex'] eq 1}checked{/if}>
+										<input type="radio" name="sex" class="sex" value="1" {if $info['sex'] eq 1 or $info['sex'] eq null}checked{/if}>
 										男
 									</label>
 									&nbsp;&nbsp;&nbsp;
@@ -139,7 +139,7 @@
         ratio = window.devicePixelRatio || 1,
 
         // 缩略图大小
-        thumbnailWidth = 200 * ratio,
+        thumbnailWidth = 100 * ratio,
         thumbnailHeight = 100 * ratio,
 
 	    // 初始化Web Uploader
@@ -236,6 +236,7 @@
 	    $('#reset').click(function(){
 	    	console.log('删除图片');
 	    	uploader.reset();
+	    	$('#images').val('');
 	    	$('#fileList').html('');
 	    });
 	    // 图片列表自动加载
@@ -334,7 +335,8 @@
 							alert('提交成功');
 							window.location.reload();
 						}else
-							alert('提交信息失败，请稍后再试');
+							$('.error_report').show();
+							$('.error_report .text-danger').html(msg['data']);
 					}
 				});
 			},

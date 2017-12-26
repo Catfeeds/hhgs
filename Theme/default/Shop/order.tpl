@@ -11,12 +11,12 @@
 	<div class='container'>
 		<div class='info'>
 			<div class='img'>
-				<img src="{$smarty.const.THEME}Shop/img/WX20171218-171437.png">
+				<img src="{$smarty.const.UPLOAD}goods/{$goods_info['thumbnail']}">
 			</div>
 			<div class='text'>
-				<p class='t'>现代简约休闲实木沙发</p>
-				<p class='s'>新品体验,正在进行中</p>
-				<p class='c'><span>500积分</span></p>
+				<p class='t'>{$goods_info['goods_name']}</p>
+				<p class='s'>{$goods_info['goods_intro']}</p>
+				<p class='c'><span>{$goods_info['goods_price']}积分</span></p>
 			</div>
 		</div>
 		<div class='content'>
@@ -25,7 +25,7 @@
 					<div class='item'>
 						<p>兑换数量</p>
 						<p>
-							<input id='number' name='number' type='number' value='1' disabled>
+							<input id='number' name='number' type='number' value='1'>
 						</p>
 					</div>
 				</div>
@@ -33,7 +33,7 @@
 					<div class='item'>
 						<p>配送方式</p>
 						<p style='text-align: right;'>
-							物业中心自取
+							{if $goods_info['pay_type'] eq 1}物业中心自取{else}其他{/if}
 						</p>
 					</div>
 				</div>
@@ -41,17 +41,17 @@
 					<div class='item'>
 						<p>姓名</p>
 						<p>
-							<input id='name' name="name" type="text" >
+							<input id='name' name="name" type="text" value='{$mem_info["uname"]}'>
 						</p>
 					</div>
 					<div class='item'>
 						<p>联系方式</p>
 						<p>
-							<input id='phone' name="phone" type="tel" >
+							<input id='phone' name="phone" type="tel" value='{$mem_info["phone_num"]}'>
 						</p>
 					</div>
 					<div class='item'>
-						<p><textarea rows='4' style='resize:none; width: 100%;font-size: 12px;border:none;' placeholder='点击填写备注信息'></textarea></p>
+						<p><textarea id='remarks' name='remarks' rows='4' style='resize:none; width: 100%;font-size: 12px;border:none;' placeholder='点击填写备注信息'></textarea></p>
 					</div>
 				</div>
 				<div class='btn_wrap'>
@@ -61,5 +61,67 @@
 			</form>
 		</div>		
 	</div>
+	<script src="{$smarty.const.ORG}jquery/jquery-2.1.0.min.js"></script>
+	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// 手机号码验证
+			jQuery.validator.addMethod("isphone", function(value, element) {
+			  	var length = value.length; 
+			  	{literal}
+			  	var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/; 
+			  	{/literal}
+			  	return this.optional(element) || (length == 11 && mobile.test(value)); 
+			}, "手机号码格式错误"); 
+			$('#form').validate({
+				// debug:true,
+				rules:{
+					name:'required',
+					phone:{
+						required:true,
+						isphone:true,
+					},
+					number:{
+						required:true,
+						digits:true,
+					}
+				},
+				messages:{
+					name:'姓名不能为空',
+					phone:{
+						required:'手机号码不能为空',
+					},
+					number:{
+						required:'兑换数量不能为空',
+						digits:'兑换数量必须为整数',
+					}
+
+				},
+				errorPlacement:function(error,element){
+					console.log(error);
+				},
+				submitHandler:function(){
+					$.ajax({
+						type:'POST',
+						dataType:'json',
+						data:{
+							'number':$('#number').val(),
+							'name':$('#name').val(),
+							'phone_num':$('#phone').val(),
+							'remarks':$('#remarks').val(),
+						},
+						success:function(msg){
+							if(msg['code']==200){
+								alert('兑换成功');
+								window.location.href=location.href;
+							}else{
+								console.log(msg['data']);
+							}
+						}
+					});
+				}
+			});
+		});
+	</script>
 </body>
 </html>

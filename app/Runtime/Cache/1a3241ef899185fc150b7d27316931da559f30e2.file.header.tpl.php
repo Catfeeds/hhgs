@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-25 19:53:38
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-26 17:11:43
          compiled from "/Applications/MAMP/htdocs/jianye_garden/ThemeAdmin/default/tpl/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7409233665a38b5dbb9a292-11855364%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1a3241ef899185fc150b7d27316931da559f30e2' => 
     array (
       0 => '/Applications/MAMP/htdocs/jianye_garden/ThemeAdmin/default/tpl/header.tpl',
-      1 => 1514202814,
+      1 => 1514279492,
       2 => 'file',
     ),
   ),
@@ -73,7 +73,7 @@ jquery/jquery-1.8.2.min.js"></script>
 				</ul>
 				<!-- 顶部右侧菜单 -->
 		        <ul class="nav navbar-nav navbar-right">
-					<li class="dropdown visible-md visible-lg">
+					<!-- <li class="dropdown visible-md visible-lg">
 						 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gears"></i></a>					
 						<ul class="dropdown-menu update-menu" role="menu">
 							<li><a href="<?php echo @ADMIN;?>
@@ -83,7 +83,7 @@ Archive/post_new.html"><i class="fa fa-plus-square"></i> 写文章 </a>
 Pages/page_new.html"><i class="fa fa-plus-square"></i> 新建页面 </a>
 	                        </li>
 						</ul>
-					</li>
+					</li> -->
 					<li class="dropdown visible-md visible-lg">
 		        		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class='fa fa-user' style='margin: 22px 0 0 0;width: 32px;text-align: center;color: #c8c8c8;font-size: 18px;'></b><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 </a>
@@ -169,7 +169,7 @@ Shop/order.html"><i class="fa fa-paw"></i><span class="text"> 订单管理</span
 								</li>
 								<li><a href="<?php echo @ADMIN;?>
 Award/index.html"><i class="fa fa-superpowers"></i><span class="text"> 成长值与活跃值设置</span></a></li>
-								<li>
+								<!-- <li>
 									<a href="#"><i class="fa fa-list-alt"></i><span class="text"> 内容管理</span> <span class="fa fa-angle-down pull-right"></span></a>
 									<ul class="nav sub">
 										<li><a href="<?php echo @ADMIN;?>
@@ -183,17 +183,17 @@ Archive/tags.html"><i class="fa fa-tags"></i><span class="text"> 标签</span></
 										<li><a href="<?php echo @ADMIN;?>
 Option/archive_set.html"><i class="fa fa-gear"></i><span class="text"> 文章设置</span></a></li>
 									</ul>
-								</li>
+								</li> -->
 							
 								<!-- 系统设置与用户管理只有管理员才可以操作 -->
 								<?php if ($_smarty_tpl->tpl_vars['level']->value=='10'){?>
-								<li>
+								<!-- <li>
 									<a href="#"><i class="fa fa-cogs"></i><span class="text"> 系统设置</span> <span class="fa fa-angle-down pull-right"></span></a>
 									<ul class="nav sub">
 										<li><a href="<?php echo @ADMIN;?>
 Option/site_basic.html"><i class="fa fa-asterisk"></i><span class="text"> 基本参数</span></a></li>	
 									</ul>
-								</li>
+								</li> -->
 								<li>
 									<a href="#"><i class="fa fa-user"></i><span class="text"> 用户</span> <span class="fa fa-angle-down pull-right"></span></a>
 									<ul class="nav sub">
@@ -206,10 +206,10 @@ User/user_new.html"><i class="fa fa-user-plus"></i><span class="text"> 添加新
 									</ul>
 								</li>
 								<?php }?>
-								<li><a href="<?php echo @ADMIN;?>
-Archive/trash.html"><i class="fa fa-trash-o"></i><span class="text">  回收站</span></a></li>
+								<!-- <li><a href="<?php echo @ADMIN;?>
+Archive/trash.html"><i class="fa fa-trash-o"></i><span class="text">  回收站</span></a></li> -->
 								<?php if ($_smarty_tpl->tpl_vars['level']->value=='10'){?>
-								<li>
+							<!-- 	<li>
 									<a href="#"><i class="fa fa-folder-open-o"></i><span class="text"> 日志</span><span class="fa fa-angle-down pull-right"></a>
 									<ul class="nav sub">
 										<li><a href="<?php echo @ADMIN;?>
@@ -217,7 +217,7 @@ Log/arc_log.html"><i class="fa fa-sticky-note-o"></i><span class="text"> 文章<
 										<li><a href="<?php echo @ADMIN;?>
 Log/login_log.html"><i class="fa fa-sign-in"></i><span class="text"> 用户登录</span></a></li>
 									</ul>
-								</li>
+								</li> -->
 								<?php }?>
 							</ul>
 						</div>					

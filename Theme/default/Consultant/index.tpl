@@ -115,7 +115,7 @@
 			  	return this.optional(element) || (length == 11 && mobile.test(value)); 
 			}, "手机号码格式错误"); 
 			$('#form').validate({
-				debug:true,
+				// debug:true,
 				rules:{
 					name:'required',
 					phone:{

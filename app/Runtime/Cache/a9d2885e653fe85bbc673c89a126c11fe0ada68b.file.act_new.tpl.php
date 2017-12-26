@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-25 12:05:20
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-26 15:04:27
          compiled from "./ThemeAdmin/default/Activity/act_new.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4665023945a38c04c694d65-03255968%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a9d2885e653fe85bbc673c89a126c11fe0ada68b' => 
     array (
       0 => './ThemeAdmin/default/Activity/act_new.tpl',
-      1 => 1514167413,
+      1 => 1514270580,
       2 => 'file',
     ),
   ),
@@ -315,6 +315,7 @@ Activity/uploadImg',
 	    $('#reset').click(function(){
 	    	console.log('删除图片');
 	    	uploader.reset();
+	    	$('#images').val('');
 	    	$('#fileList').html('');
 	    });
 	    // 图片列表自动加载
@@ -416,7 +417,7 @@ Activity/act_new_post',
 						'name':$('#name').val(),
 						'date':$('#date').val(),
 						'time':$('#time').val(),
-						'edate':$('#date').val(),
+						'edate':$('#edate').val(),
 						'etime':$('#etime').val(),
 						'images':$('#images').val(),
 						'addr':$('#addr').val(),
@@ -437,7 +438,7 @@ Activity/act_new_post',
 							window.location.href=location.href;
 						}else{
 							$('.error_report').show();
-							$('.error_report .text-danger').html('图片不能为空');
+							$('.error_report .text-danger').html(msg['data']);
 						}
 					}
 				});

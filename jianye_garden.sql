@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: 2017-12-25 13:09:40
+-- Generation Time: 2017-12-26 15:36:32
 -- 服务器版本： 5.6.35
 -- PHP Version: 7.1.6
 
@@ -247,6 +247,73 @@ INSERT INTO `w_family` (`uid`, `p_uid`, `child_uid`, `relation`, `a_time`) VALUE
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `w_goods`
+--
+
+CREATE TABLE `w_goods` (
+  `uid` bigint(8) UNSIGNED ZEROFILL NOT NULL COMMENT '主键',
+  `goods_name` varchar(100) NOT NULL COMMENT '商品名称',
+  `goods_num` int(11) NOT NULL COMMENT '商品库存',
+  `goods_last` int(11) NOT NULL COMMENT '商品余量',
+  `pay_type` tinyint(4) NOT NULL DEFAULT '1' COMMENT '兑换类型1、积分；2、微信支付',
+  `goods_price` decimal(11,2) NOT NULL COMMENT '商品价格',
+  `goods_img` varchar(500) NOT NULL COMMENT '商品图片',
+  `goods_intro` varchar(200) DEFAULT NULL COMMENT '商品介绍',
+  `goods_detail` text COMMENT '商品详情',
+  `goods_level` tinyint(4) NOT NULL DEFAULT '1' COMMENT '该商品的兑换等级',
+  `goods_stime` varchar(20) DEFAULT NULL COMMENT '开始时间',
+  `goods_etime` varchar(20) DEFAULT NULL COMMENT '结束时间',
+  `goods_convert` tinyint(4) NOT NULL DEFAULT '1' COMMENT '兑换数量限制',
+  `goods_status` tinyint(11) NOT NULL DEFAULT '1' COMMENT '物品状态1、上架；2、下架',
+  `goods_lock` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '乐观锁',
+  `goods_degree` tinyint(4) NOT NULL DEFAULT '1' COMMENT '商品权重',
+  `goods_delete` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否被删除',
+  `atime` varchar(20) NOT NULL COMMENT '添加时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='花园小铺商品';
+
+--
+-- 转存表中的数据 `w_goods`
+--
+
+INSERT INTO `w_goods` (`uid`, `goods_name`, `goods_num`, `goods_last`, `pay_type`, `goods_price`, `goods_img`, `goods_intro`, `goods_detail`, `goods_level`, `goods_stime`, `goods_etime`, `goods_convert`, `goods_status`, `goods_lock`, `goods_degree`, `goods_delete`, `atime`) VALUES
+(00000001, '花园小铺特色糕点', 100, 55, 1, '300.00', '2017-12-26/5a41f4722cbad.jpg;', '花园小铺特色糕点1', '花园小铺特色糕点', 1, '1514274968', '', 5, 1, '2017-12-26 09:48:35', 1, 0, '1514252866'),
+(00000002, '花园小铺特色糕点(特惠版)', 100, 54, 1, '200.00', '2017-12-26/5a41f7e002127.jpg;2017-12-26/5a41f7e28ef8c.jpg;', '花园小铺特色糕点', '&lt;p&gt;花园小铺特色糕点,欢迎业主品尝&lt;/p&gt;', 2, '1514274968', '1546275661', 2, 1, '2017-12-26 09:48:35', 2, 0, '1514252866'),
+(00000003, '花园小铺特色糕点', 100, 54, 1, '500.00', '', '花园小铺特色糕点', '花园小铺特色糕点', 1, '1514274968', '1546275661', 1, 1, '2017-12-26 09:48:35', 1, 0, '1514252866');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `w_goods_order`
+--
+
+CREATE TABLE `w_goods_order` (
+  `uid` bigint(20) NOT NULL,
+  `u_uid` bigint(8) UNSIGNED ZEROFILL NOT NULL COMMENT '用户uid',
+  `order_id` varchar(20) NOT NULL COMMENT '订单编号',
+  `goods_id` bigint(8) UNSIGNED ZEROFILL NOT NULL COMMENT '商品id',
+  `deliver_type` tinyint(4) NOT NULL DEFAULT '1' COMMENT '配送方式1、自取',
+  `order_money` decimal(11,2) NOT NULL COMMENT '订单总金额',
+  `order_num` int(11) NOT NULL COMMENT '订单数量',
+  `pay_time` varchar(20) NOT NULL COMMENT '付款时间',
+  `uname` varchar(50) NOT NULL COMMENT '客户名称',
+  `phone_num` varchar(15) NOT NULL COMMENT '手机号码',
+  `order_status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '订单状态0、未完成；1、已完成',
+  `order_remarks` varchar(255) DEFAULT NULL COMMENT '订单备注',
+  `recieve_time` varchar(20) DEFAULT NULL COMMENT '收货时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='花园小铺订单';
+
+--
+-- 转存表中的数据 `w_goods_order`
+--
+
+INSERT INTO `w_goods_order` (`uid`, `u_uid`, `order_id`, `goods_id`, `deliver_type`, `order_money`, `order_num`, `pay_time`, `uname`, `phone_num`, `order_status`, `order_remarks`, `recieve_time`) VALUES
+(1, 00000001, '20171226140809123', 00000001, 1, '500.00', 1, '1514274968', '张小超', '13693938208', 1, '少放辣椒', '1514278292'),
+(2, 00000001, '20171226140809123', 00000001, 1, '500.00', 1, '1514274968', '张小超', '13693938208', 0, '少放辣椒', '1483203661'),
+(3, 00000001, '20171226140809213', 00000001, 1, '300.00', 1, '1514298355', '张小超', '18639932721', 0, '备注信息就随便写点吧 ，方正不要太甜就好', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `w_grade`
 --
 
@@ -262,7 +329,7 @@ CREATE TABLE `w_grade` (
 --
 
 INSERT INTO `w_grade` (`uid`, `u_uid`, `level`, `score`) VALUES
-(1, 00000001, 370, 701),
+(1, 00000001, 370, 401),
 (2, 00000002, 373, 716);
 
 -- --------------------------------------------------------
@@ -276,6 +343,7 @@ CREATE TABLE `w_growth` (
   `u_uid` bigint(8) UNSIGNED ZEROFILL NOT NULL COMMENT '用户主键',
   `type` tinyint(4) NOT NULL DEFAULT '1' COMMENT '积分为1，等级为2',
   `of` tinyint(4) NOT NULL COMMENT '那种方式获取的积分：1完善个人；2成员添加；3签到；4活动；5订单',
+  `inc_dec` tinyint(4) NOT NULL DEFAULT '1' COMMENT '积分增加或减少1+；2-',
   `number` int(11) NOT NULL COMMENT '增长数值',
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='积分、等级成长表';
@@ -284,27 +352,28 @@ CREATE TABLE `w_growth` (
 -- 转存表中的数据 `w_growth`
 --
 
-INSERT INTO `w_growth` (`uid`, `u_uid`, `type`, `of`, `number`, `time`) VALUES
-(2, 00000001, 2, 1, 5, '2017-12-15 18:40:18'),
-(3, 00000001, 1, 2, 10, '2017-12-15 18:40:18'),
-(32, 00000001, 1, 2, 5, '2017-12-15 18:41:50'),
-(33, 00000001, 1, 1, 10, '2017-12-15 18:41:50'),
-(34, 00000001, 2, 1, 5, '2017-12-15 18:44:21'),
-(44, 00000001, 2, 1, 5, '2017-12-15 19:56:46'),
-(45, 00000001, 1, 2, 10, '2017-12-15 19:56:46'),
-(46, 00000001, 2, 1, 10, '2017-12-15 21:15:08'),
-(47, 00000001, 1, 1, 20, '2017-12-15 21:15:08'),
-(48, 00000001, 1, 2, 10, '2017-12-15 21:25:53'),
-(49, 00000001, 1, 2, 20, '2017-12-15 21:25:53'),
-(52, 00000001, 2, 1, 55, '2017-12-15 22:33:26'),
-(60, 00000001, 2, 1, 50, '2017-12-15 22:36:46'),
-(61, 00000001, 1, 1, 100, '2017-12-15 22:36:46'),
-(64, 00000001, 2, 1, 5, '2017-12-15 22:44:42'),
-(65, 00000001, 1, 1, 10, '2017-12-15 22:44:42'),
-(66, 00000001, 2, 1, 5, '2017-12-15 22:48:14'),
-(67, 00000001, 1, 1, 10, '2017-12-15 22:48:14'),
-(76, 00000001, 2, 3, 2, '2017-12-16 16:07:00'),
-(77, 00000001, 1, 3, 2, '2017-12-16 16:07:00');
+INSERT INTO `w_growth` (`uid`, `u_uid`, `type`, `of`, `inc_dec`, `number`, `time`) VALUES
+(2, 00000001, 2, 1, 1, 5, '2017-12-15 18:40:18'),
+(3, 00000001, 1, 2, 1, 10, '2017-12-15 18:40:18'),
+(32, 00000001, 1, 2, 1, 5, '2017-12-15 18:41:50'),
+(33, 00000001, 1, 1, 1, 10, '2017-12-15 18:41:50'),
+(34, 00000001, 2, 1, 1, 5, '2017-12-15 18:44:21'),
+(44, 00000001, 2, 1, 1, 5, '2017-12-15 19:56:46'),
+(45, 00000001, 1, 2, 1, 10, '2017-12-15 19:56:46'),
+(46, 00000001, 2, 1, 1, 10, '2017-12-15 21:15:08'),
+(47, 00000001, 1, 1, 1, 20, '2017-12-15 21:15:08'),
+(48, 00000001, 1, 2, 1, 10, '2017-12-15 21:25:53'),
+(49, 00000001, 1, 2, 1, 20, '2017-12-15 21:25:53'),
+(52, 00000001, 2, 1, 1, 55, '2017-12-15 22:33:26'),
+(60, 00000001, 2, 1, 1, 50, '2017-12-15 22:36:46'),
+(61, 00000001, 1, 1, 1, 100, '2017-12-15 22:36:46'),
+(64, 00000001, 2, 1, 1, 5, '2017-12-15 22:44:42'),
+(65, 00000001, 1, 1, 1, 10, '2017-12-15 22:44:42'),
+(66, 00000001, 2, 1, 1, 5, '2017-12-15 22:48:14'),
+(67, 00000001, 1, 1, 1, 10, '2017-12-15 22:48:14'),
+(76, 00000001, 2, 3, 1, 2, '2017-12-16 16:07:00'),
+(77, 00000001, 1, 3, 1, 2, '2017-12-16 16:07:00'),
+(78, 00000001, 1, 5, 2, 300, '2017-12-26 22:25:55');
 
 -- --------------------------------------------------------
 
@@ -568,6 +637,48 @@ INSERT INTO `w_relation` (`uid`, `relation`, `mark`, `time`) VALUES
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `w_service`
+--
+
+CREATE TABLE `w_service` (
+  `uid` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL COMMENT '服务名称',
+  `img` varchar(200) NOT NULL COMMENT '服务图片',
+  `intro` varchar(200) NOT NULL COMMENT '服务介绍',
+  `detail` text NOT NULL COMMENT '服务详细说明',
+  `level` tinyint(4) NOT NULL DEFAULT '1' COMMENT '服务等级默认一级成员可用',
+  `area` varchar(100) NOT NULL COMMENT '区域',
+  `stime` varchar(20) NOT NULL COMMENT '开始时间',
+  `etime` varchar(20) NOT NULL COMMENT '结束时间',
+  `pay_way` tinyint(4) NOT NULL DEFAULT '0' COMMENT '支付方式',
+  `cost` decimal(11,2) NOT NULL COMMENT '花费',
+  `slock` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '乐观锁',
+  `score` int(11) NOT NULL COMMENT '获得积分',
+  `atime` varchar(20) NOT NULL COMMENT '添加时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='服务预约';
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `w_service_order`
+--
+
+CREATE TABLE `w_service_order` (
+  `uid` int(11) NOT NULL,
+  `u_uid` bigint(8) UNSIGNED ZEROFILL NOT NULL COMMENT '用户编号',
+  `service_uid` int(11) NOT NULL COMMENT '服务编号',
+  `uname` varchar(50) NOT NULL COMMENT '用户姓名',
+  `phone_num` varchar(15) NOT NULL COMMENT '电话号码',
+  `order_date` varchar(20) NOT NULL COMMENT '下单预订日期',
+  `order_ampm` tinyint(4) NOT NULL DEFAULT '1' COMMENT '上午或下午',
+  `address` varchar(200) NOT NULL COMMENT '地址',
+  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '状态',
+  `atime` varchar(20) NOT NULL COMMENT '添加时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `w_slnumber`
 --
 
@@ -735,6 +846,18 @@ ALTER TABLE `w_family`
   ADD PRIMARY KEY (`uid`);
 
 --
+-- Indexes for table `w_goods`
+--
+ALTER TABLE `w_goods`
+  ADD PRIMARY KEY (`uid`);
+
+--
+-- Indexes for table `w_goods_order`
+--
+ALTER TABLE `w_goods_order`
+  ADD PRIMARY KEY (`uid`);
+
+--
 -- Indexes for table `w_grade`
 --
 ALTER TABLE `w_grade`
@@ -780,6 +903,18 @@ ALTER TABLE `w_post`
 -- Indexes for table `w_relation`
 --
 ALTER TABLE `w_relation`
+  ADD PRIMARY KEY (`uid`);
+
+--
+-- Indexes for table `w_service`
+--
+ALTER TABLE `w_service`
+  ADD PRIMARY KEY (`uid`);
+
+--
+-- Indexes for table `w_service_order`
+--
+ALTER TABLE `w_service_order`
   ADD PRIMARY KEY (`uid`);
 
 --
@@ -857,6 +992,16 @@ ALTER TABLE `w_cons_order`
 ALTER TABLE `w_family`
   MODIFY `uid` bigint(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
+-- 使用表AUTO_INCREMENT `w_goods`
+--
+ALTER TABLE `w_goods`
+  MODIFY `uid` bigint(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT COMMENT '主键', AUTO_INCREMENT=4;
+--
+-- 使用表AUTO_INCREMENT `w_goods_order`
+--
+ALTER TABLE `w_goods_order`
+  MODIFY `uid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
 -- 使用表AUTO_INCREMENT `w_grade`
 --
 ALTER TABLE `w_grade`
@@ -865,7 +1010,7 @@ ALTER TABLE `w_grade`
 -- 使用表AUTO_INCREMENT `w_growth`
 --
 ALTER TABLE `w_growth`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 --
 -- 使用表AUTO_INCREMENT `w_logs`
 --
@@ -896,6 +1041,16 @@ ALTER TABLE `w_post`
 --
 ALTER TABLE `w_relation`
   MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- 使用表AUTO_INCREMENT `w_service`
+--
+ALTER TABLE `w_service`
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- 使用表AUTO_INCREMENT `w_service_order`
+--
+ALTER TABLE `w_service_order`
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- 使用表AUTO_INCREMENT `w_slnumber`
 --

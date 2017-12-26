@@ -30,69 +30,33 @@
 			<div class='menu-item'><label><img src="{$smarty.const.THEME}Shop/img/gift.png"></label><span>兑换记录</span></div>
 		</div>
 		<div class='content-list'>
-			<a href="{$smarty.const.HOME}Shop/detail.html">
-				<div class='list-item'>
-					<div class='img'>
-						<img src="{$smarty.const.THEME}Shop/img/WX20171218-171437.png">
-					</div>
-					<div class='info'>
-						<div class='title'>花园无语系列之甜心花茶</div>
-						<div class='time'>
-							<p>兑换时间</p>
-							<p>2017年10月11日-2017年10月21日</p>
+			{foreach $list as $item}
+				<a href="{$smarty.const.HOME}Shop/detail.html?uid={$item['uid']}">
+					<div class='list-item'>
+						<div class='img'>
+							<img src="{$smarty.const.UPLOAD}goods/{$item['thumbnail']}">
 						</div>
-						<div class='coin'>
-							<span class='c1'>500积分</span>
-							<span class='c2'>库存：20</span>
+						<div class='info'>
+							<div class='title'>{$item['goods_name']}</div>
+							<div class='time'>
+								<p>兑换时间</p>
+								{if $item['goods_etime'] eq null}
+								<p>无限制</p>
+								{else}
+								<p>{$item['goods_stime']|date_format:'%Y年%m月%d日'}-{$item['goods_etime']|date_format:'%Y年%m月%d日'}</p>
+								{/if}
+							</div>
+							<div class='coin'>
+								<span class='c1'>{$item['goods_price']|string_format:'%d'}积分</span>
+								<span class='c2'>库存：{$item['goods_last']}</span>
+							</div>
 						</div>
-					</div>
-					<div class='btn'>
-						<span>马上兑换</span>
-					</div>
-				</div>
-			</a>
-			<a href="{$smarty.const.HOME}Shop/detail.html">
-				<div class='list-item'>
-					<div class='img'>
-						<img src="{$smarty.const.THEME}Shop/img/WX20171218-171437.png">
-					</div>
-					<div class='info'>
-						<div class='title'>花园无语系列之甜心花茶</div>
-						<div class='time'>
-							<p>兑换时间</p>
-							<p>2017年10月11日-2017年10月21日</p>
-						</div>
-						<div class='coin'>
-							<span class='c1'>500积分</span>
-							<span class='c2'>库存：20</span>
+						<div class='btn'>
+							<span>马上兑换</span>
 						</div>
 					</div>
-					<div class='btn'>
-						<span>马上兑换</span>
-					</div>
-				</div>
-			</a>
-			<a href="{$smarty.const.HOME}Shop/detail.html">
-				<div class='list-item'>
-					<div class='img'>
-						<img src="{$smarty.const.THEME}Shop/img/WX20171218-171437.png">
-					</div>
-					<div class='info'>
-						<div class='title'>花园无语系列之甜心花茶</div>
-						<div class='time'>
-							<p>兑换时间</p>
-							<p>2017年10月11日-2017年10月21日</p>
-						</div>
-						<div class='coin'>
-							<span class='c1'>500积分</span>
-							<span class='c2'>库存：20</span>
-						</div>
-					</div>
-					<div class='btn'>
-						<span>马上兑换</span>
-					</div>
-				</div>
-			</a>
+				</a>
+			{/foreach}
 		</div>
 	</div>
 	<script src="{$smarty.const.ORG}jquery/jquery-2.1.0.min.js"></script>
@@ -100,6 +64,7 @@
 	<script>        
 		var mySwiper = new Swiper ('.swiper-container', {
 			loop: true,
+			autoplay:3000,
 			// 如果需要分页器
 			pagination: '.swiper-pagination',
 		})        

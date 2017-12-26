@@ -145,8 +145,8 @@
 							alert('提交成功');
 							window.location.reload();
 						}else{
-							$('.message_box .content').html(msg['data']);
-							$('.cover').show();
+							$('.error_report').show();
+							$('.error_report .text-danger').html(msg['data']);
 						}
 					}
 				});

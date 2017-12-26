@@ -260,6 +260,7 @@
 	    $('#reset').click(function(){
 	    	console.log('删除图片');
 	    	uploader.reset();
+	    	$('#images').val('');
 	    	$('#fileList').html('');
 	    });
 	    // 图片列表自动加载
@@ -357,7 +358,7 @@
 						'name':$('#name').val(),
 						'date':$('#date').val(),
 						'time':$('#time').val(),
-						'edate':$('#date').val(),
+						'edate':$('#edate').val(),
 						'etime':$('#etime').val(),
 						'images':$('#images').val(),
 						'addr':$('#addr').val(),
@@ -378,7 +379,7 @@
 							window.location.href=location.href;
 						}else{
 							$('.error_report').show();
-							$('.error_report .text-danger').html('图片不能为空');
+							$('.error_report .text-danger').html(msg['data']);
 						}
 					}
 				});

@@ -38,7 +38,7 @@
 				</ul>
 				<!-- 顶部右侧菜单 -->
 		        <ul class="nav navbar-nav navbar-right">
-					<li class="dropdown visible-md visible-lg">
+					<!-- <li class="dropdown visible-md visible-lg">
 						 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gears"></i></a>					
 						<ul class="dropdown-menu update-menu" role="menu">
 							<li><a href="{$smarty.const.ADMIN}Archive/post_new.html"><i class="fa fa-plus-square"></i> 写文章 </a>
@@ -46,7 +46,7 @@
 	                        <li><a href="{$smarty.const.ADMIN}Pages/page_new.html"><i class="fa fa-plus-square"></i> 新建页面 </a>
 	                        </li>
 						</ul>
-					</li>
+					</li> -->
 					<li class="dropdown visible-md visible-lg">
 		        		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class='fa fa-user' style='margin: 22px 0 0 0;width: 32px;text-align: center;color: #c8c8c8;font-size: 18px;'></b>{$username}</a>
 		        		<ul class="dropdown-menu">
@@ -113,7 +113,7 @@
 									</ul>
 								</li>
 								<li><a href="{$smarty.const.ADMIN}Award/index.html"><i class="fa fa-superpowers"></i><span class="text"> 成长值与活跃值设置</span></a></li>
-								<li>
+								<!-- <li>
 									<a href="#"><i class="fa fa-list-alt"></i><span class="text"> 内容管理</span> <span class="fa fa-angle-down pull-right"></span></a>
 									<ul class="nav sub">
 										<li><a href="{$smarty.const.ADMIN}Archive/category.html"><i class="fa fa-bars"></i><span class="text"> 分类目录</span></a></li>
@@ -122,16 +122,16 @@
 										<li><a href="{$smarty.const.ADMIN}Archive/tags.html"><i class="fa fa-tags"></i><span class="text"> 标签</span></a></li>
 										<li><a href="{$smarty.const.ADMIN}Option/archive_set.html"><i class="fa fa-gear"></i><span class="text"> 文章设置</span></a></li>
 									</ul>
-								</li>
+								</li> -->
 							
 								<!-- 系统设置与用户管理只有管理员才可以操作 -->
 								{if $level eq '10'}
-								<li>
+								<!-- <li>
 									<a href="#"><i class="fa fa-cogs"></i><span class="text"> 系统设置</span> <span class="fa fa-angle-down pull-right"></span></a>
 									<ul class="nav sub">
 										<li><a href="{$smarty.const.ADMIN}Option/site_basic.html"><i class="fa fa-asterisk"></i><span class="text"> 基本参数</span></a></li>	
 									</ul>
-								</li>
+								</li> -->
 								<li>
 									<a href="#"><i class="fa fa-user"></i><span class="text"> 用户</span> <span class="fa fa-angle-down pull-right"></span></a>
 									<ul class="nav sub">
@@ -141,15 +141,15 @@
 									</ul>
 								</li>
 								{/if}
-								<li><a href="{$smarty.const.ADMIN}Archive/trash.html"><i class="fa fa-trash-o"></i><span class="text">  回收站</span></a></li>
+								<!-- <li><a href="{$smarty.const.ADMIN}Archive/trash.html"><i class="fa fa-trash-o"></i><span class="text">  回收站</span></a></li> -->
 								{if $level eq '10'}
-								<li>
+							<!-- 	<li>
 									<a href="#"><i class="fa fa-folder-open-o"></i><span class="text"> 日志</span><span class="fa fa-angle-down pull-right"></a>
 									<ul class="nav sub">
 										<li><a href="{$smarty.const.ADMIN}Log/arc_log.html"><i class="fa fa-sticky-note-o"></i><span class="text"> 文章</span></a></li>
 										<li><a href="{$smarty.const.ADMIN}Log/login_log.html"><i class="fa fa-sign-in"></i><span class="text"> 用户登录</span></a></li>
 									</ul>
-								</li>
+								</li> -->
 								{/if}
 							</ul>
 						</div>					

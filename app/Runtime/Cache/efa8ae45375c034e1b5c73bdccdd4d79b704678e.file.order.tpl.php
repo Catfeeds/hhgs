@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-19 10:55:00
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-26 22:34:22
          compiled from "./Theme/default/Shop/order.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8240660265a379653792845-28637342%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'efa8ae45375c034e1b5c73bdccdd4d79b704678e' => 
     array (
       0 => './Theme/default/Shop/order.tpl',
-      1 => 1513652097,
+      1 => 1514298393,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.6',
   'unifunc' => 'content_5a37965379470',
+  'variables' => 
+  array (
+    'goods_info' => 0,
+    'mem_info' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a37965379470')) {function content_5a37965379470($_smarty_tpl) {?><!DOCTYPE html>
@@ -33,13 +38,17 @@ Shop/css/order.css">
 	<div class='container'>
 		<div class='info'>
 			<div class='img'>
-				<img src="<?php echo @THEME;?>
-Shop/img/WX20171218-171437.png">
+				<img src="<?php echo @UPLOAD;?>
+goods/<?php echo $_smarty_tpl->tpl_vars['goods_info']->value['thumbnail'];?>
+">
 			</div>
 			<div class='text'>
-				<p class='t'>现代简约休闲实木沙发</p>
-				<p class='s'>新品体验,正在进行中</p>
-				<p class='c'><span>500积分</span></p>
+				<p class='t'><?php echo $_smarty_tpl->tpl_vars['goods_info']->value['goods_name'];?>
+</p>
+				<p class='s'><?php echo $_smarty_tpl->tpl_vars['goods_info']->value['goods_intro'];?>
+</p>
+				<p class='c'><span><?php echo $_smarty_tpl->tpl_vars['goods_info']->value['goods_price'];?>
+积分</span></p>
 			</div>
 		</div>
 		<div class='content'>
@@ -48,7 +57,7 @@ Shop/img/WX20171218-171437.png">
 					<div class='item'>
 						<p>兑换数量</p>
 						<p>
-							<input id='number' name='number' type='number' value='1' disabled>
+							<input id='number' name='number' type='number' value='1'>
 						</p>
 					</div>
 				</div>
@@ -56,7 +65,7 @@ Shop/img/WX20171218-171437.png">
 					<div class='item'>
 						<p>配送方式</p>
 						<p style='text-align: right;'>
-							物业中心自取
+							<?php if ($_smarty_tpl->tpl_vars['goods_info']->value['pay_type']==1){?>物业中心自取<?php }else{ ?>其他<?php }?>
 						</p>
 					</div>
 				</div>
@@ -64,17 +73,19 @@ Shop/img/WX20171218-171437.png">
 					<div class='item'>
 						<p>姓名</p>
 						<p>
-							<input id='name' name="name" type="text" >
+							<input id='name' name="name" type="text" value='<?php echo $_smarty_tpl->tpl_vars['mem_info']->value["uname"];?>
+'>
 						</p>
 					</div>
 					<div class='item'>
 						<p>联系方式</p>
 						<p>
-							<input id='phone' name="phone" type="tel" >
+							<input id='phone' name="phone" type="tel" value='<?php echo $_smarty_tpl->tpl_vars['mem_info']->value["phone_num"];?>
+'>
 						</p>
 					</div>
 					<div class='item'>
-						<p><textarea rows='4' style='resize:none; width: 100%;font-size: 12px;border:none;' placeholder='点击填写备注信息'></textarea></p>
+						<p><textarea id='remarks' name='remarks' rows='4' style='resize:none; width: 100%;font-size: 12px;border:none;' placeholder='点击填写备注信息'></textarea></p>
 					</div>
 				</div>
 				<div class='btn_wrap'>
@@ -84,5 +95,68 @@ Shop/img/WX20171218-171437.png">
 			</form>
 		</div>		
 	</div>
+	<script src="<?php echo @ORG;?>
+jquery/jquery-2.1.0.min.js"></script>
+	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// 手机号码验证
+			jQuery.validator.addMethod("isphone", function(value, element) {
+			  	var length = value.length; 
+			  	
+			  	var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/; 
+			  	
+			  	return this.optional(element) || (length == 11 && mobile.test(value)); 
+			}, "手机号码格式错误"); 
+			$('#form').validate({
+				// debug:true,
+				rules:{
+					name:'required',
+					phone:{
+						required:true,
+						isphone:true,
+					},
+					number:{
+						required:true,
+						digits:true,
+					}
+				},
+				messages:{
+					name:'姓名不能为空',
+					phone:{
+						required:'手机号码不能为空',
+					},
+					number:{
+						required:'兑换数量不能为空',
+						digits:'兑换数量必须为整数',
+					}
+
+				},
+				errorPlacement:function(error,element){
+					console.log(error);
+				},
+				submitHandler:function(){
+					$.ajax({
+						type:'POST',
+						dataType:'json',
+						data:{
+							'number':$('#number').val(),
+							'name':$('#name').val(),
+							'phone_num':$('#phone').val(),
+							'remarks':$('#remarks').val(),
+						},
+						success:function(msg){
+							if(msg['code']==200){
+								alert('兑换成功');
+								// window.location.href=location.href;
+							}else{
+								console.log(msg['data']);
+							}
+						}
+					});
+				}
+			});
+		});
+	</script>
 </body>
 </html><?php }} ?>

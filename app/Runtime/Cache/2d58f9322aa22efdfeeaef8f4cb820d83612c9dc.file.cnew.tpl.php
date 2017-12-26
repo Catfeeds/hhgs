@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-24 16:13:24
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-26 15:05:58
          compiled from "./ThemeAdmin/default/Consultant/cnew.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2524040955a3f44c75293d8-98395463%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2d58f9322aa22efdfeeaef8f4cb820d83612c9dc' => 
     array (
       0 => './ThemeAdmin/default/Consultant/cnew.tpl',
-      1 => 1514103184,
+      1 => 1514271956,
       2 => 'file',
     ),
   ),
@@ -82,7 +82,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<div class='col-xs-12 col-md-11'>
 								<div class="radio">
 									<label>
-										<input type="radio" name="sex" class="sex" value="1" <?php if ($_smarty_tpl->tpl_vars['info']->value['sex']==1){?>checked<?php }?>>
+										<input type="radio" name="sex" class="sex" value="1" <?php if ($_smarty_tpl->tpl_vars['info']->value['sex']==1||$_smarty_tpl->tpl_vars['info']->value['sex']==null){?>checked<?php }?>>
 										男
 									</label>
 									&nbsp;&nbsp;&nbsp;
@@ -195,7 +195,7 @@ webuploader/webuploader.min.js'></script>
         ratio = window.devicePixelRatio || 1,
 
         // 缩略图大小
-        thumbnailWidth = 200 * ratio,
+        thumbnailWidth = 100 * ratio,
         thumbnailHeight = 100 * ratio,
 
 	    // 初始化Web Uploader
@@ -294,6 +294,7 @@ Consultant/uploadImg',
 	    $('#reset').click(function(){
 	    	console.log('删除图片');
 	    	uploader.reset();
+	    	$('#images').val('');
 	    	$('#fileList').html('');
 	    });
 	    // 图片列表自动加载
@@ -393,7 +394,8 @@ headimg/'+imagesList[i]+'">' +'</div>');
 							alert('提交成功');
 							window.location.reload();
 						}else
-							alert('提交信息失败，请稍后再试');
+							$('.error_report').show();
+							$('.error_report .text-danger').html(msg['data']);
 					}
 				});
 			},

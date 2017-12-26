@@ -166,8 +166,7 @@
 				}else
 					echo message(302,'notice','您已经报名参加过此活动，请不要重复报名');
 			}else
-				echo message(301,'notice','活动已结束');
-			
+				echo message(301,'notice','活动已结束');	
 		}
 		// 生成二维码
 		private function create_qrcode($url){
