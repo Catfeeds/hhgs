@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: 2017-12-26 15:36:32
+-- Generation Time: 2017-12-27 11:54:40
 -- 服务器版本： 5.6.35
 -- PHP Version: 7.1.6
 
@@ -216,8 +216,8 @@ CREATE TABLE `w_cons_order` (
 --
 
 INSERT INTO `w_cons_order` (`uid`, `cons_uid`, `u_uid`, `name`, `phone_num`, `type`, `date`, `time`, `code`, `is_arrival`, `atime`) VALUES
-(5, 00000001, 00000001, '张小超', '18639932721', 2, '2018-01-02', '15:32', '258828', 1, '1514192441'),
-(6, 00000003, 00000001, '张小超', '18639932721', 1, '2018-01-21', '12:12', '116151', 0, '1514192660');
+(5, 00000001, 00000001, '张小超', '18639932721', 2, '2018-01-02', '15:20', '258828', 1, '1514192441'),
+(6, 00000003, 00000001, '张小超', '18639932722', 1, '2018-01-21', '14:00', '116151', 1, '1514192660');
 
 -- --------------------------------------------------------
 
@@ -329,7 +329,7 @@ CREATE TABLE `w_grade` (
 --
 
 INSERT INTO `w_grade` (`uid`, `u_uid`, `level`, `score`) VALUES
-(1, 00000001, 370, 401),
+(1, 00000001, 370, 201),
 (2, 00000002, 373, 716);
 
 -- --------------------------------------------------------
@@ -342,7 +342,7 @@ CREATE TABLE `w_growth` (
   `uid` int(11) NOT NULL,
   `u_uid` bigint(8) UNSIGNED ZEROFILL NOT NULL COMMENT '用户主键',
   `type` tinyint(4) NOT NULL DEFAULT '1' COMMENT '积分为1，等级为2',
-  `of` tinyint(4) NOT NULL COMMENT '那种方式获取的积分：1完善个人；2成员添加；3签到；4活动；5订单',
+  `of` tinyint(4) NOT NULL COMMENT '那种方式获取的积分：1完善个人；2成员添加；3签到；4活动；5订单,6服务',
   `inc_dec` tinyint(4) NOT NULL DEFAULT '1' COMMENT '积分增加或减少1+；2-',
   `number` int(11) NOT NULL COMMENT '增长数值',
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -373,7 +373,9 @@ INSERT INTO `w_growth` (`uid`, `u_uid`, `type`, `of`, `inc_dec`, `number`, `time
 (67, 00000001, 1, 1, 1, 10, '2017-12-15 22:48:14'),
 (76, 00000001, 2, 3, 1, 2, '2017-12-16 16:07:00'),
 (77, 00000001, 1, 3, 1, 2, '2017-12-16 16:07:00'),
-(78, 00000001, 1, 5, 2, 300, '2017-12-26 22:25:55');
+(78, 00000001, 1, 5, 2, 300, '2017-12-26 22:25:55'),
+(79, 00000001, 1, 6, 2, 100, '2017-12-27 18:46:18'),
+(80, 00000001, 1, 6, 2, 100, '2017-12-27 18:50:00');
 
 -- --------------------------------------------------------
 
@@ -480,7 +482,10 @@ INSERT INTO `w_logs` (`ID`, `user_id`, `login_time`, `login_ip`, `login_referer`
 (84, 1, '1512127629', '127.0.0.1', 'http://127.0.0.1/jianye_garden/admin/index/login.html'),
 (85, 1, '1513666011', '127.0.0.1', 'http://127.0.0.1/jianye_garden/admin/index/login.html'),
 (86, 1, '1514018780', '127.0.0.1', 'http://127.0.0.1/jianye_garden/admin/index/login.html'),
-(87, 1, '1514198695', '127.0.0.1', 'http://127.0.0.1/jianye_garden/admin/index/login.html');
+(87, 1, '1514198695', '127.0.0.1', 'http://127.0.0.1/jianye_garden/admin/index/login.html'),
+(88, 1, '1514340195', '127.0.0.1', 'http://127.0.0.1/jianye_garden/admin/index/login.html'),
+(89, 1, '1514355491', '127.0.0.1', 'http://127.0.0.1/jianye_garden/admin/index/login.html'),
+(90, 1, '1514369343', '127.0.0.1', 'http://127.0.0.1/jianye_garden/admin/index/login.html');
 
 -- --------------------------------------------------------
 
@@ -652,10 +657,21 @@ CREATE TABLE `w_service` (
   `etime` varchar(20) NOT NULL COMMENT '结束时间',
   `pay_way` tinyint(4) NOT NULL DEFAULT '0' COMMENT '支付方式',
   `cost` decimal(11,2) NOT NULL COMMENT '花费',
+  `number` tinyint(4) NOT NULL DEFAULT '1' COMMENT '名额',
+  `last_number` tinyint(4) NOT NULL COMMENT '剩余名额',
+  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '服务状态',
   `slock` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '乐观锁',
-  `score` int(11) NOT NULL COMMENT '获得积分',
+  `score` int(11) NOT NULL DEFAULT '0' COMMENT '获得积分',
   `atime` varchar(20) NOT NULL COMMENT '添加时间'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='服务预约';
+
+--
+-- 转存表中的数据 `w_service`
+--
+
+INSERT INTO `w_service` (`uid`, `name`, `img`, `intro`, `detail`, `level`, `area`, `stime`, `etime`, `pay_way`, `cost`, `number`, `last_number`, `status`, `slock`, `score`, `atime`) VALUES
+(1, '冰箱清洗', '2017-12-27/5a435b50f0bba.png', '冰箱内部清洗', '&lt;p&gt;冰箱内部清洗，冰箱内部清洗，冰箱内部清洗冰箱内部清洗冰箱内部清洗&lt;/p&gt;', 1, '惠济区', '2017-12-12', '2018-01-12', 1, '100.00', 3, 0, 1, '2017-12-27 18:50:00', 15, ''),
+(2, '厨房清洗', '2017-12-27/5a435bc6c3ba8.png', '厨房清洗', '&lt;p&gt;厨房清洗厨房清洗厨房清洗厨房清洗厨房清洗厨房清洗&lt;/p&gt;', 1, '惠济区', '2017-12-12', '2018-01-12', 1, '100.00', 1, 1, 1, '2017-12-27 11:34:57', 0, '');
 
 -- --------------------------------------------------------
 
@@ -675,6 +691,16 @@ CREATE TABLE `w_service_order` (
   `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '状态',
   `atime` varchar(20) NOT NULL COMMENT '添加时间'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `w_service_order`
+--
+
+INSERT INTO `w_service_order` (`uid`, `u_uid`, `service_uid`, `uname`, `phone_num`, `order_date`, `order_ampm`, `address`, `status`, `atime`) VALUES
+(1, 00000001, 1, '怂', '13693938208', '2017-12-27', 1, '国基路国家知识产权产业设计园区', 1, '1514361838'),
+(2, 00000001, 1, '不怂', '13693938208', '2017-12-27', 2, '国基路国家知识产权产业设计园区', 0, '1514361838'),
+(3, 00000001, 1, '张小超', '18639932721', '2017-12-23', 1, '瀚海晴洲', 0, '1514371578'),
+(4, 00000001, 1, '张小超', '18639932721', '2018-01-01', 2, '国际篱笆', 0, '1514371800');
 
 -- --------------------------------------------------------
 
@@ -1010,12 +1036,12 @@ ALTER TABLE `w_grade`
 -- 使用表AUTO_INCREMENT `w_growth`
 --
 ALTER TABLE `w_growth`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 --
 -- 使用表AUTO_INCREMENT `w_logs`
 --
 ALTER TABLE `w_logs`
-  MODIFY `ID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `ID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 --
 -- 使用表AUTO_INCREMENT `w_members`
 --
@@ -1045,12 +1071,12 @@ ALTER TABLE `w_relation`
 -- 使用表AUTO_INCREMENT `w_service`
 --
 ALTER TABLE `w_service`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- 使用表AUTO_INCREMENT `w_service_order`
 --
 ALTER TABLE `w_service_order`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- 使用表AUTO_INCREMENT `w_slnumber`
 --
