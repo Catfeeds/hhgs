@@ -87,7 +87,7 @@
 									<a href="#"><i class="fa fa-server"></i><span class="text"> 服务</span> <span class="fa fa-angle-down pull-right"></span></a>
 									<ul class="nav sub">
 										<li><a href="{$smarty.const.ADMIN}Service/list.html"><i class="fa fa-puzzle-piece"></i><span class="text"> 服务管理</span></a></li>
-										<li><a href="{$smarty.const.ADMIN}Service/order.html"><i class="fa fa-paw"></i><span class="text"> 预约管理</span></a></li>
+										<li><a href="{$smarty.const.ADMIN}Service/service_order.html"><i class="fa fa-paw"></i><span class="text"> 服务预约管理</span></a></li>
 									</ul>
 								</li>
 								<li>
@@ -103,6 +103,7 @@
 									<ul class="nav sub">
 										<li><a href="{$smarty.const.ADMIN}Consultant/index.html"><i class="fa fa-list-alt"></i><span class="text"> 置业顾问列表</span></a></li>
 										<li><a href="{$smarty.const.ADMIN}Consultant/cnew.html"><i class="fa fa-plus-square"></i><span class="text"> 置业顾问添加</span></a></li>
+										<li><a href="{$smarty.const.ADMIN}Consultant/cons_order.html"><i class="fa fa-bell"></i><span class="text"> 预约管理</span></a></li>
 									</ul>
 								</li>
 								<li>

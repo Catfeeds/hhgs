@@ -10,16 +10,13 @@
 <body>
 	<div class='container'>
 		<div class='list'>
-			<a href="{$smarty.const.HOME}Service/order.html?">
-				<div class='item'>
-					<img src="{$smarty.const.THEME}Service/img/WX20171218-143816.png">
-				</div>
-			</a>
-			<a href="{$smarty.const.HOME}Service/order.html?">
-				<div class='item'>
-					<img src="{$smarty.const.THEME}Service/img/WX20171218-143825.png">
-				</div>
-			</a>
+			{foreach $list as $item}
+				<a href="{$smarty.const.HOME}Service/order.html?uid={$item['uid']}">
+					<div class='item'>
+						<img src="{$smarty.const.UPLOAD}service/{$item['img']}">
+					</div>
+				</a>
+			{/foreach}
 		</div>
 	</div>
 </body>

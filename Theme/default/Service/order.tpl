@@ -10,21 +10,21 @@
 <body>
 	<div class='container'>
 		<div class='header'>
-			<img src="{$smarty.const.THEME}Service/img/WX20171218-150804.png">
+			<img src="{$smarty.const.UPLOAD}service/{$sinfo['img']}">
 		</div>
 		<div class='content'>
 			<div class='title'>
-				<p class='pt'>清风徐来 给您健康的额家</p>
-				<p class='pn'>建业·花园里空调清洗服务-还您清新空气</p>
+				<p class='pt'>{$sinfo['name']}</p>
+				<p class='pn'>{$sinfo['intro']}</p>
 			</div>
-			<div class='number'>本周可预约名额:<span>2</span>名</div>
+			<div class='number'>本周可预约名额:<span>{$sinfo['number']}</span>名</div>
 			<div class='area'>
 				<span>服务区域</span>
-				<p>惠济区花园里公社</p>
+				<p>{$sinfo['area']}</p>
 			</div>
 			<div class='time'>
 				<span>上门服务时间</span>
-				<p>2017年12月24号</p>
+				<p>{$sinfo['stime']|date_format:'%Y年%m月%d日'}至{$sinfo['etime']|date_format:'%Y年%m月%d日'}</p>
 			</div>
 			<div class='form'>
 				<form id='form' class='form' action="" method="post" enctype="multipart/form-data">
@@ -33,11 +33,11 @@
 					</p>
 					<p class='line'>
 						<label>姓名</label>
-						<input id='name' name='name' type='text' value='{$info["name"]}'>
+						<input id='name' name='name' type='text' value='{$uinfo["uname"]}'>
 					</p>
 					<p class='line'>
 						<label>手机号码</label>
-						<input id='phone' name='phone' type='tel' value='{$info["phone_num"]}'>
+						<input id='phone' name='phone' type='tel' value='{$uinfo["phone_num"]}'>
 					</p>
 					<p class='line'>
 						<label>预约日期</label>
@@ -45,11 +45,15 @@
 					</p>
 					<p class='line'>
 						<label>预约时间</label>
-						<select id='relation' name='relation'>
+						<select id='time' name='time'>
 							<option value=0>请选择预约时间</option>
 							<option value='1'>上午</option>
 							<option value='2'>下午</option>
 						</select>
+					</p>
+					<p class='line'>
+						<label>详细地址</label>
+						<input id='address' name='address' type='text' value=''>
 					</p>
 					<p class='btn_wrap'>
 						<button class='btn' type='submit'>提交报名</button>
@@ -58,5 +62,70 @@
 			</div>
 		</div>
 	</div>
+	<script src="{$smarty.const.ORG}jquery/jquery-2.1.0.min.js"></script>
+	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// 手机号码验证
+			jQuery.validator.addMethod("isphone", function(value, element) {
+			  	var length = value.length; 
+			  	{literal}
+			  	var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/; 
+			  	{/literal}
+			  	return this.optional(element) || (length == 11 && mobile.test(value)); 
+			}, "手机号码格式错误"); 
+			$('#form').validate({
+				// debug:true,
+				rules:{
+					name:'required',
+					phone:{
+						required:true,
+						isphone:true,
+					},
+					date:'required',
+					time:{
+						required:true,
+						min:1,
+					},
+					address:'required'
+				},
+				messages:{
+					name:'姓名不能为空',
+					phone:'手机号码格式错误',
+					date:'请选择预约日期',
+					time:{
+						required:'请选择预约时间',
+						min:'请选择预约日期'
+					},
+					address:'地址不能为空',
+				},
+				errorPlacement:function(error,element){
+					// $('#error').html(error);
+					console.log(error);
+				},
+				submitHandler:function(){
+					$.ajax({
+						type:'POST',
+						dataType:'json',
+						data:{
+							'name':$('#name').val(),
+							'date':$('#date').val(),
+							'time':$('#time').val(),
+							'phone_num':$('#phone').val(),
+							'address':$('#address').val(),
+						},
+						success:function(msg){
+							if(msg['code']==200){
+								alert('报名预约成功');
+								window.location.href=location.href;
+							}else{
+								alert(msg['data']);
+							}
+						}
+					});
+				}
+			});
+		});
+	</script>
 </body>
 </html>

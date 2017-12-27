@@ -46,7 +46,7 @@
 				$this->display();
 			}
 		}
-
+		// 获取评论信息
 		function get_comment($cons_uid,$p=1){
 			$comment=M('w_cons_comment');
 			$list=$comment->where(array('cons_uid'=>$cons_uid))->page($p,20)->select();
@@ -56,6 +56,33 @@
 				'list'	=>$list,
 				'page'	=>$page->show()
 			);
+		}
+
+		// 预约管理
+		function cons_order(){
+			$p=I('GET.p');
+			$search=I('GET.words');
+			if($search)
+				$map=array(
+					'w_cons_order.name'			=>array('like','%'.$search.'%'),
+					'w_cons_order.phone_num'	=>array('like','%'.$search.'%'),
+					'_logic'					=>'or'
+				);
+			$list=M('w_cons_order')->field('w_cons_order.*,w_consultant.name as cons_name')->where($map)->join('w_consultant on w_consultant.uid=w_cons_order.cons_uid')->page($p,20)->order('type,is_arrival')->select();
+			$count=M('w_cons_order')->where($map)->count();
+			$page=new \Think\Page($count,20);
+			$this->assign('list',array('list'=>$list,'page'=>$page->show()));
+			$this->display();
+		}
+		// 预约管理签到
+		function order_arrival(){
+			$uid=I('POST.uid');
+			$order=M('w_cons_order');
+			$exec=$order->where(array('uid'=>$uid))->save(array('is_arrival'=>1));
+			if($exec)
+				echo message();
+			else
+				echo message(301,'notice','手动签到失败，请稍后再试');
 		}
 
 		function uploadImg(){

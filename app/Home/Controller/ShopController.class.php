@@ -11,7 +11,12 @@
 			$this->goods=M('w_goods');
 		}
 		function index(){
-			$list=$this->goods->field('uid,goods_name,goods_last,goods_img,goods_stime,goods_etime,goods_price')->where(array('goods_delete'=>0,'goods_status'=>1,'goods_etime'=>array(array('gt',time()),'','or')))->order('goods_degree desc')->select();
+			$t=I('GET.t');
+			$t=base64_decode(str_replace(' ', '+', $t));
+			if($t=='兑换记录'){	
+				$list=M('w_goods_order')->field('goods_id as uid,goods_name,goods_last,goods_img,goods_stime,goods_etime,goods_price')->where(array('u_uid'=>$this->uid))->join('w_goods on w_goods.uid=w_goods_order.goods_id')->select();
+			}else
+				$list=$this->goods->field('uid,goods_name,goods_last,goods_img,goods_stime,goods_etime,goods_price')->where(array('goods_delete'=>0,'goods_status'=>1,'goods_etime'=>array(array('gt',time()),'','or')))->order('goods_degree desc')->select();
 			$list=array_map(array(__CLASS__,'get_thumbnail'), $list);
 			$this->assign('list',$list);
 			$this->display();
@@ -42,6 +47,8 @@
 				$msg='您兑换的商品已下架';
 			else if(($goods_info['goods_etime']<time())&&$goods_info['goods_etime']!='')
 				$msg='商品限时兑换已结束';
+			else if(($goods_info['goods_stime']>time())&&$goods_info['goods_stime']!='')
+				$msg='商品限时兑换未开始';
 			// 提示信息输出
 			if($msg){
 				if($post)

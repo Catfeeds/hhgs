@@ -26,8 +26,8 @@
 		    <div class="swiper-pagination"></div>
 		</div>
 		<div class='menu'>
-			<div class='menu-item'><label><img src="{$smarty.const.THEME}Shop/img/coin.png"></label><span>我的积分</span></div>
-			<div class='menu-item'><label><img src="{$smarty.const.THEME}Shop/img/gift.png"></label><span>兑换记录</span></div>
+			<div class='menu-item'><a href="{$smarty.const.HOME}Member/profile"><label><img src="{$smarty.const.THEME}Shop/img/coin.png"></label><span>我的积分</span></a></div>
+			<div class='menu-item'><a href="{$smarty.const.HOME}Shop/index.html?t=5YWR5o2i6K6w5b2V"><label><img src="{$smarty.const.THEME}Shop/img/gift.png"></label><span>兑换记录</span></a></div>
 		</div>
 		<div class='content-list'>
 			{foreach $list as $item}
@@ -61,13 +61,15 @@
 	</div>
 	<script src="{$smarty.const.ORG}jquery/jquery-2.1.0.min.js"></script>
 	<script type="text/javascript" src='{$smarty.const.ORG}swiper/swiper-3.4.2.jquery.min.js'></script>
-	<script>        
-		var mySwiper = new Swiper ('.swiper-container', {
-			loop: true,
-			autoplay:3000,
-			// 如果需要分页器
-			pagination: '.swiper-pagination',
-		})        
+	<script>        		
+		$(function(){
+			var mySwiper = new Swiper ('.swiper-container', {
+				loop: true,
+				autoplay:3000,
+				// 如果需要分页器
+				pagination: '.swiper-pagination',
+			});
+		});    
 	</script>
 </body>
 </html>

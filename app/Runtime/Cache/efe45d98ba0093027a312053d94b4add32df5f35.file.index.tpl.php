@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-26 20:32:55
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-27 09:54:54
          compiled from "./Theme/default/Shop/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7958462795a377715e6a722-49896422%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'efe45d98ba0093027a312053d94b4add32df5f35' => 
     array (
       0 => './Theme/default/Shop/index.tpl',
-      1 => 1514286974,
+      1 => 1514339486,
       2 => 'file',
     ),
   ),
@@ -58,10 +58,12 @@ Shop/img/WX20171218-160538.png">
 		    <div class="swiper-pagination"></div>
 		</div>
 		<div class='menu'>
-			<div class='menu-item'><label><img src="<?php echo @THEME;?>
-Shop/img/coin.png"></label><span>我的积分</span></div>
-			<div class='menu-item'><label><img src="<?php echo @THEME;?>
-Shop/img/gift.png"></label><span>兑换记录</span></div>
+			<div class='menu-item'><a href="<?php echo @HOME;?>
+Member/profile"><label><img src="<?php echo @THEME;?>
+Shop/img/coin.png"></label><span>我的积分</span></a></div>
+			<div class='menu-item'><a href="<?php echo @HOME;?>
+Shop/index.html?t=5YWR5o2i6K6w5b2V"><label><img src="<?php echo @THEME;?>
+Shop/img/gift.png"></label><span>兑换记录</span></a></div>
 		</div>
 		<div class='content-list'>
 			<?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;
@@ -110,13 +112,15 @@ goods/<?php echo $_smarty_tpl->tpl_vars['item']->value['thumbnail'];?>
 jquery/jquery-2.1.0.min.js"></script>
 	<script type="text/javascript" src='<?php echo @ORG;?>
 swiper/swiper-3.4.2.jquery.min.js'></script>
-	<script>        
-		var mySwiper = new Swiper ('.swiper-container', {
-			loop: true,
-			autoplay:3000,
-			// 如果需要分页器
-			pagination: '.swiper-pagination',
-		})        
+	<script>        		
+		$(function(){
+			var mySwiper = new Swiper ('.swiper-container', {
+				loop: true,
+				autoplay:3000,
+				// 如果需要分页器
+				pagination: '.swiper-pagination',
+			});
+		});    
 	</script>
 </body>
 </html><?php }} ?>
