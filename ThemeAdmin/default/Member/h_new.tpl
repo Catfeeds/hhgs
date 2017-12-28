@@ -154,4 +154,11 @@
 		});
 	});
 </script>
+<!-- 上传excel文件并将业主信息导入到数据库中去 -->
+<script type="text/javascript" src='{$smarty.const.ORG}upload/jquery.form.js'></script>
+<script type="text/javascript">
+	$(function(){
+
+	});
+</script>
 {include file='../tpl/footer.tpl'}

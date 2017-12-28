@@ -87,7 +87,38 @@
 				$cons=$consultant->field('uid,name')->select();
 				$this->assign('consultant',$cons);
 				$this->display();
-			}
+			}			
+		}
+
+		// 业主信息批量导入
+		function batch_import(){
 			
+		}
+
+		// 读取excel内容
+		private function excel($filename){
+			vendor('PHPExcel.PHPExcel.IOFactory');
+			// $file= $_SERVER['DOCUMENT_ROOT'].HOME.'upload/excel/a.xlsx';
+			$file=$filename;
+			$fileType=\PHPExcel_IOFactory::identify($file);//获取文件类型
+			$reader=\PHPExcel_IOFactory::createReader($fileType);//获取文件读取的对象
+			$sheetName='Sheet1';
+			$reader->setLoadSheetsOnly($sheetName);//加载指定的sheet
+			$objExcel=$reader->load($file);
+			$rows=array();//行数据集合
+			$sheets=array();
+			foreach ($objExcel->getWorksheetIterator() as $sheet) {//读取sheet
+				foreach($sheet->getRowIterator() as $row){//读取行数据
+					if($row->getRowIndex()<2)//略过第一行数据
+						continue;
+					$row_array=array();					
+					foreach($row->getCellIterator() as $cell){
+						array_push($row_array, $cell->getValue());					
+					}
+					array_push($rows, $row_array);
+				}
+				array_push($sheets, $rows);
+			}
+			return $sheets;
 		}
 	}

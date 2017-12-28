@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-27 15:35:43
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 22:55:37
          compiled from "/Applications/MAMP/htdocs/jianye_garden/ThemeAdmin/default/tpl/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7409233665a38b5dbb9a292-11855364%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1a3241ef899185fc150b7d27316931da559f30e2' => 
     array (
       0 => '/Applications/MAMP/htdocs/jianye_garden/ThemeAdmin/default/tpl/header.tpl',
-      1 => 1514360140,
+      1 => 1514470215,
       2 => 'file',
     ),
   ),
@@ -110,7 +110,7 @@ User/profile.html"><i class="fa fa-user"></i> 个人信息</a></li>
 					<div class="sidebar-collapse">
 						<div class="sidebar-header t-center">
 	                        <span><img class="text-logo" src="<?php echo @THEMEADMIN;?>
-assets/img/logo.png"><i class="fa fa-space-shuttle fa-3x blue"></i></span>
+assets/img/logo.png"></span>
 	                    </div>										
 						<div class="sidebar-menu">
 							<ul class="nav nav-sidebar">
@@ -133,7 +133,7 @@ Activity/act_new.html"><i class="fa fa-plus-square"></i><span class="text"> 新�
 									<a href="#"><i class="fa fa-server"></i><span class="text"> 服务</span> <span class="fa fa-angle-down pull-right"></span></a>
 									<ul class="nav sub">
 										<li><a href="<?php echo @ADMIN;?>
-Service/list.html"><i class="fa fa-puzzle-piece"></i><span class="text"> 服务管理</span></a></li>
+Service/slist.html"><i class="fa fa-puzzle-piece"></i><span class="text"> 服务管理</span></a></li>
 										<li><a href="<?php echo @ADMIN;?>
 Service/service_order.html"><i class="fa fa-paw"></i><span class="text"> 服务预约管理</span></a></li>
 									</ul>

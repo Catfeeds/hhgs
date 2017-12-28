@@ -13599,3 +13599,8 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000385s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000436s ]
 
+[ 2017-12-28T22:55:36+08:00 ] 127.0.0.1 /jianye_garden/ThemeAdmin/default/assets/ico/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+

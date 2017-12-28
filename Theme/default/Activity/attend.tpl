@@ -49,8 +49,7 @@
 					</p>
 					<p class='line'>
 						<label>报名人数</label>
-<!-- 						<input id='number' name='number' type='number' value='{$uinfo["carry_num"]}' min=0 max='{$ainfo["carrynum"]}'>
- -->						<select id='number' name='number'>
+						<select id='number' name='number'>
 							{section name=carrynum loop={$ainfo['carrynum']}}
 								<option {if $uinfo["carry_num"] eq $smarty.section.carrynum.index}selected{/if} value='{$smarty.section.carrynum.index}'>{$smarty.section.carrynum.index}</option>
 							{/section}

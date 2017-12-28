@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 16:32:17
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 23:03:27
          compiled from "./ThemeAdmin/default/Member/h_new.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20172540755a3f65336c0605-54183763%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '29cd47ed40b1e299f8053ad7e6187c48fcab4662' => 
     array (
       0 => './ThemeAdmin/default/Member/h_new.tpl',
-      1 => 1514424009,
+      1 => 1514473397,
       2 => 'file',
     ),
   ),
@@ -201,6 +201,14 @@ card.js'></script>
 				});
 			},
 		});
+	});
+</script>
+<!-- 上传excel文件并将业主信息导入到数据库中去 -->
+<script type="text/javascript" src='<?php echo @ORG;?>
+upload/jquery.form.js'></script>
+<script type="text/javascript">
+	$(function(){
+
 	});
 </script>
 <?php echo $_smarty_tpl->getSubTemplate ('../tpl/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
