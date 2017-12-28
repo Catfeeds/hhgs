@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-23 15:40:26
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 20:43:47
          compiled from "./Theme/default/Activity/attend.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14542077275a372da52c6971-53175042%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9eff014833b44c426b0e831f565c075383428813' => 
     array (
       0 => './Theme/default/Activity/attend.tpl',
-      1 => 1514014824,
+      1 => 1514465022,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a372da533ad0')) {function content_5a372da533ad0($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a372da533ad0')) {function content_5a372da533ad0($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang='zh'>
 <head>
@@ -93,9 +93,40 @@ Activity/img/per.png"></label>
 					</p>
 					<p class='line'>
 						<label>报名人数</label>
-						<input id='number' name='number' type='number' value='<?php echo $_smarty_tpl->tpl_vars['uinfo']->value["carry_num"];?>
+<!-- 						<input id='number' name='number' type='number' value='<?php echo $_smarty_tpl->tpl_vars['uinfo']->value["carry_num"];?>
 ' min=0 max='<?php echo $_smarty_tpl->tpl_vars['ainfo']->value["carrynum"];?>
 '>
+ -->						<select id='number' name='number'>
+							<?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['ainfo']->value['carrynum'];?>
+<?php $_tmp1=ob_get_clean();?><?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['name'] = 'carrynum';
+$_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['loop'] = is_array($_loop=$_tmp1) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['show'] = true;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['max'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['loop'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['step'] = 1;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['start'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['step'] > 0 ? 0 : $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['loop']-1;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['show']) {
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['total'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['loop'];
+    if ($_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['total'] == 0)
+        $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['show'] = false;
+} else
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['total'] = 0;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['show']):
+
+            for ($_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['index'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['start'], $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['iteration'] = 1;
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['iteration'] <= $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['total'];
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['index'] += $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['step'], $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['iteration']++):
+$_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['rownum'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['iteration'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['index_prev'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['index'] - $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['index_next'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['index'] + $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['iteration'] == 1);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['carrynum']['total']);
+?>
+								<option <?php if ($_smarty_tpl->tpl_vars['uinfo']->value["carry_num"]==$_smarty_tpl->getVariable('smarty')->value['section']['carrynum']['index']){?>selected<?php }?> value='<?php echo $_smarty_tpl->getVariable('smarty')->value['section']['carrynum']['index'];?>
+'><?php echo $_smarty_tpl->getVariable('smarty')->value['section']['carrynum']['index'];?>
+</option>
+							<?php endfor; endif; ?>
+						</select>
 					</p>
 					<p class='qrcode'>
 						<?php if ($_smarty_tpl->tpl_vars['uinfo']->value['qrcode']){?>

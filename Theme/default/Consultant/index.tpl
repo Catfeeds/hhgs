@@ -21,7 +21,7 @@
 							<span class='starimg' style='width: {12*$item["degree"]}px'>
 							</span>	
 							<span>{$item['degree']|string_format:'%.1f'}</span>
-							<span class='pj {if $item["comment"] eq 1}pj_can{/if}'>评价</span>
+							<span class='pj {if $item["comment"] eq 1}pj_can{else}pj_cant{/if}'>评价</span>
 						</p>
 						<p class='infop'>年龄：<span>{(($smarty.now-$item['birth'])/3600/24/365)|string_format:'%d'}</span>&nbsp;&nbsp;性别：<span>{if $item['sex'] eq 1}男{else}女{/if}</span></p>
 						<p class='infop'>
@@ -71,9 +71,6 @@
 		</p>
 	</div>
 	<div class='cover_comment'>
-		<div id='close'>
-			<img src="{$smarty.const.THEME}Consultant/">
-		</div>
 		<div class='box'>
 			<input id='comm_uid' type="hidden">
 			<div id="star">
@@ -95,6 +92,9 @@
 				<button id='com_sub' class='btn btn-submit'>提交您的评论</button>
 			</div>
 		</div>
+		<p class='close'>
+			<img src="{$smarty.const.THEME}Consultant/img/close.png">
+		</p>
 	</div>
 	<script src="{$smarty.const.ORG}jquery/jquery-2.1.0.min.js"></script>
 	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
@@ -159,12 +159,16 @@
 			});
 			$('.close img').click(function(){
 				$('#cons_uid').val('');
-				$('.cover').hide();
+				$(this).parent().parent().hide();
 			});
+			// 点开评论框
 			$('.pj_can').click(function(){
 				let comm_uid=$(this).parent().parent().parent().data('uid');
 				$('#comm_uid').val(comm_uid);
 				$('.cover_comment').slideDown();
+			});
+			$('.pj_cant').click(function(){
+				alert('暂时无法评论此顾问');
 			});
 			// 提交评论
 			$('#com_sub').click(function(){
@@ -192,6 +196,16 @@
 						}
 					}
 				});
+			});
+			$('#type').change(function(){
+				let vl=$(this).val();
+				if(vl==1){
+					$('#date').parent().parent().show();
+					$('#time').parent().parent().show();
+				}else{
+					$('#date').parent().parent().hide();
+					$('#time').parent().parent().hide();
+				}
 			});
 		});
 	</script>

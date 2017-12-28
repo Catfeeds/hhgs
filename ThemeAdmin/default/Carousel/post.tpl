@@ -45,6 +45,15 @@
 							</div>
 						</div>
 						<div class='form-group'>
+							<label class='col-md-1 col-xs-12'>类型</label>
+							<div class='col-xs-12 col-md-8'>
+								<select id='type' class='form-control'>
+									<option value=1 {if $res['type'] eq 1}selected{/if}>活动</option>
+									<option value=2 {if $res['type'] eq 2}selected{/if}>商城</option>
+								</select>
+							</div>
+						</div>
+						<div class='form-group'>
 							<label class='col-md-1 col-xs-12'>备注</label>
 							<div class='col-xs-12 col-md-8'>
 								<textarea id='mark' class='form-control' rows="5" style='resize:none;'>{$res['mark']}</textarea>

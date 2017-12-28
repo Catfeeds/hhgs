@@ -1,12 +1,9 @@
 <?php
 	namespace Home\Controller;
 	use Think\Controller;
-	class ConsultantController extends Controller{
+	class ConsultantController extends BaseController{
 		function __construct(){
 			parent::__construct();
-			// 这里的session获取是可以进行删除的
-			// session('jianye_user_uid',00000001);
-			$this->uid=session('jianye_user_uid');
 		}
 
 		function index(){

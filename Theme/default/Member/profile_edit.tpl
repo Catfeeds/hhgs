@@ -122,7 +122,7 @@
 				<p style='text-align: center;'>完成度：{$completion}%</p>
 				<p class=btn>
 					<button type=submit>
-						<img src="{$smarty.const.THEME}Member/img/submit.png">
+						<div class='sub_bg'>更新信息</div>
 					</button>
 				</p>
 			</form>

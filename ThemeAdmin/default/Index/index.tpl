@@ -12,7 +12,7 @@
 	</div>
 	<div class='row'>
 		<!-- 最新页面 -->
-		<div class='col-md-7'>
+	<!-- 	<div class='col-md-7'>
 			<div class='panel panel-default'>
 				<div class='panel-heading'>页面</div>
 				<div class='panel-body'>
@@ -32,9 +32,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- 登录日志 -->
-		<div class='col-md-5'>
+		<!-- <div class='col-md-5'>
 			<div class='panel panel-default'>
 				<div class='panel-heading'>登录日志</div>
 				<div class='panel-body'>
@@ -52,9 +52,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- 最新发布 -->
-		<div class='col-md-12'>
+		<!-- <div class='col-md-12'>
 			<div class='panel panel-default'>
 				<div class='panel-heading'>最新发布</div>
 				<div class='panel-body'>
@@ -74,9 +74,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- 快捷操作 -->
-		<div class='col-md-6'>
+		<!-- <div class='col-md-6'>
 			<div class='panel panel-default'>
 				<div class='panel-heading'>快捷操作</div>
 				<div class='panel-body'>
@@ -97,7 +97,7 @@
 					</span>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 <link rel="stylesheet" type="text/css" href="{$smarty.const.THEMEADMIN}assets/css/index.css">

@@ -28,6 +28,7 @@
 						<thead>
 							<tr>
 								<th>服务名称</th>
+								<th>用户id</th>
 								<th>用户名称</th>
 								<th>用户手机</th>
 								<th>预定时间</th>
@@ -41,6 +42,7 @@
 							{foreach $list as $item}
 								<tr>
 									<td>{$item['sname']}</td>
+									<td>{$item['u_uid']}</td>
 									<td>{$item['uname']}</td>
 									<td>{$item['phone_num']}</td>
 									<td>{$item['order_date']}&nbsp;{if $item['order_ampm'] eq 1}上午{else}下午{/if}</td>

@@ -1,14 +1,11 @@
 <?php
 	namespace Home\Controller;
 	use Think\Controller;
-	class ActivityController extends Controller{
+	class ActivityController extends BaseController{
 		private $act;
 		function __construct(){
 			parent::__construct();
 			$this->act=D('Activity');
-			// 这里的session获取是可以进行删除的
-			// session('jianye_user_uid',00000001);
-			$this->uid=session('jianye_user_uid');	
 		}
 
 		// 活动列表

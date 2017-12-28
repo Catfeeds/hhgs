@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-22 16:57:50
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 10:46:03
          compiled from "./Theme/default/Activity/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17029595805a34eb35622969-86670909%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c81b93d12044a1f4e8cd1f349b5d27f89e84f3d6' => 
     array (
       0 => './Theme/default/Activity/index.tpl',
-      1 => 1513933063,
+      1 => 1514423998,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a34eb35624b4')) {function content_5a34eb35624b4($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a34eb35624b4')) {function content_5a34eb35624b4($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang='zh'>
 <head>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-26 22:34:22
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 21:11:18
          compiled from "./Theme/default/Shop/order.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8240660265a379653792845-28637342%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'efa8ae45375c034e1b5c73bdccdd4d79b704678e' => 
     array (
       0 => './Theme/default/Shop/order.tpl',
-      1 => 1514298393,
+      1 => 1514466676,
       2 => 'file',
     ),
   ),
@@ -47,8 +47,8 @@ goods/<?php echo $_smarty_tpl->tpl_vars['goods_info']->value['thumbnail'];?>
 </p>
 				<p class='s'><?php echo $_smarty_tpl->tpl_vars['goods_info']->value['goods_intro'];?>
 </p>
-				<p class='c'><span><?php echo $_smarty_tpl->tpl_vars['goods_info']->value['goods_price'];?>
-积分</span></p>
+				<p id='price' class='c'><span><i style='font-style:normal;'><?php echo sprintf("%d",$_smarty_tpl->tpl_vars['goods_info']->value['goods_price']);?>
+</i>活跃值</span></p>
 			</div>
 		</div>
 		<div class='content'>
@@ -89,7 +89,8 @@ goods/<?php echo $_smarty_tpl->tpl_vars['goods_info']->value['thumbnail'];?>
 					</div>
 				</div>
 				<div class='btn_wrap'>
-					<p>订单消耗积分：<span>500</span></p>
+					<p>订单消耗活跃值：<span id='total'><?php echo sprintf("%d",$_smarty_tpl->tpl_vars['goods_info']->value['goods_price']);?>
+</span></p>
 					<p><button class='btn' type='submit'>提交订单</button></p>
 				</div>
 			</form>
@@ -148,13 +149,19 @@ jquery/jquery-2.1.0.min.js"></script>
 						success:function(msg){
 							if(msg['code']==200){
 								alert('兑换成功');
-								// window.location.href=location.href;
+								window.location.href=location.href;
 							}else{
 								console.log(msg['data']);
 							}
 						}
 					});
 				}
+			});
+			$('#number').blur(function(){
+				let price=$('#price span i').html();
+				let num=$(this).val();
+				total=price*num;
+				$('#total').html(total);
 			});
 		});
 	</script>

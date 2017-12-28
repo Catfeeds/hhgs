@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-13 16:28:52
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 10:26:44
          compiled from "./Theme/default/Member/login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11023932385a2e4292c01c60-30426728%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7ed425d9ca21a2aa8bd73248c1fa9ed9fe741eb' => 
     array (
       0 => './Theme/default/Member/login.tpl',
-      1 => 1513071353,
+      1 => 1514428000,
       2 => 'file',
     ),
   ),
@@ -54,8 +54,7 @@ Member/img/logo.png">
 			<p class='ajax_error'></p>
 			<p class='form-line' style='padding-top:40px;'>
 				<button type='submit'>
-					<img src="<?php echo @THEME;?>
-Member/img/login_btn.png">
+					<div class='sub_bg'>提交信息</div>
 				</button>
 			</p>
 		</form>

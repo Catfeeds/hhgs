@@ -16,7 +16,7 @@
 			<div class='text'>
 				<p class='t'>{$goods_info['goods_name']}</p>
 				<p class='s'>{$goods_info['goods_intro']}</p>
-				<p class='c'><span>{$goods_info['goods_price']}积分</span></p>
+				<p id='price' class='c'><span><i style='font-style:normal;'>{$goods_info['goods_price']|string_format:"%d"}</i>活跃值</span></p>
 			</div>
 		</div>
 		<div class='content'>
@@ -55,7 +55,7 @@
 					</div>
 				</div>
 				<div class='btn_wrap'>
-					<p>订单消耗积分：<span>500</span></p>
+					<p>订单消耗活跃值：<span id='total'>{$goods_info['goods_price']|string_format:"%d"}</span></p>
 					<p><button class='btn' type='submit'>提交订单</button></p>
 				</div>
 			</form>
@@ -120,6 +120,12 @@
 						}
 					});
 				}
+			});
+			$('#number').blur(function(){
+				let price=$('#price span i').html();
+				let num=$(this).val();
+				total=price*num;
+				$('#total').html(total);
 			});
 		});
 	</script>

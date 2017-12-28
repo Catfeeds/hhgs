@@ -1,13 +1,10 @@
 <?php
 	namespace Home\Controller;
 	use Think\Controller;
-	class ShopController extends Controller{
+	class ShopController extends BaseController{
 		private $goods;
 		function __construct(){
 			parent::__construct();
-			// 这里的session获取是可以进行删除的
-			// session('jianye_user_uid',00000001);
-			$this->uid=session('jianye_user_uid');	
 			$this->goods=M('w_goods');
 		}
 		function index(){

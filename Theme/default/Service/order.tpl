@@ -47,8 +47,8 @@
 						<label>预约时间</label>
 						<select id='time' name='time'>
 							<option value=0>请选择预约时间</option>
-							<option value='1'>上午</option>
-							<option value='2'>下午</option>
+							<option value='1'>上午 10:00–12：00</option>
+							<option value='2'>下午 15：00—17：00</option>
 						</select>
 					</p>
 					<p class='line'>

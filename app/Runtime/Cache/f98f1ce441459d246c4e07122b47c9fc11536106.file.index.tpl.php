@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-19 14:46:51
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 14:59:15
          compiled from "./ThemeAdmin/default/Index/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12965568985a38b5dbad8612-12186312%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f98f1ce441459d246c4e07122b47c9fc11536106' => 
     array (
       0 => './ThemeAdmin/default/Index/index.tpl',
-      1 => 1488801266,
+      1 => 1514444352,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5a38b5dbb9115',
   'variables' => 
   array (
     'username' => 0,
@@ -26,10 +28,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'archive' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5a38b5dbb9115',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a38b5dbb9115')) {function content_5a38b5dbb9115($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a38b5dbb9115')) {function content_5a38b5dbb9115($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 <?php $_tmp1=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 <?php $_tmp2=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['userlevel']->value;?>
@@ -48,7 +48,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	</div>
 	<div class='row'>
 		<!-- 最新页面 -->
-		<div class='col-md-7'>
+	<!-- 	<div class='col-md-7'>
 			<div class='panel panel-default'>
 				<div class='panel-heading'>页面</div>
 				<div class='panel-body'>
@@ -78,9 +78,9 @@ Pages/page_list.html">查看更多</a>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- 登录日志 -->
-		<div class='col-md-5'>
+		<!-- <div class='col-md-5'>
 			<div class='panel panel-default'>
 				<div class='panel-heading'>登录日志</div>
 				<div class='panel-body'>
@@ -106,9 +106,9 @@ Log/login_log.html">查看更多</a>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- 最新发布 -->
-		<div class='col-md-12'>
+		<!-- <div class='col-md-12'>
 			<div class='panel panel-default'>
 				<div class='panel-heading'>最新发布</div>
 				<div class='panel-body'>
@@ -138,9 +138,9 @@ Archive/post_list.html">查看更多</a>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- 快捷操作 -->
-		<div class='col-md-6'>
+		<!-- <div class='col-md-6'>
 			<div class='panel panel-default'>
 				<div class='panel-heading'>快捷操作</div>
 				<div class='panel-body'>
@@ -166,7 +166,7 @@ Archive/tags.html">标签管理</a>
 					</span>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 <link rel="stylesheet" type="text/css" href="<?php echo @THEMEADMIN;?>

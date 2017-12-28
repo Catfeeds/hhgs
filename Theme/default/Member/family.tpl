@@ -10,27 +10,31 @@
 <body>
 	<div class='container'>
 		<div class='content'>
-			{foreach $list as $l}
-				<a href="{$smarty.const.HOME}Member/family_mem.html?memid={$l['uid']}">
-					<div class='family_mem'>			
-						<div class='elm headimg'>
-							<img src="{if $l['headimg'] eq null}{$smarty.const.THEME}/Member/img/head-2.gif{else}$l['headimg'{/if}">
+			{if $list eq null}
+				<p style='padding: 80px 15px 10px;text-align: center;'>暂无家庭成员，若您为业主请自行添加家庭成员信息</p>
+			{else}
+				{foreach $list as $l}
+					<a href="{$smarty.const.HOME}Member/family_mem.html?memid={$l['uid']}">
+						<div class='family_mem'>			
+							<div class='elm headimg'>
+								<img src="{if $l['headimg'] eq null}{$smarty.const.THEME}/Member/img/head-2.gif{else}$l['headimg'{/if}">
+							</div>
+							<div class='elm info'>
+								<p>姓名：<span class='ispan'>{$l['uname']}</span> 性别：{if $l['sex'] eq 1}男{else}女{/if}</p>
+								<p>生日：<span class='ispan birth' data-birth="{$l['birth']}">{$l['birth']|date_format:"%m/%d"}</span> 年龄：<span class='age'></span></p>
+								<p>手机号码：{$l['phone_num']}</p>
+							</div>
+							<div class='elm relation'>
+								{if $hide eq false}<p class='rbg'>{$l['relation']}</p>{/if}
+							</div>
+							<p>
+								<div class='circle circle_l'></div>
+								<div class='circle circle_r'></div>
+							</p>				
 						</div>
-						<div class='elm info'>
-							<p>姓名：<span class='ispan'>{$l['uname']}</span> 性别：{if $l['sex'] eq 1}男{else}女{/if}</p>
-							<p>生日：<span class='ispan birth' data-birth="{$l['birth']}">{$l['birth']|date_format:"%m/%d"}</span> 年龄：<span class='age'></span></p>
-							<p>手机号码：{$l['phone_num']}</p>
-						</div>
-						<div class='elm relation'>
-							{if $hide eq false}<p class='rbg'>{$l['relation']}</p>{/if}
-						</div>
-						<p>
-							<div class='circle circle_l'></div>
-							<div class='circle circle_r'></div>
-						</p>				
-					</div>
-				</a>
-			{/foreach}	
+					</a>
+				{/foreach}
+			{/if}	
 			{if $hide eq false}
 			<div class='add'>
 				<a href="{$smarty.const.HOME}Member/family_mem.html"><img src="{$smarty.const.THEME}Member/img/add.png"></a>

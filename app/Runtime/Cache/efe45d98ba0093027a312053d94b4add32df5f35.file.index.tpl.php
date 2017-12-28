@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-27 09:54:54
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 21:13:07
          compiled from "./Theme/default/Shop/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7958462795a377715e6a722-49896422%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'efe45d98ba0093027a312053d94b4add32df5f35' => 
     array (
       0 => './Theme/default/Shop/index.tpl',
-      1 => 1514339486,
+      1 => 1514466779,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a377715ec923')) {function content_5a377715ec923($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a377715ec923')) {function content_5a377715ec923($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang='zh'>
 <head>
@@ -59,8 +59,8 @@ Shop/img/WX20171218-160538.png">
 		</div>
 		<div class='menu'>
 			<div class='menu-item'><a href="<?php echo @HOME;?>
-Member/profile"><label><img src="<?php echo @THEME;?>
-Shop/img/coin.png"></label><span>我的积分</span></a></div>
+Shop/index.html"><label><img src="<?php echo @THEME;?>
+Shop/img/coin.png"></label><span>礼品兑换</span></a></div>
 			<div class='menu-item'><a href="<?php echo @HOME;?>
 Shop/index.html?t=5YWR5o2i6K6w5b2V"><label><img src="<?php echo @THEME;?>
 Shop/img/gift.png"></label><span>兑换记录</span></a></div>
@@ -95,7 +95,7 @@ goods/<?php echo $_smarty_tpl->tpl_vars['item']->value['thumbnail'];?>
 							</div>
 							<div class='coin'>
 								<span class='c1'><?php echo sprintf('%d',$_smarty_tpl->tpl_vars['item']->value['goods_price']);?>
-积分</span>
+活跃值</span>
 								<span class='c2'>库存：<?php echo $_smarty_tpl->tpl_vars['item']->value['goods_last'];?>
 </span>
 							</div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-26 19:23:36
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 21:12:07
          compiled from "./Theme/default/Shop/detail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6430137085a3791e05e3b40-59899532%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b21ee65eed91e99d09d4dd2b59b78ae1f14dba4' => 
     array (
       0 => './Theme/default/Shop/detail.tpl',
-      1 => 1514287414,
+      1 => 1514466725,
       2 => 'file',
     ),
   ),
@@ -65,7 +65,7 @@ goods/<?php echo $_smarty_tpl->tpl_vars['img']->value;?>
 			<p class=tname><?php echo $_smarty_tpl->tpl_vars['info']->value['goods_name'];?>
 </p>
 			<div class='coin'><?php echo sprintf("%d",$_smarty_tpl->tpl_vars['info']->value['goods_price']);?>
-积分</div>
+活跃值</div>
 		</div>		
 		<div class='content'>
 			<?php echo stripslashes(htmlspecialchars_decode($_smarty_tpl->tpl_vars['info']->value['goods_detail']));?>

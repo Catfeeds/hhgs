@@ -76,3 +76,9 @@ input,label{
 	left: 0;
 	top: 18px;
 }
+.sub_bg{
+	background: -webkit-linear-gradient(left, rgb(207,166,108), rgb(238,210,170));
+	color: #fff;
+	border-radius: 3px;
+	padding:7px 0;
+}

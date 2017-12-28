@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-15 21:22:41
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 20:56:27
          compiled from "./Theme/default/Member/family_mem.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2178703865a30f633d0b035-68084015%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '61f3fc6dfe7ea13c936024d03a5abadb38bd3992' => 
     array (
       0 => './Theme/default/Member/family_mem.tpl',
-      1 => 1513344159,
+      1 => 1514465752,
       2 => 'file',
     ),
   ),
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a30f633d0c72')) {function content_5a30f633d0c72($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a30f633d0c72')) {function content_5a30f633d0c72($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang='zh'>
 <head>
@@ -92,13 +92,12 @@ $_smarty_tpl->tpl_vars['t']->_loop = true;
 				</p>
 				<p class='line'>
 					<label>兴趣爱好</label>
-					<input id='hobby' name='hobby' type='tel' value='<?php echo $_smarty_tpl->tpl_vars['info']->value["hobby"];?>
+					<input id='hobby' name='hobby' type='text' value='<?php echo $_smarty_tpl->tpl_vars['info']->value["hobby"];?>
 '>
 				</p>
 				<p class='btn'>
 					<button type='submit'>
-						<img src="<?php echo @THEME;?>
-Member/img/submit.png">
+						<div class='sub_bg'>提交信息</div>
 					</button>
 				</p>
 			</form>

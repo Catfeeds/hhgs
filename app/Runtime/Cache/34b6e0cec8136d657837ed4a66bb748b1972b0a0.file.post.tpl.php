@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-25 19:55:58
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 15:11:07
          compiled from "./ThemeAdmin/default/Carousel/post.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9585399315a40e74e42ef83-05686342%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '34b6e0cec8136d657837ed4a66bb748b1972b0a0' => 
     array (
       0 => './ThemeAdmin/default/Carousel/post.tpl',
-      1 => 1514202911,
+      1 => 1514444878,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5a40e74e4979b',
   'variables' => 
   array (
     'username' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'res' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5a40e74e4979b',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5a40e74e4979b')) {function content_5a40e74e4979b($_smarty_tpl) {?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 <?php $_tmp1=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['id']->value;?>
@@ -80,6 +80,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 						</div>
 						<div class='form-group'>
+							<label class='col-md-1 col-xs-12'>类型</label>
+							<div class='col-xs-12 col-md-8'>
+								<select id='type' class='form-control'>
+									<option value=1 <?php if ($_smarty_tpl->tpl_vars['res']->value['type']==1){?>selected<?php }?>>活动</option>
+									<option value=2 <?php if ($_smarty_tpl->tpl_vars['res']->value['type']==2){?>selected<?php }?>>商城</option>
+								</select>
+							</div>
+						</div>
+						<div class='form-group'>
 							<label class='col-md-1 col-xs-12'>备注</label>
 							<div class='col-xs-12 col-md-8'>
 								<textarea id='mark' class='form-control' rows="5" style='resize:none;'><?php echo $_smarty_tpl->tpl_vars['res']->value['mark'];?>
@@ -108,6 +117,6 @@ assets/css/public.css">
 <script type="text/javascript" src='<?php echo @JS;?>
 ajax.js'></script>
 <script type="text/javascript" src="<?php echo @THEMEADMIN;?>
-assets/js/Carousel.js"></script>
+assets/js/carousel.js"></script>
 <?php echo $_smarty_tpl->getSubTemplate ('../tpl/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

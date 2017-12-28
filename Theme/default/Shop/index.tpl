@@ -26,7 +26,7 @@
 		    <div class="swiper-pagination"></div>
 		</div>
 		<div class='menu'>
-			<div class='menu-item'><a href="{$smarty.const.HOME}Member/profile"><label><img src="{$smarty.const.THEME}Shop/img/coin.png"></label><span>我的积分</span></a></div>
+			<div class='menu-item'><a href="{$smarty.const.HOME}Shop/index.html"><label><img src="{$smarty.const.THEME}Shop/img/coin.png"></label><span>礼品兑换</span></a></div>
 			<div class='menu-item'><a href="{$smarty.const.HOME}Shop/index.html?t=5YWR5o2i6K6w5b2V"><label><img src="{$smarty.const.THEME}Shop/img/gift.png"></label><span>兑换记录</span></a></div>
 		</div>
 		<div class='content-list'>
@@ -47,7 +47,7 @@
 								{/if}
 							</div>
 							<div class='coin'>
-								<span class='c1'>{$item['goods_price']|string_format:'%d'}积分</span>
+								<span class='c1'>{$item['goods_price']|string_format:'%d'}活跃值</span>
 								<span class='c2'>库存：{$item['goods_last']}</span>
 							</div>
 						</div>

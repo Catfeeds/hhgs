@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-24 21:34:07
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 16:32:17
          compiled from "./ThemeAdmin/default/Member/h_new.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20172540755a3f65336c0605-54183763%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '29cd47ed40b1e299f8053ad7e6187c48fcab4662' => 
     array (
       0 => './ThemeAdmin/default/Member/h_new.tpl',
-      1 => 1514122444,
+      1 => 1514424009,
       2 => 'file',
     ),
   ),
@@ -194,8 +194,8 @@ card.js'></script>
 							alert('提交成功');
 							window.location.reload();
 						}else{
-							$('.message_box .content').html(msg['data']);
-							$('.cover').show();
+							$('.error_report').show();
+							$('.error_report .text-danger').html(msg['data']);
 						}
 					}
 				});

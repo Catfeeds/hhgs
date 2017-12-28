@@ -1,0 +1,1773 @@
+[ 2017-12-07T15:26:47+08:00 ] 117.158.25.204 /jianye_garden/Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+
+[ 2017-12-07T15:26:50+08:00 ] 117.158.25.204 /jianye_garden/Member/login?code=071eGJPO0tNX1b2VHUQO0qnvPO0eGJPK&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::add() should be compatible with that of Think\Model::add() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::save() should be compatible with that of Think\Model::save() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::delete() should be compatible with that of Think\Model::delete() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::select() should be compatible with that of Think\Model::select() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::find() should be compatible with that of Think\Model::find() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+ERR: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-12-07T15:27:34+08:00 ] 117.158.25.204 /jianye_garden/Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+
+[ 2017-12-07T15:27:37+08:00 ] 117.158.25.204 /jianye_garden/Member/login?code=071V6CY90CHn6w1Ia30a0lKHY90V6CYj&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::add() should be compatible with that of Think\Model::add() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::save() should be compatible with that of Think\Model::save() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::delete() should be compatible with that of Think\Model::delete() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::select() should be compatible with that of Think\Model::select() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::find() should be compatible with that of Think\Model::find() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+ERR: 1146:Table 'jianye_garden.w_member' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `w_member`
+ERR: 1146:Table 'jianye_garden.w_member' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `w_member`
+
+[ 2017-12-07T15:28:18+08:00 ] 117.158.25.204 /jianye_garden/Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+
+[ 2017-12-07T15:29:25+08:00 ] 117.158.25.204 /jianye_garden/Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+
+[ 2017-12-07T15:33:29+08:00 ] 117.158.25.204 /jianye_garden/Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+
+[ 2017-12-07T15:33:48+08:00 ] 117.158.25.204 /jianye_garden/Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+
+[ 2017-12-07T15:34:32+08:00 ] 117.158.25.204 /jianye_garden/Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for ./app/Runtime/Cache/e7ed425d9ca21a2aa8bd73248c1fa9ed9fe741eb.file.login.tpl.php /alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./app/Runtime/Cache/e7ed425d9ca21a2aa8bd73248c1fa9ed9fe741eb.file.login.tpl.php): No such file or directory /alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010401s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010476s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000412s ]
+
+[ 2017-12-07T15:35:09+08:00 ] 117.158.25.204 /jianye_garden/Member/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+
+[ 2017-12-07T15:36:07+08:00 ] 117.158.25.204 /jianye_garden/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+
+[ 2017-12-07T15:37:14+08:00 ] 117.158.25.204 /jianye_garden/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+
+[ 2017-12-07T15:38:56+08:00 ] 117.158.25.204 /jianye_garden/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+
+[ 2017-12-07T15:42:13+08:00 ] 117.158.25.204 /jianye_garden/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+
+[ 2017-12-07T15:43:53+08:00 ] 117.158.25.204 /jianye_garden/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+
+[ 2017-12-07T15:44:59+08:00 ] 117.158.25.204 /jianye_garden/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+
+[ 2017-12-07T15:46:29+08:00 ] 117.158.25.204 /jianye_garden/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+
+[ 2017-12-07T15:46:32+08:00 ] 117.158.25.204 /jianye_garden/Member?code=0714CDIO1Q4Qc31gOJHO1WuSIO14CDI1&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+ERR: 非法操作:index
+
+[ 2017-12-07T15:52:54+08:00 ] 117.158.25.204 /jianye_garden/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+
+[ 2017-12-07T15:53:23+08:00 ] 117.158.25.204 /jianye_garden/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+
+[ 2017-12-07T15:53:57+08:00 ] 117.158.25.204 /jianye_garden/Member/profile
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+
+[ 2017-12-07T15:54:25+08:00 ] 117.158.25.204 /jianye_garden/Member/profile
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+
+[ 2017-12-07T15:56:00+08:00 ] 117.158.25.204 /jianye_garden/Member/profile
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+
+[ 2017-12-07T15:56:03+08:00 ] 117.158.25.204 /jianye_garden/Member/profile?code=011meev60JySvK1aV8v60yWbv60meevI&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for ./app/Runtime/Cache/342c905c22685561d9bb3f7ae4a7dd9780a28f08.file.profile.tpl.php /alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./app/Runtime/Cache/342c905c22685561d9bb3f7ae4a7dd9780a28f08.file.profile.tpl.php): No such file or directory /alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009904s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009996s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000412s ]
+
+[ 2017-12-07T15:56:54+08:00 ] 117.158.25.204 /jianye_garden/Member/profile
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+
+[ 2017-12-07T15:56:58+08:00 ] 117.158.25.204 /jianye_garden/Member/profile?code=021RuYnR1G7z8a1fyWpR1TBYnR1RuYn3&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000416s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007155s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007249s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000426s ]
+
+[ 2017-12-07T15:57:30+08:00 ] 117.158.25.204 /jianye_garden/Member/profile
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+
+[ 2017-12-07T15:58:20+08:00 ] 117.158.25.204 /jianye_garden/Member/profile
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+
+[ 2017-12-07T15:59:38+08:00 ] 117.158.25.204 /jianye_garden/Member/profile?code=011Ik5bu18Kpwc0jL1bu1jbNau1Ik5b2&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::add() should be compatible with that of Think\Model::add() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::save() should be compatible with that of Think\Model::save() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::delete() should be compatible with that of Think\Model::delete() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::select() should be compatible with that of Think\Model::select() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::find() should be compatible with that of Think\Model::find() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: info /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000728s ]
+
+[ 2017-12-07T16:00:00+08:00 ] 117.158.25.204 /jianye_garden/Member/profile
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+
+[ 2017-12-07T16:00:03+08:00 ] 117.158.25.204 /jianye_garden/Member/profile?code=071xGlkF1rWRj10BlHnF14T1kF1xGlkZ&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::add() should be compatible with that of Think\Model::add() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::save() should be compatible with that of Think\Model::save() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::delete() should be compatible with that of Think\Model::delete() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::select() should be compatible with that of Think\Model::select() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::find() should be compatible with that of Think\Model::find() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 29 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006997s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007057s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000412s ]
+
+[ 2017-12-07T16:01:30+08:00 ] 117.158.25.204 /jianye_garden/Member/profile
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+
+[ 2017-12-07T16:01:34+08:00 ] 117.158.25.204 /jianye_garden/Member/profile?code=011YRQ9l1JplFl0rhW8l1HYJ9l1YRQ9z&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::add() should be compatible with that of Think\Model::add() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 31 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::save() should be compatible with that of Think\Model::save() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 31 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::delete() should be compatible with that of Think\Model::delete() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 31 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::select() should be compatible with that of Think\Model::select() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 31 行.
+NOTIC: [2048] Declaration of Common\Model\MemberModel::find() should be compatible with that of Think\Model::find() /alidata/www/api/jianye_garden/app/Common/Model/MemberModel.class.php 第 31 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007092s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007150s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000476s ]
+
+[ 2017-12-07T16:03:23+08:00 ] 117.158.25.204 /jianye_garden/Member/profile
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+
+[ 2017-12-07T16:03:27+08:00 ] 117.158.25.204 /jianye_garden/Member/profile?code=061JHmzL01kWt72sZwBL0WVizL0JHmzM&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007609s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007688s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000157s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000470s ]
+
+[ 2017-12-07T16:04:18+08:00 ] 117.158.25.204 /jianye_garden/Member/profile
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+
+[ 2017-12-07T16:04:21+08:00 ] 117.158.25.204 /jianye_garden/Member/profile?code=021WUpOc2n4BZC0RfxOc2MRBOc2WUpOO&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007117s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000344s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000397s ]
+
+[ 2017-12-07T16:05:31+08:00 ] 117.158.25.204 /jianye_garden/Member/profile
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+
+[ 2017-12-07T16:05:35+08:00 ] 117.158.25.204 /jianye_garden/Member/profile?code=071tcaW02zKJbX0MSwV02Pc1W02tcaWx&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+ERR: 1406:Data too long for column 'openid' at row 1
+ [ SQL语句 ] : INSERT INTO `w_members` (`openid`) VALUES ('oMP-Ms85vH3sMnMlEArs-mWKpXS4')
+ERR: 1406:Data too long for column 'openid' at row 1
+ [ SQL语句 ] : INSERT INTO `w_members` (`openid`) VALUES ('oMP-Ms85vH3sMnMlEArs-mWKpXS4')
+
+[ 2017-12-07T16:07:01+08:00 ] 117.158.25.204 /jianye_garden/Member/profile?code=071tcaW02zKJbX0MSwV02Pc1W02tcaWx&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 41 行.
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = null LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 46 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 46 行.
+SQL: INSERT INTO `w_members` (`openid`) VALUES (NULL) [ RunTime:0.0057s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 47 行.
+
+[ 2017-12-07T16:07:01+08:00 ] 117.158.25.204 /jianye_garden/member/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+
+[ 2017-12-07T16:07:05+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071Wegql1y0XVl0iOIpl17fYpl1WegqP&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `w_members` (`openid`) VALUES ('oMP-Ms85vH3sMnMlEArs-mWKpXS4') [ RunTime:0.0062s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007868s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000373s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000443s ]
+
+[ 2017-12-07T16:08:10+08:00 ] 117.158.25.204 /jianye_garden/member/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+
+[ 2017-12-07T16:08:13+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071RRTvK0WOvq62D8nvK0TxXvK0RRTvE&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006706s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000323s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000374s ]
+
+[ 2017-12-07T16:12:21+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071RRTvK0WOvq62D8nvK0TxXvK0RRTvE&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 41 行.
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = null LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 46 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 46 行.
+SQL: INSERT INTO `w_members` (`openid`) VALUES (NULL) [ RunTime:0.0059s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 47 行.
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007099s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000419s ]
+
+[ 2017-12-07T16:12:27+08:00 ] 117.158.25.204 /jianye_garden/member/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+
+[ 2017-12-07T16:12:31+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=061pyzx32NfNeM0MVfz321vTx32pyzxz&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006404s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006461s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2017-12-07T16:18:15+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=061pyzx32NfNeM0MVfz321vTx32pyzxz&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0180s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 41 行.
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = null LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 46 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 46 行.
+SQL: INSERT INTO `w_members` (`openid`) VALUES (NULL) [ RunTime:0.0258s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 47 行.
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008435s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000365s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000419s ]
+
+[ 2017-12-07T16:18:57+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=061pyzx32NfNeM0MVfz321vTx32pyzxz&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 41 行.
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = null LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 46 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 46 行.
+SQL: INSERT INTO `w_members` (`openid`) VALUES (NULL) [ RunTime:0.0074s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 47 行.
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006983s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000415s ]
+
+[ 2017-12-07T16:20:06+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=061pyzx32NfNeM0MVfz321vTx32pyzxz&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 42 行.
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = null LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 47 行.
+NOTIC: [8] Undefined property: stdClass::$headimgurl /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 47 行.
+SQL: INSERT INTO `w_members` (`openid`) VALUES (NULL) [ RunTime:0.0161s ]
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 48 行.
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009049s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000380s ]
+
+[ 2017-12-07T16:21:17+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=061pyzx32NfNeM0MVfz321vTx32pyzxz&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:21:21+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=061pyzx32NfNeM0MVfz321vTx32pyzxz&state=STATE&code=0813KM350yQZ8J1m3y350P8E3503KM3I&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 23 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000308s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000354s ]
+
+[ 2017-12-07T16:21:57+08:00 ] 117.158.25.204 /jianye_garden/member/profile.html?code=061pyzx32NfNeM0MVfz321vTx32pyzxz&state=STATE&code=0813KM350yQZ8J1m3y350P8E3503KM3I&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:22:01+08:00 ] 117.158.25.204 /jianye_garden/member/profile.html?code=061pyzx32NfNeM0MVfz321vTx32pyzxz&state=STATE&code=0813KM350yQZ8J1m3y350P8E3503KM3I&state=STATE&code=061KEJC12oHcFX0bawF12ziIC12KEJCW&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 23 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-07T16:22:01+08:00 ] 117.158.25.204 /jianye_garden/member/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+
+[ 2017-12-07T16:22:05+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 23 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006680s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000378s ]
+
+[ 2017-12-07T16:25:12+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:25:17+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006702s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2017-12-07T16:25:35+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:25:39+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `w_members` (`openid`) VALUES ('oMP-Ms85vH3sMnMlEArs-mWKpXS4') [ RunTime:0.0085s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006628s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006693s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2017-12-07T16:27:17+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:27:22+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0012s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `w_members` (`openid`,`headimg`,`rg_time`) VALUES ('oMP-Ms85vH3sMnMlEArs-mWKpXS4','http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJMjzRiaDU5U2WVzFxibnco6DWXuCCQqkHxpxNoLE7Obm6ueajSOjFZkEawrqaAsiaucN3HnFicS53ticg/0','1512635242') [ RunTime:0.0123s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007446s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2017-12-07T16:46:24+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:46:27+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0011s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057545s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000425s ]
+
+[ 2017-12-07T16:46:27+08:00 ] 117.158.25.204 /jianye_garden/ThemeAdmin/default/House/css/add.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+ERR: 无法加载控制器:ThemeAdmin
+
+[ 2017-12-07T16:47:29+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:47:32+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007117s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000344s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2017-12-07T16:47:32+08:00 ] 117.158.25.204 /jianye_garden/ThemeAdmin/default/House/css/add.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+ERR: 无法加载控制器:ThemeAdmin
+
+[ 2017-12-07T16:47:49+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:47:53+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040344s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000349s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000399s ]
+
+[ 2017-12-07T16:47:53+08:00 ] 117.158.25.204 /jianye_garden/ThemeAdmin/default/House/css/add.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+ERR: 无法加载控制器:ThemeAdmin
+
+[ 2017-12-07T16:47:55+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:47:58+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006292s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006349s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000345s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000394s ]
+
+[ 2017-12-07T16:47:58+08:00 ] 117.158.25.204 /jianye_garden/ThemeAdmin/default/House/css/add.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+ERR: 无法加载控制器:ThemeAdmin
+
+[ 2017-12-07T16:49:33+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:49:37+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039163s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000372s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000420s ]
+
+[ 2017-12-07T16:49:37+08:00 ] 117.158.25.204 /jianye_garden/Theme/default/House/css/add.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+ERR: 无法加载控制器:Theme
+
+[ 2017-12-07T16:50:18+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:50:22+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036643s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036715s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000384s ]
+
+[ 2017-12-07T16:50:22+08:00 ] 117.158.25.204 /jianye_garden/Theme/default/Member/css/add.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+ERR: 无法加载控制器:Theme
+
+[ 2017-12-07T16:50:58+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:51:02+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042135s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000429s ]
+
+[ 2017-12-07T16:51:55+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:51:58+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006491s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006548s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2017-12-07T16:53:25+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:53:29+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006734s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006807s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000537s ]
+
+[ 2017-12-07T16:54:02+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:54:06+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007283s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007342s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000337s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000390s ]
+
+[ 2017-12-07T16:55:53+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T16:55:57+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000406s ]
+
+[ 2017-12-07T17:00:57+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:01:03+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037657s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037729s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000371s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000420s ]
+
+[ 2017-12-07T17:04:46+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:04:50+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039069s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000426s ]
+
+[ 2017-12-07T17:04:58+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:05:00+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:05:04+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007392s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007450s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000393s ]
+
+[ 2017-12-07T17:05:20+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:05:21+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:05:24+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE&code=081TKg180CfyQH13a64809wv180TKg1g&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006441s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006503s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000393s ]
+
+[ 2017-12-07T17:05:34+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE&code=081TKg180CfyQH13a64809wv180TKg1g&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:05:35+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE&code=081TKg180CfyQH13a64809wv180TKg1g&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:05:37+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE&code=081TKg180CfyQH13a64809wv180TKg1g&state=STATE&code=021vM4H60S6NLK1ERFG60EEKG60vM4H5&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006990s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007063s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000589s ]
+
+[ 2017-12-07T17:06:33+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE&code=081TKg180CfyQH13a64809wv180TKg1g&state=STATE&code=021vM4H60S6NLK1ERFG60EEKG60vM4H5&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:06:34+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE&code=081TKg180CfyQH13a64809wv180TKg1g&state=STATE&code=021vM4H60S6NLK1ERFG60EEKG60vM4H5&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:06:35+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE&code=081TKg180CfyQH13a64809wv180TKg1g&state=STATE&code=021vM4H60S6NLK1ERFG60EEKG60vM4H5&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:06:38+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE&code=081TKg180CfyQH13a64809wv180TKg1g&state=STATE&code=021vM4H60S6NLK1ERFG60EEKG60vM4H5&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:06:42+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE&code=081TKg180CfyQH13a64809wv180TKg1g&state=STATE&code=021vM4H60S6NLK1ERFG60EEKG60vM4H5&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000416s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:06:43+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE&code=081TKg180CfyQH13a64809wv180TKg1g&state=STATE&code=021vM4H60S6NLK1ERFG60EEKG60vM4H5&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:06:43+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=071SJ29L0sG4l72pL08L0FO39L0SJ29K&state=STATE&code=001rpTU01tWY202TdxS01pGxU01rpTUO&state=STATE&code=011bm5Tk2kETNG0nb4Tk2c1SSk2bm5TP&state=STATE&code=001jGIZi2eomfJ0psB1j2AkVZi2jGIZk&state=STATE&code=021GgIXw0ZK6Li1WkGXw0r6VXw0GgIX6&state=STATE&code=071zTejz0zNAyg17PXiz0G6mjz0zTejw&state=STATE&code=081jPka423bMzM0pcBb42Dcha42jPkaI&state=STATE&code=081voX5f2rt55B03aH5f2hrU5f2voX5-&state=STATE&code=021y70IC12dFX20gxRJC1NrXHC1y70IP&state=STATE&code=021eqaQk1Rfuql0xPHSk1vapQk1eqaQ4&state=STATE&code=071O97JM1leOK512WxIM1sEPIM1O97JS&state=STATE&code=061gza961Cfv0S1jYT8611b9961gza9Q&state=STATE&code=061xmQCe1mvvLs0isaDe1dlPCe1xmQCj&state=STATE&code=021UG8ms0QrtRd1kaims0wOWls0UG8m6&state=STATE&code=0810MMhq09SOup1M9chq0Ubyhq00MMho&state=STATE&code=011XajRN1LxYl21oEEQN1aSzRN1XajRn&state=STATE&code=081fovrG10pb520xocrG1kdOrG1fovrc&state=STATE&code=001gBdJj0XVPtn1M1SMj0BqqJj0gBdJO&state=STATE&code=081TKg180CfyQH13a64809wv180TKg1g&state=STATE&code=021vM4H60S6NLK1ERFG60EEKG60vM4H5&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:09:35+08:00 ] 117.158.25.204 /jianye_garden/Member/profile
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+
+[ 2017-12-07T17:09:38+08:00 ] 117.158.25.204 /jianye_garden/Member/profile?code=021OPiWF1qM1R10OfjXF1WstWF1OPiWQ&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-12-07T17:09:39+08:00 ] 117.158.25.204 /jianye_garden/member/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+
+[ 2017-12-07T17:09:42+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=011kTgkB1Z3J7f0mJnjB1AHZjB1kTgkM&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006931s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006988s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000411s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2017-12-07T17:10:54+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=011kTgkB1Z3J7f0mJnjB1AHZjB1kTgkM&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:10:58+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=011kTgkB1Z3J7f0mJnjB1AHZjB1kTgkM&state=STATE&code=011KZTe61rPn2S1xF0e61DnUe61KZTet&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007074s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000390s ]
+
+[ 2017-12-07T17:11:05+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=011kTgkB1Z3J7f0mJnjB1AHZjB1kTgkM&state=STATE&code=011KZTe61rPn2S1xF0e61DnUe61KZTet&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+
+[ 2017-12-07T17:12:56+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=011kTgkB1Z3J7f0mJnjB1AHZjB1kTgkM&state=STATE&code=011KZTe61rPn2S1xF0e61DnUe61KZTet&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$access_token /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 53 行.
+NOTIC: [8] Undefined property: stdClass::$openid /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 54 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+
+[ 2017-12-07T17:13:00+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=011kTgkB1Z3J7f0mJnjB1AHZjB1kTgkM&state=STATE&code=011KZTe61rPn2S1xF0e61DnUe61KZTet&state=STATE&code=0114wjHq1QGfXm0etiHq1ixxHq14wjHf&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] curl_setopt(): CURLOPT_SSL_VERIFYHOST with value 1 is deprecated and will be removed as of libcurl 7.28.1. It is recommended to use value 2 instead /alidata/www/api/jianye_garden/ThinkPHP/Library/Org/Wechat/Jssdk.class.php 第 127 行.
+NOTIC: [8] Undefined property: stdClass::$errcode /alidata/www/api/jianye_garden/app/Home/Controller/BaseController.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`openid`,`uname`,`phone_num` FROM `w_members` WHERE `openid` = 'oMP-Ms85vH3sMnMlEArs-mWKpXS4' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007191s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000393s ]
+
+[ 2017-12-07T17:16:20+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=011kTgkB1Z3J7f0mJnjB1AHZjB1kTgkM&state=STATE&code=011KZTe61rPn2S1xF0e61DnUe61KZTet&state=STATE&code=0114wjHq1QGfXm0etiHq1ixxHq14wjHf&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+
+[ 2017-12-07T17:58:21+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=011kTgkB1Z3J7f0mJnjB1AHZjB1kTgkM&state=STATE&code=011KZTe61rPn2S1xF0e61DnUe61KZTet&state=STATE&code=0114wjHq1QGfXm0etiHq1ixxHq14wjHf&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006455s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000380s ]
+
+[ 2017-12-07T18:04:27+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=011kTgkB1Z3J7f0mJnjB1AHZjB1kTgkM&state=STATE&code=011KZTe61rPn2S1xF0e61DnUe61KZTet&state=STATE&code=0114wjHq1QGfXm0etiHq1ixxHq14wjHf&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035195s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035273s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000399s ]
+
+[ 2017-12-07T18:04:51+08:00 ] 117.158.25.204 /jianye_garden/member/login.html?code=011kTgkB1Z3J7f0mJnjB1AHZjB1kTgkM&state=STATE&code=011KZTe61rPn2S1xF0e61DnUe61KZTet&state=STATE&code=0114wjHq1QGfXm0etiHq1ixxHq14wjHf&state=STATE
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006577s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000413s ]
+

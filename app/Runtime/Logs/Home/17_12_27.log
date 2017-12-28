@@ -1925,3 +1925,24 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000597s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000639s ]
 
+[ 2017-12-27T18:57:57+08:00 ] 127.0.0.1 /jianye_garden/Service/order.html?uid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000101s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+SQL: SHOW COLUMNS FROM `w_service` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `w_service` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0051s ]
+SQL: SELECT w_members.uid,`uname`,`phone_num`,`level`,`score` FROM `w_members` left JOIN w_grade on w_grade.u_uid=w_members.uid  WHERE w_members.uid = 1 LIMIT 1   [ RunTime:0.0032s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019697s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019746s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+

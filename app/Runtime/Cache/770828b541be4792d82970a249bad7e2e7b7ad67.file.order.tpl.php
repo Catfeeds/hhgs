@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-26 16:51:14
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 20:54:15
          compiled from "./ThemeAdmin/default/Shop/order.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20489898985a40e429c2c685-42460199%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '770828b541be4792d82970a249bad7e2e7b7ad67' => 
     array (
       0 => './ThemeAdmin/default/Shop/order.tpl',
-      1 => 1514278271,
+      1 => 1514465652,
       2 => 'file',
     ),
   ),
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a40e429c7ab9')) {function content_5a40e429c7ab9($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a40e429c7ab9')) {function content_5a40e429c7ab9($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 <?php $_tmp1=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 <?php $_tmp2=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['userlevel']->value;?>
@@ -58,6 +58,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<thead>
 							<tr>
 								<th>订单编号</th>
+								<th>用户id</th>
 								<th>用户名称</th>
 								<th>联系方式</th>
 								<th>购买商品</th>
@@ -78,6 +79,8 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 ?>
 								<tr>
 									<td><?php echo $_smarty_tpl->tpl_vars['item']->value['order_id'];?>
+</td>
+									<td><?php echo $_smarty_tpl->tpl_vars['item']->value['u_uid'];?>
 </td>
 									<td><?php echo $_smarty_tpl->tpl_vars['item']->value['uname'];?>
 </td>

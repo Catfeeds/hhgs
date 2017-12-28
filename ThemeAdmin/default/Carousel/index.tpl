@@ -29,7 +29,8 @@
 						<thead>
 							<tr>
 								<th>图片</th>
-								<th>链接</th>								
+								<th>链接</th>
+								<th>类型</th>								
 								<th>时间</th>
 								<th>备注</th>
 								<th>操作</th>
@@ -41,7 +42,10 @@
 									<td>
 										<img class='img' src="{$smarty.const.HOME}{$item['img']}">
 									</td>
-									<td>{$item['link']}</td>							
+									<td>{$item['link']}</td>
+									<td>
+										{if $item['type'] eq 1}活动{else}商城{/if}
+									</td>							
 									<td>{$item['time']|date_format:'%Y-%m-%d %H:%M'}</td>
 									<td>{$item['mark']}</td>
 									<td>

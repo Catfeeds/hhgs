@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-25 18:37:45
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 21:52:45
          compiled from "./Theme/default/Consultant/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13533942805a40991636c2a6-10497333%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '35a1dc545fd5f2286848ef27fe3fd35ad8c3a989' => 
     array (
       0 => './Theme/default/Consultant/index.tpl',
-      1 => 1514198262,
+      1 => 1514469162,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a4099163b393')) {function content_5a4099163b393($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a4099163b393')) {function content_5a4099163b393($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang='zh'>
 <head>
@@ -60,7 +60,7 @@ px'>
 							</span>	
 							<span><?php echo sprintf('%.1f',$_smarty_tpl->tpl_vars['item']->value['degree']);?>
 </span>
-							<span class='pj <?php if ($_smarty_tpl->tpl_vars['item']->value["comment"]==1){?>pj_can<?php }?>'>评价</span>
+							<span class='pj <?php if ($_smarty_tpl->tpl_vars['item']->value["comment"]==1){?>pj_can<?php }else{ ?>pj_cant<?php }?>'>评价</span>
 						</p>
 						<p class='infop'>年龄：<span><?php echo sprintf('%d',((time()-$_smarty_tpl->tpl_vars['item']->value['birth'])/3600/24/365));?>
 </span>&nbsp;&nbsp;性别：<span><?php if ($_smarty_tpl->tpl_vars['item']->value['sex']==1){?>男<?php }else{ ?>女<?php }?></span></p>
@@ -118,10 +118,6 @@ Consultant/img/close.png">
 		</p>
 	</div>
 	<div class='cover_comment'>
-		<div id='close'>
-			<img src="<?php echo @THEME;?>
-Consultant/">
-		</div>
 		<div class='box'>
 			<input id='comm_uid' type="hidden">
 			<div id="star">
@@ -143,6 +139,10 @@ Consultant/">
 				<button id='com_sub' class='btn btn-submit'>提交您的评论</button>
 			</div>
 		</div>
+		<p class='close'>
+			<img src="<?php echo @THEME;?>
+Consultant/img/close.png">
+		</p>
 	</div>
 	<script src="<?php echo @ORG;?>
 jquery/jquery-2.1.0.min.js"></script>
@@ -165,7 +165,7 @@ Consultant/js/stars.js'></script>
 			  	return this.optional(element) || (length == 11 && mobile.test(value)); 
 			}, "手机号码格式错误"); 
 			$('#form').validate({
-				debug:true,
+				// debug:true,
 				rules:{
 					name:'required',
 					phone:{
@@ -209,12 +209,16 @@ Consultant/js/stars.js'></script>
 			});
 			$('.close img').click(function(){
 				$('#cons_uid').val('');
-				$('.cover').hide();
+				$(this).parent().parent().hide();
 			});
+			// 点开评论框
 			$('.pj_can').click(function(){
 				let comm_uid=$(this).parent().parent().parent().data('uid');
 				$('#comm_uid').val(comm_uid);
 				$('.cover_comment').slideDown();
+			});
+			$('.pj_cant').click(function(){
+				alert('暂时无法评论');
 			});
 			// 提交评论
 			$('#com_sub').click(function(){
@@ -243,6 +247,16 @@ Consultant/comment_submit',
 						}
 					}
 				});
+			});
+			$('#type').change(function(){
+				let vl=$(this).val();
+				if(vl==1){
+					$('#date').parent().parent().show();
+					$('#time').parent().parent().show();
+				}else{
+					$('#date').parent().parent().hide();
+					$('#time').parent().parent().hide();
+				}
 			});
 		});
 	</script>

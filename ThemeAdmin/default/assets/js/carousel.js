@@ -47,6 +47,7 @@ $(function(){
 		var uid=$('#uid').val();
 		var img=$('.head_img img').data('url');
 		var link=$('#link').val();
+		var type=$('#type').val();
 		var mark=$('#mark').val();
 		if(img==''){
 			$('.error_report').show();
@@ -67,6 +68,6 @@ $(function(){
             },
         };
         Ajax.setConfig(setting);
-        Ajax.submit({'uid':uid,'img':img,'link':link,'mark':mark});
+        Ajax.submit({'uid':uid,'img':img,'link':link,'type':type,'mark':mark});
 	});
 });

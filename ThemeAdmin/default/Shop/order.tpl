@@ -23,6 +23,7 @@
 						<thead>
 							<tr>
 								<th>订单编号</th>
+								<th>用户id</th>
 								<th>用户名称</th>
 								<th>联系方式</th>
 								<th>购买商品</th>
@@ -39,6 +40,7 @@
 							{foreach $order['list'] as $item}
 								<tr>
 									<td>{$item['order_id']}</td>
+									<td>{$item['u_uid']}</td>
 									<td>{$item['uname']}</td>
 									<td>{$item['phone_num']}</td>
 									<td>{$item['goods_name']}</td>

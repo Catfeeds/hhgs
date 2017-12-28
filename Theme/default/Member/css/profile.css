@@ -54,7 +54,9 @@ body{
 	flex: 2;
 	text-align: right;
 }
-
+.header .clockin img{
+	width: 70px;
+}
 .levelgrounp{
 	display: flex;
 	background-color: #fff;

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-19 10:38:48
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 21:56:52
          compiled from "./Theme/default/Member/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8678080145a2e372b8f2ff8-80406101%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '342c905c22685561d9bb3f7ae4a7dd9780a28f08' => 
     array (
       0 => './Theme/default/Member/profile.tpl',
-      1 => 1513650237,
+      1 => 1514469397,
       2 => 'file',
     ),
   ),
@@ -107,7 +107,7 @@ Member/img/more.png"></p>
 		</div>
 		<div class='groups'>
 			<div class='item'>
-				<a href="#">
+				<a href="tel:0371-69165555">
 					<p><img src="<?php echo @THEME;?>
 Member/img/4.png"></p>
 					<p>帮助中心</p>

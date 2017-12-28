@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-25 19:59:23
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 15:04:52
          compiled from "./ThemeAdmin/default/Carousel/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14935235855a40e6e90094b0-89018547%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '527f34ea66766046d50a37057b57b41bc475d739' => 
     array (
       0 => './ThemeAdmin/default/Carousel/index.tpl',
-      1 => 1514203156,
+      1 => 1514444690,
       2 => 'file',
     ),
   ),
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a40e6e90b02c')) {function content_5a40e6e90b02c($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a40e6e90b02c')) {function content_5a40e6e90b02c($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 <?php $_tmp1=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 <?php $_tmp2=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['userlevel']->value;?>
@@ -65,7 +65,8 @@ Carousel/post.html" class='btn btn-primary'>添加新的幻灯片</a>
 						<thead>
 							<tr>
 								<th>图片</th>
-								<th>链接</th>								
+								<th>链接</th>
+								<th>类型</th>								
 								<th>时间</th>
 								<th>备注</th>
 								<th>操作</th>
@@ -84,7 +85,10 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 ">
 									</td>
 									<td><?php echo $_smarty_tpl->tpl_vars['item']->value['link'];?>
-</td>							
+</td>
+									<td>
+										<?php if ($_smarty_tpl->tpl_vars['item']->value['type']==1){?>活动<?php }else{ ?>商城<?php }?>
+									</td>							
 									<td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['item']->value['time'],'%Y-%m-%d %H:%M');?>
 </td>
 									<td><?php echo $_smarty_tpl->tpl_vars['item']->value['mark'];?>

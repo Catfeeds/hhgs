@@ -29,7 +29,7 @@
 		<div class='title'>
 			<p class='line'></p>
 			<p class=tname>{$info['goods_name']}</p>
-			<div class='coin'>{$info['goods_price']|string_format:"%d"}积分</div>
+			<div class='coin'>{$info['goods_price']|string_format:"%d"}活跃值</div>
 		</div>		
 		<div class='content'>
 			{$info['goods_detail']|htmlspecialchars_decode|stripslashes}

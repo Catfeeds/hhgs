@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-27 18:51:01
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 20:49:25
          compiled from "./ThemeAdmin/default/Service/service_order.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7142449315a434d3744daf3-23888480%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5cc8842f8500a1f56be1a1a3ac616c1431a70f21' => 
     array (
       0 => './ThemeAdmin/default/Service/service_order.tpl',
-      1 => 1514371860,
+      1 => 1514465362,
       2 => 'file',
     ),
   ),
@@ -62,6 +62,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<thead>
 							<tr>
 								<th>服务名称</th>
+								<th>用户id</th>
 								<th>用户名称</th>
 								<th>用户手机</th>
 								<th>预定时间</th>
@@ -79,6 +80,8 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 ?>
 								<tr>
 									<td><?php echo $_smarty_tpl->tpl_vars['item']->value['sname'];?>
+</td>
+									<td><?php echo $_smarty_tpl->tpl_vars['item']->value['u_uid'];?>
 </td>
 									<td><?php echo $_smarty_tpl->tpl_vars['item']->value['uname'];?>
 </td>

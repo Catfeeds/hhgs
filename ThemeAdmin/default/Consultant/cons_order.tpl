@@ -25,6 +25,7 @@
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
+								<th>客户id</th>
 								<th>客户名</th>
 								<th>联系方式</th>
 								<th>预约类型</th>
@@ -39,6 +40,7 @@
 						<tbody>
 							{foreach $list['list'] as $item}
 								<tr>
+									<td>{$item['u_uid']}</td>
 									<td>{$item['name']}</td>
 									<td>{$item['phone_num']}</td>
 									<td>{if $item['type'] eq 1}在线预约{else}到场预约{/if}</td>

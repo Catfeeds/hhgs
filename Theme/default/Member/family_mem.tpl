@@ -46,11 +46,11 @@
 				</p>
 				<p class='line'>
 					<label>兴趣爱好</label>
-					<input id='hobby' name='hobby' type='tel' value='{$info["hobby"]}'>
+					<input id='hobby' name='hobby' type='text' value='{$info["hobby"]}'>
 				</p>
 				<p class='btn'>
 					<button type='submit'>
-						<img src="{$smarty.const.THEME}Member/img/submit.png">
+						<div class='sub_bg'>提交信息</div>
 					</button>
 				</p>
 			</form>

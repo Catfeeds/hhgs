@@ -68,7 +68,7 @@
 				<div class="sidebar ">
 					<div class="sidebar-collapse">
 						<div class="sidebar-header t-center">
-	                        <span><img class="text-logo" src="{$smarty.const.THEMEADMIN}assets/img/logo.png"><i class="fa fa-space-shuttle fa-3x blue"></i></span>
+	                        <span><img class="text-logo" src="{$smarty.const.THEMEADMIN}assets/img/logo.png"></span>
 	                    </div>										
 						<div class="sidebar-menu">
 							<ul class="nav nav-sidebar">
@@ -86,7 +86,7 @@
 								<li>
 									<a href="#"><i class="fa fa-server"></i><span class="text"> 服务</span> <span class="fa fa-angle-down pull-right"></span></a>
 									<ul class="nav sub">
-										<li><a href="{$smarty.const.ADMIN}Service/list.html"><i class="fa fa-puzzle-piece"></i><span class="text"> 服务管理</span></a></li>
+										<li><a href="{$smarty.const.ADMIN}Service/slist.html"><i class="fa fa-puzzle-piece"></i><span class="text"> 服务管理</span></a></li>
 										<li><a href="{$smarty.const.ADMIN}Service/service_order.html"><i class="fa fa-paw"></i><span class="text"> 服务预约管理</span></a></li>
 									</ul>
 								</li>

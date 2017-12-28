@@ -66,7 +66,7 @@
 		</div>
 		<div class='groups'>
 			<div class='item'>
-				<a href="#">
+				<a href="tel:0371-69165555">
 					<p><img src="{$smarty.const.THEME}Member/img/4.png"></p>
 					<p>帮助中心</p>
 					<p><img src="{$smarty.const.THEME}Member/img/more.png"></p>

@@ -22,6 +22,7 @@
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
+								<th>用户id</th>
 								<th>用户名称</th>
 								<th>性别</th>
 								<th>手机号码</th>
@@ -36,6 +37,7 @@
 						<tbody>
 							{foreach $list['list'] as $item}
 								<tr>
+									<td>{$item['uid']}</td>
 									<td>{$item['uname']}</td>
 									<td>{if $item['sex'] eq 1}男{else}女{/if}</td>
 									<td>{$item['phone_num']}</td>

@@ -7,7 +7,7 @@
 			parent::__construct();
 			$this->service=M('w_service');
 		}
-		function list(){
+		function slist(){
 			$list=$this->service->field('uid,name,level,area,stime,etime,atime,status,number,last_number')->select();
 			$this->assign('list',$list);
 			$this->display();

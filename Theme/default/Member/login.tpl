@@ -31,7 +31,7 @@
 			<p class='ajax_error'></p>
 			<p class='form-line' style='padding-top:40px;'>
 				<button type='submit'>
-					<img src="{$smarty.const.THEME}Member/img/login_btn.png">
+					<div class='sub_bg'>提交信息</div>
 				</button>
 			</p>
 		</form>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-24 15:33:31
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 20:52:12
          compiled from "./ThemeAdmin/default/Consultant/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5686519865a3f44c477a9d8-08946360%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '30edcdc7c1f8860db5adc75531198ccc67a3369e' => 
     array (
       0 => './ThemeAdmin/default/Consultant/index.tpl',
-      1 => 1514100806,
+      1 => 1514465530,
       2 => 'file',
     ),
   ),
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a3f44c481946')) {function content_5a3f44c481946($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a3f44c481946')) {function content_5a3f44c481946($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 <?php $_tmp1=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 <?php $_tmp2=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['userlevel']->value;?>
@@ -57,6 +57,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
+								<th>顾问id</th>
 								<th>姓名</th>
 								<th>性别</th>
 								<th>出生日期</th>
@@ -72,6 +73,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars
 $_smarty_tpl->tpl_vars['item']->_loop = true;
 ?>
 								<tr>
+									<td><?php echo $_smarty_tpl->tpl_vars['item']->value['uid'];?>
+</td>
 									<td><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </td>
 									<td><?php if ($_smarty_tpl->tpl_vars['item']->value['sex']==1){?>男<?php }else{ ?>女<?php }?></td>

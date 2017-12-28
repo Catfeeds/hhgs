@@ -1,7 +1,7 @@
 <?php
 	namespace Home\Controller;
 	use Think\Controller;
-	class MemberController extends Controller{
+	class MemberController extends BaseController{
 		protected $mem=null;
 		protected $uid;
 		private   $profilecount=16; //信息完善的总字段数量
@@ -9,7 +9,6 @@
 		function __construct(){
 			parent::__construct();
 			$this->mem=D('Member');
-			$this->uid=session('jianye_user_uid');	
 		}
 		// 用户登录
 		function login(){
@@ -28,14 +27,13 @@
 					else
 						$is_authen=0;
 
-
 					// 对比新用户手机号码是否存在member表中
-					$is_mem=$mem->where(array('phone_num'=>$data['tel']))->count();
+					$is_mem=$this->mem->where(array('phone_num'=>$data['tel']))->count();
 					if($is_mem){
-						$uid=$mem->usave(array('phone_num'=>$data['tel']),array('openid'=>$openid,'headimg'=>$headimg,'uname'=>$data['name'],'is_authen'=>$is_authen,'rg_time'=>time()));
+						$uid=$this->mem->usave(array('phone_num'=>$data['tel']),array('openid'=>$openid,'headimg'=>$headimg,'uname'=>$data['name'],'is_authen'=>$is_authen,'rg_time'=>time()));
 
 					}else{
-						$uid=$mem->uadd(array('openid'=>$openid,'headimg'=>$headimg,'uname'=>$data['name'],'phone_num'=>$data['tel'],'is_authen'=>$is_authen,'rg_time'=>time()));
+						$uid=$this->mem->uadd(array('openid'=>$openid,'headimg'=>$headimg,'uname'=>$data['name'],'phone_num'=>$data['tel'],'is_authen'=>$is_authen,'rg_time'=>time()));
 					}
 					
 
@@ -155,7 +153,7 @@
 			$family=M('w_family');
 			$mem=D('Member');
 			$is_authen=$mem->ufind(array('uid'=>$this->uid),'is_authen');
-			// 是业主的话显示这样的信息
+			// 是业主的话显示添加按钮
 			if($is_authen['is_authen']){
 				$puid=$this->uid;
 				$this->assign('hide',false);
@@ -168,7 +166,7 @@
 					$puid=NULL;
 				$this->assign('hide',true);
 			}
-			$info_list=$family->where(array('w_family.p_uid'=>$puid))->field('w_members.uid,uname,sex,birth,phone_num,headimg,w_relation.relation')->join('join w_members on w_family.child_uid=w_members.uid')->join('join w_relation on w_family.relation=w_relation.uid')->select();
+			$info_list=$family->where(array('w_family.p_uid'=>$puid,'is_authen'=>0))->field('w_members.uid,uname,sex,birth,phone_num,headimg,w_relation.relation')->join('join w_members on w_family.child_uid=w_members.uid')->join('join w_relation on w_family.relation=w_relation.uid')->select();
 			if($info_list)
 					$this->assign('list',$info_list);
 			$this->display();
@@ -209,7 +207,7 @@
 					}else{	//添加
 						$value['rg_time']=time();
 						// 判断是否超过5个成员的限制	
-						$fnum=$family->where(array('p_uid'=>$this->uid))->count();
+						$fnum=$family->where(array('p_uid'=>$this->uid,'is_authen'=>0))->join('w_members on w_family.child_uid=w_members.uid')->count();
 						if($fnum<$this->memcount){					
 							$mem->startTrans();
 							// 添加个人信息与关系

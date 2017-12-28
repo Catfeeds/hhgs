@@ -22,6 +22,7 @@
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
+								<th>顾问id</th>
 								<th>姓名</th>
 								<th>性别</th>
 								<th>出生日期</th>
@@ -33,6 +34,7 @@
 						<tbody>
 							{foreach $list as $item}
 								<tr>
+									<td>{$item['uid']}</td>
 									<td>{$item['name']}</td>
 									<td>{if $item['sex'] eq 1}男{else}女{/if}</td>
 									<td>{$item['birth']|date_format:'%Y-%m-%d'}</td>

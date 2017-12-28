@@ -25,6 +25,7 @@
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
+								<th>用户id</th>
 								<th>参加者</th>
 								<th>手机号码</th>
 								<th>携带人数</th>
@@ -37,6 +38,7 @@
 						<tbody>
 							{foreach $list['list'] as $item}
 								<tr>
+									<td>{$item['u_uid']}</td>
 									<td>{$item['uname']}</td>
 									<td>{$item['phone_num']}</td>
 									<td><p class='text-primary'>{$item['carry_num']}&nbsp;人</p></td>
