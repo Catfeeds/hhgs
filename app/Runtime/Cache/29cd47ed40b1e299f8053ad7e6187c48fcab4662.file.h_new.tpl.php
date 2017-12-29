@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 23:03:27
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-29 11:21:19
          compiled from "./ThemeAdmin/default/Member/h_new.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20172540755a3f65336c0605-54183763%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '29cd47ed40b1e299f8053ad7e6187c48fcab4662' => 
     array (
       0 => './ThemeAdmin/default/Member/h_new.tpl',
-      1 => 1514473397,
+      1 => 1514517677,
       2 => 'file',
     ),
   ),
@@ -52,7 +52,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	</div>
 	<div class='row'>
 		<div class='col-md-12'>
+			
 			<div class='panel panel-default'>
+				<div class='panel-heading'>批量导入</div>
+				<div class='panel-body'>
+					<div style='padding: 10px 0;display: flex;'>
+						<form id="upload" enctype="multipart/form-data"  method='post'>
+							<input id='file' class='form-control' type="file" name="file" style='width:400px;' accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+						</form>
+						<p style='padding-left: 10px;'><button id='do_exel' class='btn btn-primary'>批量上传</button></p>
+					</div>
+					<p class=' text-danger'>
+					批量导入业主信息注意事项：<br>
+					1、身份证与手机号码必须为文本格式不能使用科学计数的方式；<br>
+					2、置业顾问需要填写对应的id编号不可直接使用顾问姓名<br>
+					3、业主生日应按照：2017-01-01的格式填写并格式化为文本方式<br>
+					4、文件格式必须为*.xls或*.xlsx且文件大小不能超过5M<br>
+					5、sheet数量最多为一个
+					</p>
+				</div>
+			</div>
+			<div class='panel panel-default'>
+				<div class='panel-heading'>单个导入</div>
 				<div class='panel-body'>
 					<form id='form' action="" method="post" enctype="multipart/form-data" class='form-horizontal'>
 						<input id="uid" type='hidden' value="<?php echo $_smarty_tpl->tpl_vars['info']->value['uid'];?>
@@ -208,7 +229,21 @@ card.js'></script>
 upload/jquery.form.js'></script>
 <script type="text/javascript">
 	$(function(){
-
+		$('#do_exel').click(function(){
+			$('#upload').ajaxSubmit({
+				dataType: 'json',  
+				url:'<?php echo @ADMIN;?>
+Member/batch_import',
+		        beforeSend: function() {  
+		        	console.log('上传中');  
+		        },  
+		        uploadProgress: function(event, position, total, percentComplete) {
+		        },  
+		        success: function(data) { 
+		        	console.log(data);
+		        }
+		    });
+		});
 	});
 </script>
 <?php echo $_smarty_tpl->getSubTemplate ('../tpl/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

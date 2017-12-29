@@ -146,3 +146,427 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000936s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001013s ]
 
+[ 2017-12-28T23:38:59+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0018s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.088717s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088762s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000920s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000898s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000943s ]
+
+[ 2017-12-28T23:39:15+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0017s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055285s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055334s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000585s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2017-12-28T23:39:59+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0020s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058082s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058123s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2017-12-28T23:40:15+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0021s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058889s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000438s ]
+
+[ 2017-12-28T23:40:18+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0017s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009546s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000541s ]
+
+[ 2017-12-28T23:40:36+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0018s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070677s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2017-12-28T23:40:51+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0019s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063266s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063304s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2017-12-28T23:41:00+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0019s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062418s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062453s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000549s ]
+
+[ 2017-12-28T23:41:11+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0018s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062108s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000845s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000889s ]
+
+[ 2017-12-28T23:43:04+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0024s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000531s ]
+
+[ 2017-12-28T23:45:00+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0027s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080193s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080238s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000835s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000881s ]
+
+[ 2017-12-28T23:45:34+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0019s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015905s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015950s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000837s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2017-12-28T23:46:17+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000830s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0020s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059661s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059698s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000541s ]
+
+[ 2017-12-28T23:47:48+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0016s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000482s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2017-12-28T23:47:56+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/batch_import
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0020s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+NOTIC: [8] Undefined index: file /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/MemberController.class.php 第 120 行.
+NOTIC: [8] Undefined index: file /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/MemberController.class.php 第 121 行.
+NOTIC: [8] Undefined index: file /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/MemberController.class.php 第 121 行.
+NOTIC: [8] Undefined index: file /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/MemberController.class.php 第 122 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000482s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2017-12-28T23:50:50+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/h_new.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `w_autheninfo` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `w_autheninfo` WHERE `uid` = 0 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0030s ]
+SQL: SELECT `uid`,`name` FROM `w_consultant`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080975s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000908s ]
+
+[ 2017-12-28T23:50:54+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/batch_import
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000850s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0016s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000568s ]
+
+[ 2017-12-28T23:55:06+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/batch_import
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0020s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000706s ]
+
+[ 2017-12-28T23:58:39+08:00 ] 127.0.0.1 /jianye_garden/Admin/Member/batch_import
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000995s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001084s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_members` [ RunTime:0.0024s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000678s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+

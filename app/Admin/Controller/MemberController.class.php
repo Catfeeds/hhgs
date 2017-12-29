@@ -69,9 +69,6 @@
 					}
 					$exec=$authen->add($value);
 				}
-				
-
-				
 				if($flag&&$exec){
 					$mem->commit();
 					echo message();
@@ -92,7 +89,72 @@
 
 		// 业主信息批量导入
 		function batch_import(){
-			
+			// 实例化上传类   
+            $upload 			= new \Think\Upload();
+            // 设置附件上传大小
+            $upload->maxSize   	=1024*1024*5 ;
+            // 设置附件上传类型     
+            $upload->exts      	=array('xls', 'xlsx');
+            
+            // 上传根路径
+            $upload->rootPath   =$_SERVER['DOCUMENT_ROOT'].HOME.'/upload/excel/';
+            if(!is_dir($upload->rootPath)){
+            	mkdir($upload->rootPath);
+            }
+            // 设置附件上传目录
+            $upload->savePath  	=''; 
+            // 上传文件     
+            $info   			=$upload->upload();   
+            $status=true; 
+            if(!$info) {
+                // 上传错误提示错误信息        
+                $message=$upload->getError();   
+                $status=false; 
+            }else{
+            	// 上传成功后读取excel文件内容
+                $message='上传成功';
+                $path=$upload->rootPath.$info['file']['savepath'].$info['file']['savename'];
+                $exceldata=$this->excel($path);
+
+                 // 开启事务写入到数据库中去
+                $authen=M('w_autheninfo');              
+                $authen->startTrans();
+                $d1=$authen->addAll($exceldata);
+
+                // 从数组中组合出手机号码队列,并查找members表中存在的未认证为业主的游客用户id
+                $phone=array();
+                foreach ($exceldata as $value) {
+                	$phone[]=$value['phone_num'];
+                }
+                $phone=implode(',',$phone);
+                $mem_info=$this->mem->field('uid')->where(array('phone_num'=>array('in',$phone,'is_authen'=>0)))->select();
+              
+                $uids=array();
+                foreach ($mem_info as $value) {
+                	$uids[]=$value['uid'];
+                }
+                $uids=implode(',',$uids);
+                // in查询找出所有的id,并更新所有的in中的认证信息
+                $d2=true;
+                if($uids)
+                	$d2=$this->mem->where(array('uid'=>array('in',$uids)))->save(array('is_authen'=>1));
+                if($d1&$d2){
+                	$authen->commit();
+                }
+                else
+                	$authen->rollback();
+            }
+            // 提示信息
+            $msg = array(  
+                'name'=>$info['file']['name'],
+                'path'=>$info['file']['savepath'].$info['file']['savename'],  
+                'size'=>$info['file']['size'] ,
+                'message'=>$message,
+            );  
+            if($status)
+            	echo message(200,'success',$msg);
+        	else
+        		echo message(408,'errors',$msg);
 		}
 
 		// 读取excel内容
@@ -106,19 +168,27 @@
 			$reader->setLoadSheetsOnly($sheetName);//加载指定的sheet
 			$objExcel=$reader->load($file);
 			$rows=array();//行数据集合
-			$sheets=array();
+			// $sheets=array();
 			foreach ($objExcel->getWorksheetIterator() as $sheet) {//读取sheet
 				foreach($sheet->getRowIterator() as $row){//读取行数据
 					if($row->getRowIndex()<2)//略过第一行数据
 						continue;
-					$row_array=array();					
+					$row_array=array();
+					$index=array('name','area','houseinfo','phone_num','idcard','birth','consultant');
+					$i=0;				
 					foreach($row->getCellIterator() as $cell){
-						array_push($row_array, $cell->getValue());					
+						// 先判断下数据类型是否为数字，然后将科学计数转换为text
+						// array_push($row_array, $cell->getValue());
+						$row_array[$index[$i]]=$cell->getValue();
+						$row_array['atime']=time();
+						$i++;			
 					}
+					if($row_array['name']==null)
+						continue;
 					array_push($rows, $row_array);
 				}
-				array_push($sheets, $rows);
+				// array_push($sheets, $rows);
 			}
-			return $sheets;
+			return $rows;
 		}
 	}
