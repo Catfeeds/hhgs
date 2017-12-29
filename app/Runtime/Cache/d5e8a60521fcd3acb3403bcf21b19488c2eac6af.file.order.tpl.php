@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 10:47:45
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-29 16:43:07
          compiled from "./Theme/default/Service/order.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18134222295a3765bfbe2474-74104601%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd5e8a60521fcd3acb3403bcf21b19488c2eac6af' => 
     array (
       0 => './Theme/default/Service/order.tpl',
-      1 => 1514424000,
+      1 => 1514470201,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a3765bfbe47e')) {function content_5a3765bfbe47e($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a3765bfbe47e')) {function content_5a3765bfbe47e($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang='zh'>
 <head>
@@ -85,8 +85,8 @@ service/<?php echo $_smarty_tpl->tpl_vars['sinfo']->value['img'];?>
 						<label>预约时间</label>
 						<select id='time' name='time'>
 							<option value=0>请选择预约时间</option>
-							<option value='1'>上午</option>
-							<option value='2'>下午</option>
+							<option value='1'>上午 10:00–12：00</option>
+							<option value='2'>下午 15：00—17：00</option>
 						</select>
 					</p>
 					<p class='line'>

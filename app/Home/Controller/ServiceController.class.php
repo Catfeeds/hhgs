@@ -9,7 +9,8 @@
 		}
 		// 服务列表
 		function index(){
-			$list=$this->service->where(array('status'=>1,'stime'=>array('lt',date('Y-m-d'),time()),'etime'=>array('gt',date('Y-m-d',time()))))->select();
+			// $list=$this->service->where(array('status'=>1,'stime'=>array('lt',date('Y-m-d'),time()),'etime'=>array('gt',date('Y-m-d',time()))))->order('status desc')->select();
+			$list=$this->service->order('status desc')->select();
 			$this->assign('list',$list);
 			$this->display();
 		}

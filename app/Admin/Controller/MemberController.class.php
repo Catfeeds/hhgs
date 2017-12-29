@@ -87,7 +87,7 @@
 			}			
 		}
 
-		// 业主信息批量导入
+		// 业主信息批量导入-上传预览excel文件
 		function batch_import(){
 			// 实例化上传类   
             $upload 			= new \Think\Upload();
@@ -112,49 +112,77 @@
                 $status=false; 
             }else{
             	// 上传成功后读取excel文件内容
-                $message='上传成功';
                 $path=$upload->rootPath.$info['file']['savepath'].$info['file']['savename'];
                 $exceldata=$this->excel($path);
-
-                 // 开启事务写入到数据库中去
-                $authen=M('w_autheninfo');              
-                $authen->startTrans();
-                $d1=$authen->addAll($exceldata);
-
-                // 从数组中组合出手机号码队列,并查找members表中存在的未认证为业主的游客用户id
-                $phone=array();
-                foreach ($exceldata as $value) {
-                	$phone[]=$value['phone_num'];
-                }
-                $phone=implode(',',$phone);
-                $mem_info=$this->mem->field('uid')->where(array('phone_num'=>array('in',$phone,'is_authen'=>0)))->select();
-              
-                $uids=array();
-                foreach ($mem_info as $value) {
-                	$uids[]=$value['uid'];
-                }
-                $uids=implode(',',$uids);
-                // in查询找出所有的id,并更新所有的in中的认证信息
-                $d2=true;
-                if($uids)
-                	$d2=$this->mem->where(array('uid'=>array('in',$uids)))->save(array('is_authen'=>1));
-                if($d1&$d2){
-                	$authen->commit();
-                }
-                else
-                	$authen->rollback();
             }
             // 提示信息
             $msg = array(  
                 'name'=>$info['file']['name'],
                 'path'=>$info['file']['savepath'].$info['file']['savename'],  
                 'size'=>$info['file']['size'] ,
-                'message'=>$message,
+                'message'=>$exceldata,
             );  
             if($status)
             	echo message(200,'success',$msg);
         	else
         		echo message(408,'errors',$msg);
+		}
+
+		// 批量业主信息导入到数据库中
+		function do_db_import(){
+			$filename=I('POST.filename');
+			if(!$filename)
+				return;
+			// 上传数据
+			$path=$_SERVER['DOCUMENT_ROOT'].HOME.'/upload/excel/'.$filename;
+			$exceldata=$this->excel($path);
+		   // 开启事务写入到数据库中去
+            $authen=M('w_autheninfo');              
+            $authen->startTrans();
+            $d1=$authen->addAll($exceldata,array(),1);
+            if($d1){
+            	$authen->commit();
+            	unlink($path);
+            	echo message();
+            }
+            else{
+            	$authen->rollback();
+            	echo message(301,'error','数据提交失败，请稍后再试');
+            }
+		}
+
+		// 匹配未认证业主信息，认证业主
+		function do_match_yezhu(){
+			$list=array();
+			$un_authen=$this->mem->field('uid,uname,phone_num')->where(array('is_authen'=>0))->select();
+			if($un_authen){
+				$authen=M('w_autheninfo'); 
+				 //循环注册未认证的业主信息， 
+				foreach ($un_authen as $value) {
+					// 比对认证信息表
+					$ainfo=$authen->field('uid,birth,idcard,area,houseinfo,consultant')->where(array('phone_num'=>$value['phone_num']))->find();
+					if(!$ainfo)
+						continue;
+					// 符合认证条件更新用户的信息
+					$data=array(
+						'birth' 			=>$ainfo['birth'],
+						'id_card'			=>$ainfo['idcard'],
+						'area'				=>$ainfo['area'],
+						'houseinfo'			=>$ainfo['houseinfo'],
+						'pro_consultant'	=>$ainfo['consultant'],
+						'is_authen'			=>1,
+					);
+					$exec=$this->mem->where(array('uid'=>$value['uid']))->save($data);
+					if($exec){
+						$list[]=$value;
+					}
+				}
+				if($list)
+					echo message(200,'success',$list);
+				else
+					echo message(301,'notice','暂无数据可进行匹配');
+			}else
+				echo message(302,'notice','暂无数据可进行匹配');
 		}
 
 		// 读取excel内容

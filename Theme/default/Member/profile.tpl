@@ -66,19 +66,32 @@
 		</div>
 		<div class='groups'>
 			<div class='item'>
-				<a href="tel:0371-69165555">
+				<a id='tel' href="javascript:;">
 					<p><img src="{$smarty.const.THEME}Member/img/4.png"></p>
 					<p>帮助中心</p>
 					<p><img src="{$smarty.const.THEME}Member/img/more.png"></p>
 				</a>
 			</div>
 			<div class='item'>
-				<a href="#">
+				<a href="{$smarty.const.HOME}Member/advice.html">
 					<p><img src="{$smarty.const.THEME}Member/img/5.png"></p>
 					<p>意见反馈</p>
 					<p><img src="{$smarty.const.THEME}Member/img/more.png"></p>
 				</a>
 			</div>
+		</div>
+	</div>
+	<div class='cover'>
+		<div class='message_box'>
+			<p id='img'></p>
+			<div class='content'>
+				<h2>客服电话</h2>
+				<h1>0371-69165555</h1>
+			</div>
+			<p class='btn'>
+				<button id='close'>取消</button>&nbsp;&nbsp;
+				<button ><a href="tel:0371-69165555">呼叫</a></button>
+			</p>
 		</div>
 	</div>
 	<script src="{$smarty.const.ORG}jquery/jquery-2.1.0.min.js"></script>
@@ -98,6 +111,14 @@
 					}
 				});
 			});
+			$('#tel').click(function(){
+				
+				$('.cover').slideDown();
+			});
+			$('#close').click(function(){
+				$('.cover').hide();
+			});
+
 		});
 	</script>
 </body>

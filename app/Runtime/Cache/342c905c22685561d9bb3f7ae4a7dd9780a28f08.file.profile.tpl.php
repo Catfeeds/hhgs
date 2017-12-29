@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 21:56:52
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-29 16:17:11
          compiled from "./Theme/default/Member/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8678080145a2e372b8f2ff8-80406101%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '342c905c22685561d9bb3f7ae4a7dd9780a28f08' => 
     array (
       0 => './Theme/default/Member/profile.tpl',
-      1 => 1514469397,
+      1 => 1514535430,
       2 => 'file',
     ),
   ),
@@ -107,7 +107,7 @@ Member/img/more.png"></p>
 		</div>
 		<div class='groups'>
 			<div class='item'>
-				<a href="tel:0371-69165555">
+				<a id='tel' href="javascript:;">
 					<p><img src="<?php echo @THEME;?>
 Member/img/4.png"></p>
 					<p>帮助中心</p>
@@ -116,7 +116,8 @@ Member/img/more.png"></p>
 				</a>
 			</div>
 			<div class='item'>
-				<a href="#">
+				<a href="<?php echo @HOME;?>
+Member/advice.html">
 					<p><img src="<?php echo @THEME;?>
 Member/img/5.png"></p>
 					<p>意见反馈</p>
@@ -124,6 +125,19 @@ Member/img/5.png"></p>
 Member/img/more.png"></p>
 				</a>
 			</div>
+		</div>
+	</div>
+	<div class='cover'>
+		<div class='message_box'>
+			<p id='img'></p>
+			<div class='content'>
+				<h2>客服电话</h2>
+				<h1>0371-69165555</h1>
+			</div>
+			<p class='btn'>
+				<button id='close'>取消</button>&nbsp;&nbsp;
+				<button ><a href="tel:0371-69165555">呼叫</a></button>
+			</p>
 		</div>
 	</div>
 	<script src="<?php echo @ORG;?>
@@ -145,6 +159,14 @@ Member/clock_in',
 					}
 				});
 			});
+			$('#tel').click(function(){
+				
+				$('.cover').slideDown();
+			});
+			$('#close').click(function(){
+				$('.cover').hide();
+			});
+
 		});
 	</script>
 </body>

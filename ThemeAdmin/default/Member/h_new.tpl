@@ -16,8 +16,7 @@
 		</div>
 	</div>
 	<div class='row'>
-		<div class='col-md-12'>
-			
+		<div class='col-md-12'>			
 			<div class='panel panel-default'>
 				<div class='panel-heading'>批量导入</div>
 				<div class='panel-body'>
@@ -25,7 +24,8 @@
 						<form id="upload" enctype="multipart/form-data"  method='post'>
 							<input id='file' class='form-control' type="file" name="file" style='width:400px;' accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
 						</form>
-						<p style='padding-left: 10px;'><button id='do_exel' class='btn btn-primary'>批量上传</button></p>
+						<p style='padding-left: 10px;'><button id='do_exel' class='btn btn-primary'>开始上传</button></p>
+						<p style='padding-left: 10px;'><button id='do_match' class='btn btn-primary'>匹配未认证业主</button></p>
 					</div>
 					<p class=' text-danger'>
 					批量导入业主信息注意事项：<br>
@@ -33,7 +33,8 @@
 					2、置业顾问需要填写对应的id编号不可直接使用顾问姓名<br>
 					3、业主生日应按照：2017-01-01的格式填写并格式化为文本方式<br>
 					4、文件格式必须为*.xls或*.xlsx且文件大小不能超过5M<br>
-					5、sheet数量最多为一个
+					5、sheet数量最多为一个<br>
+					6、每次导入不要超过500条数据
 					</p>
 				</div>
 			</div>
@@ -94,6 +95,42 @@
 			</div>
 		</div>
 	</div>
+</div>
+<!-- Large modal -->
+<div id='modal' class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" >
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style='max-height: 600px;overflow: scroll;'>
+    	<div class='modal-header'>数据上传检测</div>
+      	<div class='modal-body'>
+      		<input id='filename' type="hidden" name="">
+      		<style type="text/css">
+      			#exceldata td{
+      				height: auto;
+      			}
+      		</style>
+      		<table class='table table-striped'>
+      			<thead>
+      				<tr>
+      					<th>姓名</th>
+      					<th>地块</th>
+      					<th>房源</th>
+      					<th>联系方式</th>
+      					<th>身份证号</th>
+      					<th>生日</th>
+      					<th>置业顾问</th>
+      				</tr>
+      			</thead>
+      			<tbody id='exceldata'>
+      				
+      			</tbody>
+      		</table>
+      		<p class='text-center text-danger'>导入前请严格确认数据无误</p>
+      		<div class='text-center'>
+      			<button id='real_exec' class='btn btn-info'>现在导入</button>
+      		</div>
+      </div>
+    </div>
+  </div>
 </div>
 <link rel="stylesheet" type="text/css" href="{$smarty.const.THEMEADMIN}assets/css/public.css">
 <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
@@ -184,14 +221,76 @@
 				dataType: 'json',  
 				url:'{$smarty.const.ADMIN}Member/batch_import',
 		        beforeSend: function() {  
-		        	console.log('上传中');  
+		        	$('#do_exel').html('上传中···');
+		        	$('#do_exel').attr('disabled','disabled');
 		        },  
 		        uploadProgress: function(event, position, total, percentComplete) {
 		        },  
-		        success: function(data) { 
-		        	console.log(data);
+		        success: function(msg) { 
+		        	$('#do_exel').html('开始上传');
+		        	$('#do_exel').removeAttr('disabled');
+		        	if(msg['code']==200){
+		        		let html='';
+		        		let data=msg['data']['message'];
+		        		for(var i=0;i<data.length;i++){
+		        			html+='<tr><td>'+data[i]['name']+'</td><td>'+data[i]['area']+'</td><td>'+data[i]['houseinfo']+'</td><td>'+data[i]['phone_num']+'</td><td>'+data[i]['idcard']+'</td><td>'+data[i]['birth']+'</td><td>'+data[i]['consultant']+'</td></tr>';
+		        		}
+		        		$('#filename').val(msg['data']['path']);
+		        		$('#exceldata').html(html);
+		        		$('#modal').modal('show');
+		        	}
 		        }
 		    });
+		});
+		$('#real_exec').click(function(){
+			if(!confirm('确认数据无误后开始进行上传操作'))
+				return;
+			let filename=$('#filename').val();
+			$.ajax({
+				type:'POST',
+				url:'{$smarty.const.ADMIN}Member/do_db_import',
+				dataType:'json',
+				data:{
+					'filename':filename,
+				},
+				beforeSend:function(){
+					$('#real_exec').html('上传中···');
+					$('#real_exec').attr('disabled','disabled');
+				},
+				success:function(msg){
+					if(msg['code']==200){
+						alert('上传成功');
+						$('#real_exec').html('现在导入');
+						$('#real_exec').removeAttr('disabled');
+						$('#modal').modal('hide');
+					}
+				}
+			});
+		});
+
+		$('#do_match').click(function(){
+			if(!confirm('是否需要重新更新已注册且并未匹配为业主的用户的信息？'))
+				return;
+			$.ajax({
+				type:'POST',
+				url:'{$smarty.const.ADMIN}Member/do_match_yezhu',
+				dataType:'json',
+				data:{
+
+				},
+				success:function(msg){
+					if(msg['code']==200){
+						let data=msg['data'];
+						let list='';
+						for(let i=0;i<data.length;i++){
+							list+=data[i]['uid']+'----'+data[i]['uname']+'\r\n';
+						}
+						alert('更新用户列表\r\n'+list);
+					}else{
+						alert(msg['data']);
+					}
+				}
+			})
 		});
 	});
 </script>

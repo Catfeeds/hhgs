@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 10:47:44
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-29 17:09:38
          compiled from "./Theme/default/Service/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4898067165a3763321406e2-22267526%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9f8d14d2302115f644c5583a83806b25b6f777cc' => 
     array (
       0 => './Theme/default/Service/index.tpl',
-      1 => 1514424000,
+      1 => 1514538576,
       2 => 'file',
     ),
   ),
@@ -49,9 +49,23 @@ Service/order.html?uid=<?php echo $_smarty_tpl->tpl_vars['item']->value['uid'];?
 						<img src="<?php echo @UPLOAD;?>
 service/<?php echo $_smarty_tpl->tpl_vars['item']->value['img'];?>
 ">
+						<div class='icon'>
+							<?php if ($_smarty_tpl->tpl_vars['item']->value['status']==1){?>
+								<img src="<?php echo @THEME;?>
+Service/img/open.png">
+							<?php }else{ ?>
+								<img src="<?php echo @THEME;?>
+Service/img/close.png">
+							<?php }?>
+						</div>
 					</div>
 				</a>
 			<?php } ?>
+		</div>
+		<div class='more'>
+			<img src="<?php echo @THEME;?>
+Service/img/more.png">
+			<p>更多服务陆续更新中!</p>
 		</div>
 	</div>
 </body>
