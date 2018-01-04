@@ -160,11 +160,12 @@
 				 //循环注册未认证的业主信息， 
 				foreach ($un_authen as $value) {
 					// 比对认证信息表
-					$ainfo=$authen->field('uid,birth,idcard,area,houseinfo,consultant')->where(array('phone_num'=>$value['phone_num']))->find();
+					$ainfo=$authen->field('uid,name,birth,idcard,area,houseinfo,consultant')->where(array('phone_num'=>$value['phone_num']))->find();
 					if(!$ainfo)
 						continue;
 					// 符合认证条件更新用户的信息
 					$data=array(
+						'uname'				=>$ainfo['name'],
 						'birth' 			=>$ainfo['birth'],
 						'id_card'			=>$ainfo['idcard'],
 						'area'				=>$ainfo['area'],

@@ -4,7 +4,7 @@
 	class MemberController extends BaseController{
 		protected $mem=null;
 		protected $uid;
-		private   $profilecount=16; //信息完善的总字段数量
+		private   $profilecount=13; //信息完善的总字段数量
 		private   $memcount=5; //家庭成员添加数量
 		function __construct(){
 			parent::__construct();
@@ -18,28 +18,39 @@
 				$code=session('login_valicode');
 				$headimg=session('temp_headimg');
 				// 判断验证码是否正确
-				if($data['code']==$code){//session('login_valicode')
+				if($data['code']==$code){
 					// 和业主认证表进行对比进行认证
 					$authen=D('Authen');
-					$ainfo=$authen->ufind(array('phone_num'=>$data['tel']),'name,phone_num');
-					if($ainfo['phone_num']==$data['tel']&&$ainfo['name']==$data['name'])
-						$is_authen=1;
-					else
-						$is_authen=0;
+					$ainfo=$authen->ufind(array('phone_num'=>$data['tel']));
+					// 新成员数组
+					$new_mem=array(
+						'openid'=>$openid,
+						'headimg'=>$headimg,
+						'uname'	=>$data['name'],
+						'phone_num'=>$data['tel'],
+						'is_authen'=>0,
+						'rg_time'=>time()
+					);
+					// 若认证信息存在补充认证信息到用户表中并标记为认证业主
+					if(($ainfo['phone_num']==$data['tel'])&&($ainfo['name']==$data['name'])){
+						$new_mem['uname']=$ainfo['name'];
+						$new_mem['birth']=$ainfo['birth'];
+						$new_mem['id_card']=$ainfo['id_card'];
+						$new_mem['area']=$ainfo['area'];
+						$new_mem['houseinfo']=$ainfo['houseinfo'];
+						$new_mem['pro_consultant']=$ainfo['consultant'];
+						$new_mem['is_authen']=1;
+					}
 
 					// 对比新用户手机号码是否存在member表中
 					$is_mem=$this->mem->where(array('phone_num'=>$data['tel']))->count();
-					if($is_mem){
-						$uid=$this->mem->usave(array('phone_num'=>$data['tel']),array('openid'=>$openid,'headimg'=>$headimg,'uname'=>$data['name'],'is_authen'=>$is_authen,'rg_time'=>time()));
+					if($is_mem)
+						// 已经存在
+						$uid=$this->mem->usave(array('phone_num'=>$data['tel']),$new_mem);
+					else
+						$uid=$this->mem->uadd($new_mem);
 
-					}else{
-						$uid=$this->mem->uadd(array('openid'=>$openid,'headimg'=>$headimg,'uname'=>$data['name'],'phone_num'=>$data['tel'],'is_authen'=>$is_authen,'rg_time'=>time()));
-					}
-					
-
-
-					// 新用户首次登陆时默认+10经验值+20活跃值（完成了手机号码与姓名的验证）待定
-					// //////////////////////////////////////////////////////////////////////////////
+					// 注册成功设定登录状态成功，并跳转回登录前页面
 					if($uid){
 						session('jianye_user_uid',$uid);
 						// 登录成功跳回之前页面
@@ -78,11 +89,10 @@
 		function profile_edit(){
 			$data=I('POST.');
 			$mem=D('Member');
-			$info=$mem->ufind(array('uid'=>$this->uid));	
+			$info=$mem->ufind(array('w_members.uid'=>$this->uid),'w_members.*,w_consultant.name as cons_name','w_consultant on w_consultant.uid=w_members.pro_consultant');
 			if($data){
 				$value=array(
 					'sex'				=>$data['sex'],
-					'id_card'			=>$data['id'],
 					'birth'				=>strtotime($data['birth']),
 					'phone_num'			=>$data['phone'],
 					'marital_status'	=>$data['marry'],
@@ -91,19 +101,16 @@
 					'job'				=>$data['job'],
 					'residence'			=>$data['residence'],
 					'hobby'				=>$data['hobby'],
-					// 'houseinfo'			=>'$data['houseinfo'],
 					'buy_reason'		=>$data['reason'],
 					'buy_times'			=>$data['times'],
 					'car_amount'		=>$data['car'],
 					'car_brand'			=>$data['carbrand'],
-					// 'pro_consultant'	=>$data['consultant']
 				);
-
 				$mem->startTrans();
 				
 				// 添加积分和经验值
 				// 正待提交的完成度
-				$ndegree=$this->array_empty_count($value)+1/$this->profilecount; //新添加的数据的完整度
+				$ndegree=$this->array_empty_count($value); //新添加的数据的完整度
 				// 数据库中的完成度
 				$odegree=$info['degree'];
 				$exec2=true;				
@@ -123,7 +130,6 @@
 
 				// 保存成员信息
 				$exec1=$mem->usave(array('uid'=>$this->uid),$value);
-
 				//数据提交与结果返回
 				$exec=$exec1&&$exec2;
 				if($exec){
@@ -132,19 +138,19 @@
 				}
 				else{
 					$mem->rollback();
-					echo message(301,'error','服务异常');
+					echo message(301,'error','服务异常，请稍后再试');
 				}
-
-			}else{
-				if($info){
-					$this->assign('info',$info);
-					// 此处显示完成度
-					$completion_degree=$this->array_empty_count($info);
-					$this->assign('completion',floor($completion_degree*100));
-					// 行业信息显示
-					$trade=M('w_trade')->select();
-					$this->assign('trade',$trade);
-				}
+			}else{				
+				$this->assign('info',$info);
+				// 此处显示完成度
+				$completion_degree=$this->array_empty_count($info);
+				$this->assign('completion',floor($completion_degree*100));
+				// 行业信息显示
+				$trade=M('w_trade')->select();
+				$this->assign('trade',$trade);
+				// 获取完善单个字段时增加的积分与经验值
+				$sl=M('w_slnumber')->where(array('uid'=>1))->find();
+				$this->assign('score',$sl['snumber']*$this->profilecount);
 				$this->display();
 			}
 		}
@@ -168,7 +174,7 @@
 			}
 			$info_list=$family->where(array('w_family.p_uid'=>$puid,'is_authen'=>0))->field('w_members.uid,uname,sex,birth,phone_num,headimg,w_relation.relation')->join('join w_members on w_family.child_uid=w_members.uid')->join('join w_relation on w_family.relation=w_relation.uid')->select();
 			if($info_list)
-					$this->assign('list',$info_list);
+				$this->assign('list',$info_list);
 			$this->display();
 		}
 		// 家庭成员编辑
@@ -245,8 +251,6 @@
 						echo message();
 					else
 						echo message(301,'failed','服务器异常');
-				}else{// 非业主
-
 				}
 			}else{
 				// 显示
@@ -294,13 +298,44 @@
 				$exec=$this->degree_grade(3,$level,$score);
 				if($exec){
 					$growth->commit();
-					echo message();
+					echo message(200,'success',array($level,$score));
 				}else{
 					$growth->rollback();
 					echo message(301,'error','签到服务暂时出错，请稍后再试');
 				}
 			}else
 				echo message(302,'notice','今日签到已完成');
+		}
+		// 意见建议
+		function advice(){
+			$data=I('POST.');			
+			if($data){
+				$advice=M('w_advice');
+				$exec=$advice->add(array('u_uid'=>$this->uid,'content'=>$data['content']));
+				if($exec)
+					echo message();
+				else
+					echo message(301,'error','服务繁忙，请稍后再试');
+			}else
+				$this->display();
+		}
+		function levels(){
+			$info=$this->mem->field('w_members.uname,w_grade.level,w_grade.score,headimg')->where(array('w_members.uid'=>$this->uid))->join('w_grade on w_grade.u_uid=w_members.uid')->find();
+			// 等级判断
+			if($info['level']<50)
+				$info['lv']=1;
+			elseif($info['level']>=50&&$info['level']<100)
+				$info['lv']=2;
+			elseif($info['level']>=100&&$info['level']<200)
+				$info['lv']=3;
+			elseif($info['level']>=200&&$info['level']<300)
+				$info['lv']=4;
+			elseif($info['level']>=300&&$info['level']<500)
+				$info['lv']=5;
+			elseif($info['level']>=500)
+				$info['lv']=6;
+			$this->assign('info',$info);
+			$this->display();
 		}
 
 		// 判断成员性别
@@ -311,14 +346,14 @@
 			if($re)
 				return $re['mark'];
 		}
-		// 计算个人信息完善度返回已完成的数量百分比
+		// 计算个人信息完善度返回已完成的数量百分比,保留四位小数
 		private function array_empty_count($ar){
 			$count=0;
 			foreach ($ar as $key => $value) {
 				switch ($key) {
-					case 'uname':						          
+					// case 'uname':						          
 					case 'sex':			
-					case 'id_card':
+					// case 'id_card':
 					case 'birth':
 					case 'phone_num':
 					case 'marital_status':
@@ -331,7 +366,7 @@
 					case 'buy_times':
 					case 'car_amount':
 					case 'car_brand':
-					case 'pro_consultant':
+					// case 'pro_consultant':
 						if(($value!='')&&($value!='0')){
 							$count++;
 						}
@@ -340,7 +375,7 @@
 						break;
 				}
 			}
-			return $count/ $this->profilecount;
+			return round($count/ $this->profilecount,4);
 		}
 		// 积分与经验值增加
 		// param  $of 积分获取方式
@@ -360,8 +395,7 @@
 				$exec3= $g->add_sl($this->uid,$grd['score']+$score,$grd['level']+$level);
 				return $exec1&&$exec2&&$exec3;
 			}else
-			return false;// 不是认证的业主一律不增加积分
-			
+			return false;// 不是认证的业主一律不增加积分			
 		}
 		
 	}

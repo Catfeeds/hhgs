@@ -13,14 +13,15 @@
 		<div class='header'>
 			<div class='headimg'>
 				<img src="{$info['headimg']}">
-				<p class="vip"><img src="{$smarty.const.THEME}Member/img/vip.png"></p>
+				{if $info['is_authen'] eq 1}<p class="vip"><img src="{$smarty.const.THEME}Member/img/vip.png"></p>{/if}
 			</div>
 			<div class='info'>
 				<p class='iname'>{$info['uname']}</p>
 				<p class='iauthen'>{if $info['is_authen'] eq 1}花园里认证业主{else}业主未认证{/if}</p>
 			</div>
 			<div id='clock_in' class='clockin'>
-				<img src="{$smarty.const.THEME}Member/img/clockin.png">
+				<!-- <img src="{$smarty.const.THEME}Member/img/clockin.png"> -->
+				<div class='flex'><img src="{$smarty.const.THEME}Member/img/coin.png"><span>&nbsp;签到</span></div>
 			</div>
 		</div>
 		<!-- 等级信息 -->
@@ -50,7 +51,7 @@
 				</a>
 			</div>
 			<div class='item'>
-				<a href="#">
+				<a href="{$smarty.const.HOME}Member/levels.html">
 					<p><img src="{$smarty.const.THEME}Member/img/2.png"></p>
 					<p>等级权限</p>
 					<p><img src="{$smarty.const.THEME}Member/img/more.png"></p>
@@ -81,42 +82,52 @@
 			</div>
 		</div>
 	</div>
-	<div class='cover'>
+	<div id='cover' class='cover'>
 		<div class='message_box'>
 			<p id='img'></p>
 			<div class='content'>
 				<h2>客服电话</h2>
-				<h1>0371-69165555</h1>
+				<h1>0371-60908262</h1>
 			</div>
 			<p class='btn'>
 				<button id='close'>取消</button>&nbsp;&nbsp;
-				<button ><a href="tel:0371-69165555">呼叫</a></button>
+				<button ><a href="tel:0371-60908262">呼叫</a></button>
 			</p>
+		</div>
+	</div>
+	<div id='cover1' class='cover'>
+		<div class='message_box'>
+			<div class='close'><img src="{$smarty.const.THEME}Member/img/close.png"></div>
+			<div class='content'></div>
 		</div>
 	</div>
 	<script src="{$smarty.const.ORG}jquery/jquery-2.1.0.min.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			// 签到获取积分与经验值
-			$('#clock_in').click(function(){
+			$('#clock_in .flex').click(function(){
 				$.ajax({
 					type:'POST',
 					url:'{$smarty.const.HOME}Member/clock_in',
 					dataType:'json',
 					success:function(msg){
 						if(msg['code']==200){
-							alert('签到成功');
+							$('#cover1 .content').html('<p>恭喜您,签到成功</p><p>获得了'+msg['data'][1]+'活跃值</p>');							
 						}else
-							alert(msg['data']);
+							$('#cover1 .content').html('<p>'+msg['data']+'</p>');
+						$('#cover1').show();
 					}
 				});
 			});
 			$('#tel').click(function(){
 				
-				$('.cover').slideDown();
+				$('#cover').slideDown();
 			});
 			$('#close').click(function(){
-				$('.cover').hide();
+				$('#cover').hide();
+			});
+			$('#cover1 .close').click(function(){
+				$('#cover1').hide();
 			});
 
 		});

@@ -1,0 +1,170 @@
+[ 2018-01-02T10:56:59+08:00 ] 127.0.0.1 /jianye_garden/Admin/Carousel/post.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000975s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `carousel` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022321s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022371s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001017s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000799s ]
+
+[ 2018-01-02T11:14:56+08:00 ] 127.0.0.1 /jianye_garden/Admin/Carousel/post.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `carousel` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082227s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082264s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000669s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000707s ]
+
+[ 2018-01-02T17:40:42+08:00 ] 127.0.0.1 /jianye_garden/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `w_pages` [ RunTime:0.0063s ]
+SQL: SELECT `user_nickname`,`page_id`,`page_title`,`page_time` FROM `w_pages` INNER JOIN w_users on w_users.ID=w_pages.page_author  WHERE `page_status` = 'open' AND `w_user_level` <= '10' ORDER BY page_time desc LIMIT 0,5   [ RunTime:0.0103s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_pages` WHERE `page_status` = 'open' LIMIT 1   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `w_post` [ RunTime:0.0029s ]
+SQL: SELECT w_post.ID as id,`post_date`,`post_title`,`user_nickname`,`post_status` FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' ORDER BY post_date desc LIMIT 0,5   [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_post` INNER JOIN w_users on w_users.ID=w_post.post_author  WHERE `post_type_delete` = 'open' AND `post_status` = 'publish' AND `post_author` <= '1' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_logs` [ RunTime:0.0017s ]
+SQL: SELECT w_logs.*,user_nickname as name FROM `w_logs` LEFT JOIN w_users on w_users.ID=w_logs.user_id  ORDER BY login_time desc LIMIT 0,5   [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_logs` LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026356s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000507s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2018-01-02T17:40:50+08:00 ] 127.0.0.1 /jianye_garden/Admin/Consultant/cons_order.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000997s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+NOTIC: [2] Declaration of Admin\Controller\ConsultantController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ConsultantController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `w_cons_order` [ RunTime:0.0028s ]
+NOTIC: [8] Undefined variable: map /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ConsultantController.class.php 第 71 行.
+SQL: SELECT w_cons_order.*,w_consultant.name as cons_name FROM `w_cons_order` INNER JOIN w_consultant on w_consultant.uid=w_cons_order.cons_uid  ORDER BY type,is_arrival LIMIT 0,20   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined variable: map /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ConsultantController.class.php 第 72 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `w_cons_order` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072753s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072802s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000231s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2018-01-02T17:41:58+08:00 ] 127.0.0.1 /jianye_garden/Admin/Consultant/cons_order.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+NOTIC: [2] Declaration of Admin\Controller\ConsultantController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ConsultantController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `w_cons_order` [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: map /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ConsultantController.class.php 第 72 行.
+SQL: SELECT w_cons_order.*,w_consultant.name as cons_name FROM `w_cons_order` INNER JOIN w_consultant on w_consultant.uid=w_cons_order.cons_uid  ORDER BY type,is_arrival LIMIT 0,20   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: map /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ConsultantController.class.php 第 73 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `w_cons_order` LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010215s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000491s ]
+
+[ 2018-01-02T17:42:03+08:00 ] 127.0.0.1 /jianye_garden/Admin/Consultant/cons_order?words=116
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+NOTIC: [2] Declaration of Admin\Controller\ConsultantController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ConsultantController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `w_cons_order` [ RunTime:0.0021s ]
+SQL: SELECT w_cons_order.*,w_consultant.name as cons_name FROM `w_cons_order` INNER JOIN w_consultant on w_consultant.uid=w_cons_order.cons_uid  WHERE w_cons_order.name LIKE '%116%' OR w_cons_order.phone_num LIKE '%116%' OR w_cons_order.code LIKE '%116%' ORDER BY type,is_arrival LIMIT 0,20   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_cons_order` WHERE w_cons_order.name LIKE '%116%' OR w_cons_order.phone_num LIKE '%116%' OR w_cons_order.code LIKE '%116%' LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013290s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000670s ]
+
+[ 2018-01-02T17:43:14+08:00 ] 127.0.0.1 /jianye_garden/Admin/Consultant/cons_order?words=116
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000972s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+NOTIC: [2] Declaration of Admin\Controller\ConsultantController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ConsultantController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_consultant` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `w_cons_order` [ RunTime:0.0021s ]
+SQL: SELECT w_cons_order.*,w_consultant.name as cons_name FROM `w_cons_order` INNER JOIN w_consultant on w_consultant.uid=w_cons_order.cons_uid  WHERE w_cons_order.name LIKE '%116%' OR w_cons_order.phone_num LIKE '%116%' OR w_cons_order.code LIKE '%116%' ORDER BY type,is_arrival LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_cons_order` WHERE w_cons_order.name LIKE '%116%' OR w_cons_order.phone_num LIKE '%116%' OR w_cons_order.code LIKE '%116%' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072295s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000603s ]
+

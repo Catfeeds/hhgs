@@ -10,6 +10,9 @@
 
 		// 活动列表
 		function index(){
+			// 提取幻灯片
+			$carousel=M('carousel')->where(array('type'=>1))->select();
+			$this->assign('carousel',$carousel);
 			$status=I('GET.status');
 			$p=I('POST.p');
 			$p=($p!=0)?$p:1;
@@ -115,6 +118,7 @@
 											echo message(306,'notice','积分不足');
 											return;
 										}else{
+											// 积分减少
 											$exec1=$grade->where(array('u_uid'=>$this->uid))->save(array('score'=>$score['score']-$ainfo['cost']));
 										}
 									}else if($ainfo['costtype']==2){
@@ -129,7 +133,10 @@
 									$exec3=$this->create_qrcode($user_link);
 									// 更新二维码信息
 									$exec4=$attend->where(array('uid'=>$exec2))->save(array('qrcode'=>$exec3));
-									if($exec1&&$exec2&&($exec3!='')&&$exec4){
+									// 添加积分记录
+									$growth=M('w_growth')->add(array('u_uid'=>$this->uid,'type'=>1,'of'=>4,'number'=>$ainfo['cost'],'inc_dec'=>2));
+
+									if($exec1&&$exec2&&($exec3!='')&&$exec4&&$growth){
 										$mem->commit();
 										echo message(200,'success',$exec3);
 									}else{

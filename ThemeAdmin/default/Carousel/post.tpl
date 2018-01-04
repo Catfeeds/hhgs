@@ -64,7 +64,7 @@
 					</div>
 					<div class='head_img'>
 						<img src="{$smarty.const.HOME}{$res['img']}" data-url="{$res['img']}">
-						<div class='help-block'>*图片建议尺寸为1438*701</div>
+						<div class='help-block'><!-- *图片建议尺寸为1438*701 --></div>
 					</div>
 				</div>
 			</div>

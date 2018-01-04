@@ -8,6 +8,9 @@
 			$this->goods=M('w_goods');
 		}
 		function index(){
+			// 提取幻灯片
+			$carousel=M('carousel')->where(array('type'=>2))->select();
+			$this->assign('carousel',$carousel);
 			$t=I('GET.t');
 			$t=base64_decode(str_replace(' ', '+', $t));
 			if($t=='兑换记录'){	

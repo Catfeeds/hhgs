@@ -12,24 +12,39 @@
 			$mem=D('Member');
 			$info=$mem->field('uname,phone_num,pro_consultant')->where(array('uid'=>$this->uid))->find();
 			if($data){
-				$mem->startTrans();
-				// 第一次选择置业顾问更新个人信息数据
-				$exec1=true;
-				if($info['pro_consultant']==''){
-					$exec1=$mem->where(array('uid'=>$this->uid))->save(array('pro_consultant'=>$data['consultant']));
-				}
-				// 添加置业顾问预约
-				$cons_order=M('w_cons_order');
-				$data['atime']=time();
-				$data['u_uid']=$this->uid;
-				$data['code']=rand(1,999999);
-				$exec2=$cons_order->add($data);
-				if($exec1&&$exec2){
-					$mem->commit();
-					echo message();
+				// 判断是否存在一周内未赴约的预约
+				$a=M('w_cons_order')->where(array('u_uid'=>$this->uid,'is_arrival'=>0,'atime'=>array('gt',time()-3600*24*7)))->count();
+				if($a>0){
+					echo message('302','notice','您已经进行过预约，请查看您的短信记录');
 				}else{
-					$mem->rollback();
-					echo message(301,'error','数据提交出错，请稍后再试');
+					// 获取置业顾问信息
+					$consultant=M('w_consultant');
+					$cons_info=$consultant->field('name,phone_num')->where(array('uid'=>$data['cons_uid']))->find();
+
+					$mem->startTrans();
+					// 第一次选择置业顾问更新个人信息数据
+					$exec1=true;
+					if($info['pro_consultant']==''){
+						$exec1=$mem->where(array('uid'=>$this->uid))->save(array('pro_consultant'=>$data['cons_uid']));
+					}
+					// 添加置业顾问预约
+					$cons_order=M('w_cons_order');
+					$data['atime']=time();
+					$data['u_uid']=$this->uid;
+					$data['code']=rand(1,999999);
+					$exec2=$cons_order->add($data);
+					if($exec1&&$exec2){
+						$mem->commit();
+						// 双方收到短信提示信息
+						$pa1=urlencode('#code#').'='.urlencode($data['code']).'&'.urlencode('#name#').'='.urlencode($cons_info['name']);
+						$this->sent_sms(2132774,17603879576,$pa1); // 客户
+						$pa2=urlencode('#code#').'='.urlencode($data['code']).'&'.urlencode('#time#').'='.urlencode($data['date'].' '.$data['time']);
+						$this->sent_sms(2132776,$cons_info['phone_num'],$pa2); // 置业顾问
+						echo message(200,'success',$data['code']);
+					}else{
+						$mem->rollback();
+						echo message(301,'error','数据提交出错，请稍后再试');
+					}
 				}
 
 			}else{
@@ -41,6 +56,7 @@
 				$this->display();
 			}
 		}
+
 		// 保存用户提交的评论内容
 		function comment_submit(){
 			$data=I('POST.');
@@ -76,5 +92,14 @@
 				$p['comment']=2;
 			return $p;
 
+		}
+		// 发送短信息
+		private function sent_sms($temp_id,$phone,$param){
+			$sms=D('Sms');
+			$res=$sms->send_phone_msg($phone,$temp_id,$param);
+			if($res->code==0){
+				return true;
+			}else
+				return false;
 		}
 	}

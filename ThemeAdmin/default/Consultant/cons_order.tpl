@@ -18,7 +18,7 @@
 	<div class='row'>
 		<div class='col-md-12'>
 			<div style='padding: 5px 0; display: flex;'>
-				<input type="search" id='search_text' class='form-control' placeholder="请输入手机号码或客户名" style='width: 300px;'><button id='search' class='btn btn-primary'>搜索</button>
+				<input type="search" id='search_text' class='form-control' placeholder="请输入手机号码、客户名或预约码" style='width: 300px;'><button id='search' class='btn btn-primary'>搜索</button>
 			</div>
 			<div class='panel panel-default'>
 				<div class='panel-body'>
@@ -31,7 +31,7 @@
 								<th>预约类型</th>
 								<th>置业顾问</th>
 								<th>预约日期</th>
-								<th>验证码</th>
+								<th>预约码</th>
 								<th>是否到达</th>
 								<th>下单时间</th>
 								<th>操作</th>

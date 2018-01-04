@@ -25,7 +25,7 @@
 			</div>
 			<p class='form-line'>
 				<label class='read'>
-					<input type='radio' name='read'>我已阅读并遵守<a href="javascript:;">《花园公约》</a>
+					<input id='alread' type='radio' name='read'>我已阅读并遵守<a id='read' href="javascript:;">《花园公约》</a>
 				</label>
 			</p>
 			<p class='ajax_error'></p>
@@ -35,6 +35,15 @@
 				</button>
 			</p>
 		</form>
+	</div>
+	<div class='cover'>
+		<div class='read_frame'>
+			<div class='content'>
+				<h2>花园公约</h2>
+				<img src="{$smarty.const.THEME}Member/img/huayuan.jpeg">
+			</div>
+			<button class='close_btn'>我已阅读</button>
+		</div>
 	</div>
 	<script src="{$smarty.const.ORG}jquery/jquery-2.1.0.min.js"></script>
 	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
@@ -141,6 +150,17 @@
 			});
 			$('#code').focus(function(){
 				$('.ajax_error').html('');
+			});
+			$('#read').click(function(){
+
+			});
+			$('#read').click(function(){
+				$('.cover').slideDown();
+			});
+			
+			$('.close_btn').click(function(){
+				$('.cover').hide();
+				$('#alread').attr('checked',true);
 			});
 		});
 	</script>

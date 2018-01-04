@@ -46,7 +46,7 @@
 
 		// 图片上传处理逻辑
 		public function  imgUpload(){
-			parent::uploadImg('home');
+			parent::uploadImg('carousel');
 		}
 	}
 ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 20:53:05
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-02 17:43:14
          compiled from "./ThemeAdmin/default/Consultant/cons_order.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13118118125a4300e8652fe7-21899080%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bd50acb307b4f30157e2c95fb0a12415306f7b9d' => 
     array (
       0 => './ThemeAdmin/default/Consultant/cons_order.tpl',
-      1 => 1514465583,
+      1 => 1514886172,
       2 => 'file',
     ),
   ),
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a4300e869b28')) {function content_5a4300e869b28($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a4300e869b28')) {function content_5a4300e869b28($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 <?php $_tmp1=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 <?php $_tmp2=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['userlevel']->value;?>
@@ -53,7 +53,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<div class='row'>
 		<div class='col-md-12'>
 			<div style='padding: 5px 0; display: flex;'>
-				<input type="search" id='search_text' class='form-control' placeholder="请输入手机号码或客户名" style='width: 300px;'><button id='search' class='btn btn-primary'>搜索</button>
+				<input type="search" id='search_text' class='form-control' placeholder="请输入手机号码、客户名或预约码" style='width: 300px;'><button id='search' class='btn btn-primary'>搜索</button>
 			</div>
 			<div class='panel panel-default'>
 				<div class='panel-body'>
@@ -66,7 +66,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<th>预约类型</th>
 								<th>置业顾问</th>
 								<th>预约日期</th>
-								<th>验证码</th>
+								<th>预约码</th>
 								<th>是否到达</th>
 								<th>下单时间</th>
 								<th>操作</th>

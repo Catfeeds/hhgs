@@ -24,6 +24,6 @@
 		}
 		// 单项查询
 		function ufind($map,$field='*',$join=''){
-			return $this->field($field)->join($join)->where($map)->find();
+			return $this->field($field)->join($join,'left')->where($map)->find();
 		}
 	}

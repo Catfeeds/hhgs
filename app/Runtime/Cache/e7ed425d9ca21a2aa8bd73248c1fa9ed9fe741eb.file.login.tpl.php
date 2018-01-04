@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 10:26:44
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-03 09:35:17
          compiled from "./Theme/default/Member/login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11023932385a2e4292c01c60-30426728%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7ed425d9ca21a2aa8bd73248c1fa9ed9fe741eb' => 
     array (
       0 => './Theme/default/Member/login.tpl',
-      1 => 1514428000,
+      1 => 1514943307,
       2 => 'file',
     ),
   ),
@@ -48,7 +48,7 @@ Member/img/logo.png">
 			</div>
 			<p class='form-line'>
 				<label class='read'>
-					<input type='radio' name='read'>我已阅读并遵守<a href="javascript:;">《花园公约》</a>
+					<input id='alread' type='radio' name='read'>我已阅读并遵守<a id='read' href="javascript:;">《花园公约》</a>
 				</label>
 			</p>
 			<p class='ajax_error'></p>
@@ -58,6 +58,16 @@ Member/img/logo.png">
 				</button>
 			</p>
 		</form>
+	</div>
+	<div class='cover'>
+		<div class='read_frame'>
+			<div class='content'>
+				<h2>花园公约</h2>
+				<img src="<?php echo @THEME;?>
+Member/img/huayuan.jpeg">
+			</div>
+			<button class='close_btn'>我已阅读</button>
+		</div>
 	</div>
 	<script src="<?php echo @ORG;?>
 jquery/jquery-2.1.0.min.js"></script>
@@ -167,6 +177,17 @@ Member/get_smscode',
 			});
 			$('#code').focus(function(){
 				$('.ajax_error').html('');
+			});
+			$('#read').click(function(){
+
+			});
+			$('#read').click(function(){
+				$('.cover').slideDown();
+			});
+			
+			$('.close_btn').click(function(){
+				$('.cover').hide();
+				$('#alread').attr('checked',true);
 			});
 		});
 	</script>

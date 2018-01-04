@@ -1,5 +1,5 @@
 <style type="text/css">
-	.cover{
+	.message_cover{
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -28,24 +28,31 @@
 		/*font-size: 14px;*/
 
 	}
-	.message_box .btn{
+	.message_box .btns{
 		position: absolute;
 		left: 50%;
-		margin-left: -32px;
+		margin-left: -52px;
 		bottom: 20px;
 	}
-	.message_box .btn button{
+	.message_box .btns button{
 		background: -webkit-linear-gradient(left, rgb(207,166,108), rgb(238,210,170));
-		padding: 6px 20px;
+		padding: 6px 40px;
 		color: #fff;
 	}
 </style>
-<div class='cover'>
+<div class='message_cover'>
 	<div class='message_box'>
 		<p id='img'></p>
-		<p class='content'></p>
-		<p class='btn'>
-			<button id='close'>确认</button>
+		<div class='content'></div>
+		<p class='btns'>
+			<button id='message_close'>确认</button>
 		</p>
 	</div>
 </div>
+<script type="text/javascript">
+	$(function(){
+		$('#message_close').click(function(){
+			$('.message_cover').hide();
+		});
+	});
+</script>

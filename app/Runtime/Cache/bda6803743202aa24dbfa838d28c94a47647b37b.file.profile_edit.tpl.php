@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 20:56:33
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-04 11:18:09
          compiled from "./Theme/default/Member/profile_edit.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:128640345a2f3e4e301736-85884970%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bda6803743202aa24dbfa838d28c94a47647b37b' => 
     array (
       0 => './Theme/default/Member/profile_edit.tpl',
-      1 => 1514465784,
+      1 => 1515035879,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a2f3e4e3309a')) {function content_5a2f3e4e3309a($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a2f3e4e3309a')) {function content_5a2f3e4e3309a($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang='zh'>
 <head>
@@ -34,6 +34,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1.0">
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="<?php echo @THEME;?>
+Member/css/progress.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo @THEME;?>
 Member/css/profile_edit.css">
 </head>
@@ -47,11 +50,6 @@ Member/css/profile_edit.css">
 			<p class='tips'>个人信息越完善，特权越多哟！</p>
 			<form id='form' class='form' action="" method="post" enctype="multipart/form-data">
 				<p class='line'>
-					<label>姓名</label>
-					<input name='name' type='text' disabled value='<?php echo $_smarty_tpl->tpl_vars['info']->value["uname"];?>
-'>
-				</p>
-				<p class='line'>
 					<label>性别</label>
 					<select id='sex' name='sex'>
 						<option value=0>请选择性别</option>
@@ -59,11 +57,7 @@ Member/css/profile_edit.css">
 						<option value=2 <?php if ($_smarty_tpl->tpl_vars['info']->value['sex']==2){?>selected<?php }?>>女</option>
 					</select>
 				</p>
-				<p class='line'>
-					<label>身份证号码</label>
-					<input id='id' name='id' type='number' value='<?php echo $_smarty_tpl->tpl_vars['info']->value["id_card"];?>
-'>
-				</p>
+				
 				<p class='line'>
 					<label>生日</label>
 					<span class='wrp'><input id='birth' name='birth' type='date' value='<?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['info']->value["birth"],"%Y-%m-%d");?>
@@ -123,15 +117,7 @@ $_smarty_tpl->tpl_vars['t']->_loop = true;
 					<input id='hobby' name='hobby' type='text' value='<?php echo $_smarty_tpl->tpl_vars['info']->value["hobby"];?>
 '>
 				</p>
-				<p class='line'>
-					<label>房源信息</label>
-					<input id='houseinfo' name='houseinfo' type='text' disabled value='<?php echo $_smarty_tpl->tpl_vars['info']->value["houseinfo"];?>
-'>
-				</p>
-				<p class='line'>
-					<label>置业顾问</label>
-					<input id='consultant' name='consultant' disabled type='text'>
-				</p>
+			
 				<p class='line'>
 					<label>置业动机</label>
 					<select id='reason' name='reason'>
@@ -166,9 +152,68 @@ $_smarty_tpl->tpl_vars['t']->_loop = true;
 					<input id='carbrand' name='carbrand' type='text' value='<?php echo $_smarty_tpl->tpl_vars['info']->value["car_brand"];?>
 '>
 				</p>
-				<p style='text-align: center;'>完成度：<?php echo $_smarty_tpl->tpl_vars['completion']->value;?>
-%</p>
-				<p class=btn>
+				<p id='authen' class='line'>
+					<label>业主认证</label>
+					<input  type='text' readonly value='<?php if ($_smarty_tpl->tpl_vars['info']->value["is_authen"]==1){?>已认证<?php }else{ ?>未认证<?php }?>'>
+				</p>
+				<div class='cover'>
+					<div class='box'>
+						<p class='close'>
+							<img src="<?php echo @THEME;?>
+Member/img/close.png">
+						</p>
+						<p class='title'><?php if ($_smarty_tpl->tpl_vars['info']->value['is_authen']==1){?>恭喜您，业主身份已认证！<?php }else{ ?>您花园里业主身份未认证！<?php }?></p>
+						<p class='text'><?php if ($_smarty_tpl->tpl_vars['info']->value['is_authen']==1){?>认证信息如下：<?php }?></p>
+						<div class='authen'>							
+							<?php if ($_smarty_tpl->tpl_vars['info']->value['is_authen']==1){?>
+							<p class='text'>
+								<label>姓名</label>
+								<?php echo $_smarty_tpl->tpl_vars['info']->value["uname"];?>
+
+							</p>
+							<p class='text'>
+								<label>地块：</label>
+								<?php echo $_smarty_tpl->tpl_vars['info']->value["area"];?>
+
+							</p>
+							<p class='text'>
+								<label>房源：</label>
+								<?php echo $_smarty_tpl->tpl_vars['info']->value["houseinfo"];?>
+
+							</p>
+							<p class='text'>
+								<label>身份证号：</label>
+								<?php echo $_smarty_tpl->tpl_vars['info']->value["id_card"];?>
+
+							</p>
+							<p class='text'>
+								<label>置业顾问：</label>
+								<?php echo $_smarty_tpl->tpl_vars['info']->value['cons_name'];?>
+
+							</p>	
+							<?php }else{ ?>
+							<p class='text'>
+								请联系花园里小花进行认证，谢谢！
+							</p>	
+							<?php }?>
+						</div>
+						<p class='tip'>如有疑问请联系小花：0371-60908262</p>
+					</div>
+				</div>
+				<div class='text-center' style="padding: 8px;">个人信息完成度：</div>
+				<div class='progress_w'>
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $_smarty_tpl->tpl_vars['completion']->value;?>
+%">							
+						</div>
+						<div class='pg s'>0</div>
+						<div class='pg m'>50</div>
+						<div class='pg e'>100</div>
+					</div>				
+					<div>&nbsp;<?php echo $_smarty_tpl->tpl_vars['completion']->value;?>
+%</div>
+				</div>
+				<p class='btns'>
 					<button type=submit>
 						<div class='sub_bg'>更新信息</div>
 					</button>
@@ -209,12 +254,10 @@ card.js'></script>
 			$('#form').validate({
 				// debug:true,
 				rules:{
-					id:'isIdCardNo',
 					phone:'isphone'
 
 				},
 				messages:{
-					id:'请输入正确的身份证号码',
 					phone:'手机号码格式错误'
 				},
 				errorPlacement:function(error,element){
@@ -226,7 +269,6 @@ card.js'></script>
 						dataType:'json',
 						data:{
 							'sex':$('#sex').val(),
-							'id':$('#id').val(),
 							'birth':$('#birth').val(),
 							'phone':$('#phone').val(),
 							'marry':$('#marry').val(),
@@ -235,7 +277,6 @@ card.js'></script>
 							'job':$('#job').val(),
 							'residence':$('#residence').val(),
 							'hobby':$('#hobby').val(),
-							// 'houseinfo':$('#houseinfo').val(),
 							'reason':$('#reason').val(),
 							'times':$('#times').val(),
 							'car':$('#car').val(),
@@ -246,7 +287,7 @@ card.js'></script>
 								alert('信息更新成功');
 								window.location.href=location.href;
 							}else{
-								console.log(msg['data']);
+								alert(msg['data']);
 							}
 						}
 					});
@@ -256,6 +297,20 @@ card.js'></script>
 			$('#birth').blur(function(){
 				set_age($(this));
 			});
+			$('.close').click(function(){
+				$('.cover').hide();
+			});
+			$('#authen').click(function(){
+				$('.cover').show();
+			});
+			!function animate(){
+				$(".charts").each(function(i,item){
+					var a=parseInt($(item).attr("w"));
+					$(item).animate({
+						width: a+"%"
+					},1000);
+				});
+			}();
 		});
 	</script>
 </body>

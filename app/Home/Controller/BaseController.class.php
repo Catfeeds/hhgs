@@ -47,7 +47,7 @@
 				session('jianye_user_uid',$info['uid']);
 			else{
 				// if(!$info['openid'])
-				// 	$userid=$mem->uadd(array('openid'=>$openid,'headimg'=>$headimgurl,'rg_time'=>time()));
+				// $userid=$mem->uadd(array('openid'=>$openid,'headimg'=>$headimgurl,'rg_time'=>time()));
 				session('temp_openid',$openid);
 				session('temp_headimg',$headimg);
 				if(!in_array(ACTION_NAME, $this->unlimit)){

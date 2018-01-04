@@ -11,7 +11,7 @@
 	<div class='container'>
 		<div class='content'>
 			{if $list eq null}
-				<p style='padding: 80px 15px 10px;text-align: center;'>暂无家庭成员，若您为业主请自行添加家庭成员信息</p>
+				<p style='padding: 80px 15px 10px;text-align: center;'>暂无家庭成员，若您以认证为业主请自行添加家庭成员信息</p>
 			{else}
 				{foreach $list as $l}
 					<a href="{$smarty.const.HOME}Member/family_mem.html?memid={$l['uid']}">

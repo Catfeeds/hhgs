@@ -114,6 +114,7 @@
 									</ul>
 								</li>
 								<li><a href="{$smarty.const.ADMIN}Award/index.html"><i class="fa fa-superpowers"></i><span class="text"> 成长值与活跃值设置</span></a></li>
+								<li><a href="{$smarty.const.ADMIN}Advice/index.html"><i class="fa  fa-bell-o"></i><span class="text"> 客户意见与建议</span></a></li>
 								<!-- <li>
 									<a href="#"><i class="fa fa-list-alt"></i><span class="text"> 内容管理</span> <span class="fa fa-angle-down pull-right"></span></a>
 									<ul class="nav sub">

@@ -66,6 +66,7 @@
 				$map=array(
 					'w_cons_order.name'			=>array('like','%'.$search.'%'),
 					'w_cons_order.phone_num'	=>array('like','%'.$search.'%'),
+					'w_cons_order.code'	=>array('like','%'.$search.'%'),
 					'_logic'					=>'or'
 				);
 			$list=M('w_cons_order')->field('w_cons_order.*,w_consultant.name as cons_name')->where($map)->join('w_consultant on w_consultant.uid=w_cons_order.cons_uid')->page($p,20)->order('type,is_arrival')->select();

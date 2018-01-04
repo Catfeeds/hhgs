@@ -53,10 +53,29 @@ body{
 .header .clockin{
 	flex: 2;
 	text-align: right;
+	position: relative;
 }
 .header .clockin img{
-	width: 70px;
+	width: 20px;
 }
+.header .clockin .flex{
+	position: absolute;
+	top: -13px;
+    right: 5px;
+    width: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(228,199,146);
+	color: #fff;
+	padding: 3px 10px;
+	border-top-left-radius: 23px;
+	border-bottom-left-radius: 23px;
+	border-top-right-radius: 23px;
+	border-bottom-right-radius: 23px;
+}
+
+
 .levelgrounp{
 	display: flex;
 	background-color: #fff;
@@ -154,4 +173,18 @@ body{
 .message_box .btn button a{
 	color: #fff;
 	text-decoration: none;
+}
+.message_box .close{
+	position: absolute;
+	width: 30px;
+	top: 5px;
+	right: 5px;
+}
+#cover1 .message_box{
+	min-height: 50px;
+	margin-top: 120px;
+}
+#cover1 .content p{
+	font-size:16px;
+	margin: 5px;
 }

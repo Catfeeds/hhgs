@@ -62,7 +62,7 @@
 				</p>
 				<p id='error'></p>
 				<p style='padding: 15px 0;'>
-					<button type='submit' class='btn btn-submit'>报名预约</button>
+					<button type='submit' class='btn btn-submit'>确定预约</button>
 				</p>
 			</form>		
 		</div>
@@ -148,11 +148,13 @@
 						},
 						success:function(msg){
 							if(msg['code']==200){
-								alert('报名预约成功');
-								window.location.href=location.href;
+								$('.message_cover .content').html('<p style="letter-spacing:8px;font-size:25px;font-weight:500;">'+msg['data']+'</p><p style="font-size:18px;padding:15px 0 25px;font-weight:500;">预约成功</p>');
+								$('.message_cover').show();			
 							}else{
-								console.log(msg['data']);
+								$('.message_cover .content').html('<p>'+msg['data']+'</p><p style="font-size:18px;font-weight:500;padding:15px;">预约失败</p>');
+								$('.message_cover').show();
 							}
+							$('.cover').hide();
 						}
 					});
 				}
@@ -175,8 +177,9 @@
 				let cons_uid=$('#comm_uid').val();
 				let score=$('#score').data('value');
 				let comment=$('#comment').val();
-				if(score==''){
-					alert('请输入您的评分');
+				if(typeof(score)=='undefined'){
+					alert('请为此置业顾问设定星级');
+					return;
 				}
 				$.ajax({
 					type:'POST',
@@ -189,11 +192,13 @@
 					},
 					success:function(msg){
 						if(msg['code']==200){
-							alert('评论提交成功');
-							window.location.reload();
+							$('.message_cover .content').html('<p style="font-size:18px;font-weight:500;padding:15px;">评论成功</p>');
+							$('.message_cover').show();
 						}else{
-							alert(msg['data']);
+							$('.message_cover .content').html('<p style="font-size:18px;font-weight:500;padding:15px;">'+msg['data']+'</p>');
+							$('.message_cover').show();
 						}
+						$('.cover_comment').hide();
 					}
 				});
 			});
@@ -209,4 +214,6 @@
 			});
 		});
 	</script>
+	<!-- 提示信息框 -->
+	{include file='../tpl/message.tpl'}
 </body>

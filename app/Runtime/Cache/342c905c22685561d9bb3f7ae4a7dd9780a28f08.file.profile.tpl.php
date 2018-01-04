@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-29 16:17:11
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-03 10:36:37
          compiled from "./Theme/default/Member/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8678080145a2e372b8f2ff8-80406101%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '342c905c22685561d9bb3f7ae4a7dd9780a28f08' => 
     array (
       0 => './Theme/default/Member/profile.tpl',
-      1 => 1514535430,
+      1 => 1514946952,
       2 => 'file',
     ),
   ),
@@ -40,8 +40,8 @@ Member/css/profile.css">
 			<div class='headimg'>
 				<img src="<?php echo $_smarty_tpl->tpl_vars['info']->value['headimg'];?>
 ">
-				<p class="vip"><img src="<?php echo @THEME;?>
-Member/img/vip.png"></p>
+				<?php if ($_smarty_tpl->tpl_vars['info']->value['is_authen']==1){?><p class="vip"><img src="<?php echo @THEME;?>
+Member/img/vip.png"></p><?php }?>
 			</div>
 			<div class='info'>
 				<p class='iname'><?php echo $_smarty_tpl->tpl_vars['info']->value['uname'];?>
@@ -49,8 +49,10 @@ Member/img/vip.png"></p>
 				<p class='iauthen'><?php if ($_smarty_tpl->tpl_vars['info']->value['is_authen']==1){?>花园里认证业主<?php }else{ ?>业主未认证<?php }?></p>
 			</div>
 			<div id='clock_in' class='clockin'>
-				<img src="<?php echo @THEME;?>
-Member/img/clockin.png">
+				<!-- <img src="<?php echo @THEME;?>
+Member/img/clockin.png"> -->
+				<div class='flex'><img src="<?php echo @THEME;?>
+Member/img/coin.png"><span>&nbsp;签到</span></div>
 			</div>
 		</div>
 		<!-- 等级信息 -->
@@ -127,17 +129,24 @@ Member/img/more.png"></p>
 			</div>
 		</div>
 	</div>
-	<div class='cover'>
+	<div id='cover' class='cover'>
 		<div class='message_box'>
 			<p id='img'></p>
 			<div class='content'>
 				<h2>客服电话</h2>
-				<h1>0371-69165555</h1>
+				<h1>0371-60908262</h1>
 			</div>
 			<p class='btn'>
 				<button id='close'>取消</button>&nbsp;&nbsp;
-				<button ><a href="tel:0371-69165555">呼叫</a></button>
+				<button ><a href="tel:0371-60908262">呼叫</a></button>
 			</p>
+		</div>
+	</div>
+	<div id='cover1' class='cover'>
+		<div class='message_box'>
+			<div class='close'><img src="<?php echo @THEME;?>
+Member/img/close.png"></div>
+			<div class='content'></div>
 		</div>
 	</div>
 	<script src="<?php echo @ORG;?>
@@ -145,7 +154,7 @@ jquery/jquery-2.1.0.min.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			// 签到获取积分与经验值
-			$('#clock_in').click(function(){
+			$('#clock_in .flex').click(function(){
 				$.ajax({
 					type:'POST',
 					url:'<?php echo @HOME;?>
@@ -153,7 +162,8 @@ Member/clock_in',
 					dataType:'json',
 					success:function(msg){
 						if(msg['code']==200){
-							alert('签到成功');
+							$('#cover1 .content').html('<p>恭喜您签,到成功</p><p>获得了'+msg['data'][1]+'活跃值</p>');
+							// alert('恭喜您签到成功，获得了'+msg['data'][1]+'活跃值');
 						}else
 							alert(msg['data']);
 					}
@@ -161,10 +171,10 @@ Member/clock_in',
 			});
 			$('#tel').click(function(){
 				
-				$('.cover').slideDown();
+				$('#cover').slideDown();
 			});
 			$('#close').click(function(){
-				$('.cover').hide();
+				$('#cover').hide();
 			});
 
 		});

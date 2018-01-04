@@ -12,15 +12,13 @@
 	<div class='container'>
 		<div class='swiper-container header'>
 			<div class="swiper-wrapper">
-		        <div class="swiper-slide">
-		        	<img src="{$smarty.const.THEME}Activity/img/WX20171218-094032.png">
-		        </div>
-		        <div class="swiper-slide">
-		        	<img src="{$smarty.const.THEME}Activity/img/WX20171218-101319.png">
-		        </div>
-		         <div class="swiper-slide">
-		        	<img src="{$smarty.const.THEME}Shop/img/WX20171218-160538.png">
-		        </div>
+		        {foreach $carousel as $item}
+					<div class="swiper-slide">
+			        	<a href='{$item["link"]}'>
+			        		<img src="{$smarty.const.UPLOAD}carousel/{$item['img']}">
+			        	</a>
+			        </div>
+				{/foreach}
 		    </div>
 		    <!-- 如果需要分页器 -->
 		    <div class="swiper-pagination"></div>

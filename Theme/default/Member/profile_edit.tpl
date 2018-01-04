@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1.0">
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{$smarty.const.THEME}Member/css/progress.css">
 	<link rel="stylesheet" type="text/css" href="{$smarty.const.THEME}Member/css/profile_edit.css">
 </head>
 <body>
@@ -13,12 +15,8 @@
 			<p class='headimg'>
 				<img src="{$info['headimg']}">
 			</p>
-			<p class='tips'>个人信息越完善，特权越多哟！</p>
+			<p class='tips'>多多完善信息，会奖励丰富活跃值噢！</p>
 			<form id='form' class='form' action="" method="post" enctype="multipart/form-data">
-				<p class='line'>
-					<label>姓名</label>
-					<input name='name' type='text' disabled value='{$info["uname"]}'>
-				</p>
 				<p class='line'>
 					<label>性别</label>
 					<select id='sex' name='sex'>
@@ -27,10 +25,7 @@
 						<option value=2 {if $info['sex'] eq 2}selected{/if}>女</option>
 					</select>
 				</p>
-				<p class='line'>
-					<label>身份证号码</label>
-					<input id='id' name='id' type='number' value='{$info["id_card"]}'>
-				</p>
+				
 				<p class='line'>
 					<label>生日</label>
 					<span class='wrp'><input id='birth' name='birth' type='date' value='{$info["birth"]|date_format:"%Y-%m-%d"}'></span>
@@ -78,14 +73,7 @@
 					<label>兴趣爱好</label>
 					<input id='hobby' name='hobby' type='text' value='{$info["hobby"]}'>
 				</p>
-				<p class='line'>
-					<label>房源信息</label>
-					<input id='houseinfo' name='houseinfo' type='text' disabled value='{$info["houseinfo"]}'>
-				</p>
-				<p class='line'>
-					<label>置业顾问</label>
-					<input id='consultant' name='consultant' disabled type='text'>
-				</p>
+			
 				<p class='line'>
 					<label>置业动机</label>
 					<select id='reason' name='reason'>
@@ -119,8 +107,60 @@
 					<label>爱车品牌</label>
 					<input id='carbrand' name='carbrand' type='text' value='{$info["car_brand"]}'>
 				</p>
-				<p style='text-align: center;'>完成度：{$completion}%</p>
-				<p class=btn>
+				<p id='authen' class='line'>
+					<label>业主认证</label>
+					<input  type='text' readonly value='{if $info["is_authen"] eq 1}已认证{else}未认证{/if}'>
+				</p>
+				<div class='cover'>
+					<div class='box'>
+						<p class='close'>
+							<img src="{$smarty.const.THEME}Member/img/close.png">
+						</p>
+						<p class='title'>{if $info['is_authen'] eq 1}恭喜您，业主身份已认证！{else}您花园里业主身份未认证！{/if}</p>
+						<p class='text'>{if $info['is_authen'] eq 1}认证信息如下：{/if}</p>
+						<div class='authen'>							
+							{if $info['is_authen'] eq 1}
+							<p class='text'>
+								<label>姓名：</label>
+								{$info["uname"]}
+							</p>
+							<p class='text'>
+								<label>地块：</label>
+								{$info["area"]}
+							</p>
+							<p class='text'>
+								<label>房源：</label>
+								{$info["houseinfo"]}
+							</p>
+							<p class='text'>
+								<label>身份证号：</label>
+								{$info["id_card"]}
+							</p>
+							<p class='text'>
+								<label>置业顾问：</label>
+								{$info['cons_name']}
+							</p>	
+							{else}
+							<p class='text'>
+								请联系花园里小花进行认证，谢谢！
+							</p>	
+							{/if}
+						</div>
+						<p class='tip'>如有疑问请联系小花：0371-60908262</p>
+					</div>
+				</div>
+				<div class='text-center' style="padding: 8px;">个人信息完成度：</div>
+				<div class='progress_w'>
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {$completion}%">							
+						</div>
+						<div class='pg s'>0</div>
+						<div class='pg m'>{$score/2|string_format:'%d'}活跃值</div>
+						<div class='pg e'>{$score}</div>
+					</div>				
+					<div style="line-height: 12px;font-size: 12px;">&nbsp;{$completion}%</div>
+				</div>
+				<p class='btns'>
 					<button type=submit>
 						<div class='sub_bg'>更新信息</div>
 					</button>
@@ -159,12 +199,10 @@
 			$('#form').validate({
 				// debug:true,
 				rules:{
-					id:'isIdCardNo',
 					phone:'isphone'
 
 				},
 				messages:{
-					id:'请输入正确的身份证号码',
 					phone:'手机号码格式错误'
 				},
 				errorPlacement:function(error,element){
@@ -176,7 +214,6 @@
 						dataType:'json',
 						data:{
 							'sex':$('#sex').val(),
-							'id':$('#id').val(),
 							'birth':$('#birth').val(),
 							'phone':$('#phone').val(),
 							'marry':$('#marry').val(),
@@ -185,7 +222,6 @@
 							'job':$('#job').val(),
 							'residence':$('#residence').val(),
 							'hobby':$('#hobby').val(),
-							// 'houseinfo':$('#houseinfo').val(),
 							'reason':$('#reason').val(),
 							'times':$('#times').val(),
 							'car':$('#car').val(),
@@ -196,7 +232,7 @@
 								alert('信息更新成功');
 								window.location.href=location.href;
 							}else{
-								console.log(msg['data']);
+								alert(msg['data']);
 							}
 						}
 					});
@@ -206,6 +242,20 @@
 			$('#birth').blur(function(){
 				set_age($(this));
 			});
+			$('.close').click(function(){
+				$('.cover').hide();
+			});
+			$('#authen').click(function(){
+				$('.cover').show();
+			});
+			!function animate(){
+				$(".charts").each(function(i,item){
+					var a=parseInt($(item).attr("w"));
+					$(item).animate({
+						width: a+"%"
+					},1000);
+				});
+			}();
 		});
 	</script>
 </body>

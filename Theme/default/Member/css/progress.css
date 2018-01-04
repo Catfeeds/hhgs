@@ -1,0 +1,33 @@
+.progress_w{
+	position: relative;
+	display: flex;
+	margin:0 30px;
+}
+/* barbox */
+.progress{
+	position: relative;
+	flex: 1;
+	height:12px;
+	line-height:12px;
+	overflow:visible;
+	text-align: center;	
+	border-radius: 12px;
+}
+.progress-bar{
+	border-radius: 20px;
+}
+.pg{
+	position: absolute;
+	color: rgb(207,166,108);
+	top: 18px;
+	font-size: 12px;
+}
+.s{
+	left: 0;
+}
+.m{
+	left: 45%;
+}
+.e{
+	left: 90%;
+}

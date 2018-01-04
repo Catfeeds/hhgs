@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 14:59:15
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-31 12:20:34
          compiled from "./ThemeAdmin/default/Index/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12965568985a38b5dbad8612-12186312%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f98f1ce441459d246c4e07122b47c9fc11536106' => 
     array (
       0 => './ThemeAdmin/default/Index/index.tpl',
-      1 => 1514444352,
+      1 => 1514470225,
       2 => 'file',
     ),
   ),
@@ -29,7 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a38b5dbb9115')) {function content_5a38b5dbb9115($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a38b5dbb9115')) {function content_5a38b5dbb9115($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 <?php $_tmp1=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 <?php $_tmp2=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['userlevel']->value;?>

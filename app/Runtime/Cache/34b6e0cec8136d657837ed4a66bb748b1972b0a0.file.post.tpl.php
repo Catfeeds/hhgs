@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 15:11:07
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-02 11:14:56
          compiled from "./ThemeAdmin/default/Carousel/post.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9585399315a40e74e42ef83-05686342%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '34b6e0cec8136d657837ed4a66bb748b1972b0a0' => 
     array (
       0 => './ThemeAdmin/default/Carousel/post.tpl',
-      1 => 1514444878,
+      1 => 1514862894,
       2 => 'file',
     ),
   ),
@@ -103,7 +103,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php echo $_smarty_tpl->tpl_vars['res']->value['img'];?>
 " data-url="<?php echo $_smarty_tpl->tpl_vars['res']->value['img'];?>
 ">
-						<div class='help-block'>*图片建议尺寸为1438*701</div>
+						<div class='help-block'><!-- *图片建议尺寸为1438*701 --></div>
 					</div>
 				</div>
 			</div>

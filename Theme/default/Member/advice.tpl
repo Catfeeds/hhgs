@@ -49,7 +49,25 @@
 	<script type="text/javascript">
 		$(function(){
 			$('#submit').click(function(){
-				alert('您的信息已提交成功');
+				let text=$('#text').val();
+				if(text==''){
+					alert('感谢您为我们提供宝贵的意见');
+				}else{
+					$.ajax({
+						type:'POST',
+						dataType:'json',
+						data:{
+							'content':text,
+						},
+						success:function(msg){
+							if(msg['code']==200)
+								alert('感谢您为我们提供宝贵的意见');
+							else
+								alert(msg['data']);
+						}
+					});
+				}
+				
 			});
 		});
 	</script>
