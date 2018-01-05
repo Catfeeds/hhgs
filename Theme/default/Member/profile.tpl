@@ -52,21 +52,21 @@
 				<a href="{$smarty.const.HOME}Member/profile_edit.html">
 					<p><img src="{$smarty.const.THEME}Member/img/1.png"></p>
 					<p>个人信息</p>
-					<p><img src="{$smarty.const.THEME}Member/img/more.png"></p>
+					<p class='more'><img src="{$smarty.const.THEME}Member/img/more.png"></p>
 				</a>
 			</div>
 			<div class='item'>
 				<a href="{$smarty.const.HOME}Member/levels.html">
 					<p><img src="{$smarty.const.THEME}Member/img/2.png"></p>
 					<p>等级权限</p>
-					<p><img src="{$smarty.const.THEME}Member/img/more.png"></p>
+					<p class='more'><img src="{$smarty.const.THEME}Member/img/more.png"></p>
 				</a>
 			</div>
 			<div class='item'>
 				<a href="{$smarty.const.HOME}Member/family.html">
 					<p><img src="{$smarty.const.THEME}Member/img/3.png"></p>
 					<p>家庭成员</p>
-					<p><img src="{$smarty.const.THEME}Member/img/more.png"></p>
+					<p class='more'><img src="{$smarty.const.THEME}Member/img/more.png"></p>
 				</a>
 			</div>
 		</div>
@@ -75,14 +75,23 @@
 				<a id='tel' href="javascript:;">
 					<p><img src="{$smarty.const.THEME}Member/img/4.png"></p>
 					<p>帮助中心</p>
-					<p><img src="{$smarty.const.THEME}Member/img/more.png"></p>
+					<p class='more'><img src="{$smarty.const.THEME}Member/img/more.png"></p>
 				</a>
 			</div>
 			<div class='item'>
 				<a href="{$smarty.const.HOME}Member/advice.html">
 					<p><img src="{$smarty.const.THEME}Member/img/5.png"></p>
 					<p>意见反馈</p>
-					<p><img src="{$smarty.const.THEME}Member/img/more.png"></p>
+					<p class='more'><img src="{$smarty.const.THEME}Member/img/more.png"></p>
+				</a>
+			</div>
+		</div>
+		<div class='groups'>
+			<div class='item'>
+				<a href="{$smarty.const.HOME}Recommend/index.html">
+					<p><img src="{$smarty.const.THEME}Member/img/gift.png"></p>
+					<p>推荐有礼</p>
+					<p class='more'><img src="{$smarty.const.THEME}Member/img/more.png"></p>
 				</a>
 			</div>
 		</div>

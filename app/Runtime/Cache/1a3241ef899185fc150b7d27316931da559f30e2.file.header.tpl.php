@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2018-01-03 11:43:24
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-05 20:31:28
          compiled from "/Applications/MAMP/htdocs/jianye_garden/ThemeAdmin/default/tpl/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7409233665a38b5dbb9a292-11855364%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1a3241ef899185fc150b7d27316931da559f30e2' => 
     array (
       0 => '/Applications/MAMP/htdocs/jianye_garden/ThemeAdmin/default/tpl/header.tpl',
-      1 => 1514951002,
+      1 => 1515155486,
       2 => 'file',
     ),
   ),
@@ -173,6 +173,8 @@ Shop/order.html"><i class="fa fa-paw"></i><span class="text"> 订单管理</span
 Award/index.html"><i class="fa fa-superpowers"></i><span class="text"> 成长值与活跃值设置</span></a></li>
 								<li><a href="<?php echo @ADMIN;?>
 Advice/index.html"><i class="fa  fa-bell-o"></i><span class="text"> 客户意见与建议</span></a></li>
+								<li><a href="<?php echo @ADMIN;?>
+Recommend/index.html"><i class="fa fa-gift"></i><span class="text"> 推荐管理</span></a></li>
 								<!-- <li>
 									<a href="#"><i class="fa fa-list-alt"></i><span class="text"> 内容管理</span> <span class="fa fa-angle-down pull-right"></span></a>
 									<ul class="nav sub">

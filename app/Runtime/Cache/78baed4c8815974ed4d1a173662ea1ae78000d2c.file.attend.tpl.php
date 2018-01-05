@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2018-01-05 14:02:18
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-05 20:31:20
          compiled from "./ThemeAdmin/default/Activity/attend.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5269940615a3916972608b0-73302088%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '78baed4c8815974ed4d1a173662ea1ae78000d2c' => 
     array (
       0 => './ThemeAdmin/default/Activity/attend.tpl',
-      1 => 1515132136,
+      1 => 1515150784,
       2 => 'file',
     ),
   ),
@@ -172,14 +172,22 @@ Activity/clock_in',
 			let ls={
 				'data':[]
 			};
+			let exit=false;
 			$('.growth').each(function(){
 				let _this=$(this);
 				let uid=_this.data('uid');
 				let level=_this.find('.level').val();
 				let score=_this.find('.score').val();
-				ls.data.push(new Array(uid,level,score));
+				if(isNaN(level)||isNaN(score)){
+					$('.error_report').show();
+					$('.error_report .text-danger').html('成长值或积分值存在非数字类型，请仔细检查后重新执行');
+					exit=true;
+					return false;
+				}	
+				ls.data.push(new Array(uid,level,score));		
 			});
-			console.log(ls);
+			if(exit)
+				return;
 			$.ajax({
 				type:'POST',
 				url:'<?php echo @ADMIN;?>

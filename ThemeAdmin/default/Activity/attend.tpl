@@ -119,14 +119,22 @@
 			let ls={
 				'data':[]
 			};
+			let exit=false;
 			$('.growth').each(function(){
 				let _this=$(this);
 				let uid=_this.data('uid');
 				let level=_this.find('.level').val();
 				let score=_this.find('.score').val();
-				ls.data.push(new Array(uid,level,score));
+				if(isNaN(level)||isNaN(score)){
+					$('.error_report').show();
+					$('.error_report .text-danger').html('成长值或积分值存在非数字类型，请仔细检查后重新执行');
+					exit=true;
+					return false;
+				}	
+				ls.data.push(new Array(uid,level,score));		
 			});
-			console.log(ls);
+			if(exit)
+				return;
 			$.ajax({
 				type:'POST',
 				url:'{$smarty.const.ADMIN}Activity/update_ls',
