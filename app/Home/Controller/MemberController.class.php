@@ -44,18 +44,23 @@
 
 					// 对比新用户手机号码是否存在member表中
 					$is_mem=$this->mem->where(array('phone_num'=>$data['tel']))->count();
+					$this->mem->startTrans();
 					if($is_mem)
 						// 已经存在
 						$uid=$this->mem->usave(array('phone_num'=>$data['tel']),$new_mem);
 					else
 						$uid=$this->mem->uadd($new_mem);
-
+					$grade=D('Grade')->add(array('u_uid'=>$uid,'level'=>0,'score'=>0));
 					// 注册成功设定登录状态成功，并跳转回登录前页面
-					if($uid){
+					if($uid&&$grade){
+						$this->mem->commit();
 						session('jianye_user_uid',$uid);
 						// 登录成功跳回之前页面
 						$refer=explode('_', I('GET.refer'));
 						echo message(200,'success',json_encode($refer));
+					}else{
+						$this->mem->rollback();
+						echo message(301,'notice','注册失败，请稍后再试，或联系我们的客服');
 					}					
 				}else{
 					echo message('401','notice','验证码错误');
@@ -289,11 +294,10 @@
 			$growth=D('Growth');
 			$is_clock=$growth->where(array('u_uid'=>$this->uid,'of'=>3,'time'=>array('LIKE','%'.date("Y-m-d",time()).'%')))->count('uid');
 			if(!$is_clock){
-				// 添加成员时积分与经验的增加值
+				// 签到时积分与经验的增加值
 				$sl=M('w_slnumber')->where(array('uid'=>3))->find();
-				$level=$sl['lnumber'];
-				// 当添加成员数量与额定的数量相等的时候多加额外的100积分
-				$score=($count+1)==$this->profilecount?$sl['snumber']+100:$sl['snumber'];
+				$level=$sl['lnumber'];			
+				$score=$sl['snumber'];
 				$growth->startTrans();
 				$exec=$this->degree_grade(3,$level,$score);
 				if($exec){
@@ -376,26 +380,6 @@
 				}
 			}
 			return round($count/ $this->profilecount,4);
-		}
-		// 积分与经验值增加
-		// param  $of 积分获取方式
-		// param  $level 经验值
-		// param  $score 积分值
-		private function degree_grade($of,$level,$score){
-			$mem=D('Member');
-			$is_authen=$mem->ufind(array('uid'=>$this->uid),'is_authen');
-			if($is_authen){
-					// 执行积分和经验记录的增加
-				$growth=D('Growth');
-				$exec1=$growth->add(array('u_uid'=>$this->uid,'type'=>2,'of'=>$of,'number'=>$level));
-				$exec2=$growth->add(array('u_uid'=>$this->uid,'type'=>1,'of'=>$of,'number'=>$score));
-				// 更新总积分与经验值
-				$g=D('Grade');
-				$grd=$g->where(array('u_uid'=>$this->uid))->find();
-				$exec3= $g->add_sl($this->uid,$grd['score']+$score,$grd['level']+$level);
-				return $exec1&&$exec2&&$exec3;
-			}else
-			return false;// 不是认证的业主一律不增加积分			
-		}
+		}		
 		
 	}

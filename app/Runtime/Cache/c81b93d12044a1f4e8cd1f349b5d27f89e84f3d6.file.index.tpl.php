@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 10:46:03
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-04 17:07:58
          compiled from "./Theme/default/Activity/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17029595805a34eb35622969-86670909%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c81b93d12044a1f4e8cd1f349b5d27f89e84f3d6' => 
     array (
       0 => './Theme/default/Activity/index.tpl',
-      1 => 1514423998,
+      1 => 1515056846,
       2 => 'file',
     ),
   ),
@@ -19,12 +19,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_5a34eb35624b4',
   'variables' => 
   array (
-    'list' => 0,
+    'carousel' => 0,
     'item' => 0,
+    'list' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a34eb35624b4')) {function content_5a34eb35624b4($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a34eb35624b4')) {function content_5a34eb35624b4($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html>
 <html lang='zh'>
 <head>
@@ -41,14 +42,20 @@ Activity/css/index.css">
 	<div class='container'>
 		<div class='swiper-container header'>
 			<div class="swiper-wrapper">
-		        <div class="swiper-slide">
-		        	<img src="<?php echo @THEME;?>
-Activity/img/WX20171218-094032.png">
-		        </div>
-		        <div class="swiper-slide">
-		        	<img src="<?php echo @THEME;?>
-Activity/img/WX20171218-101319.png">
-		        </div>
+				<?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['carousel']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars['item']->value){
+$_smarty_tpl->tpl_vars['item']->_loop = true;
+?>
+					<div class="swiper-slide">
+			        	<a href='<?php echo $_smarty_tpl->tpl_vars['item']->value["link"];?>
+'>
+			        		<img src="<?php echo @HOME;?>
+<?php echo $_smarty_tpl->tpl_vars['item']->value['img'];?>
+">
+			        	</a>
+			        </div>
+				<?php } ?>
 		    </div>
 		    <!-- 如果需要分页器 -->
 		    <div class="swiper-pagination"></div>
@@ -72,6 +79,10 @@ Activity/attend.html?uid=<?php echo $_smarty_tpl->tpl_vars['item']->value['uid']
 							<img src="<?php echo @UPLOAD;?>
 activity/<?php echo $_smarty_tpl->tpl_vars['item']->value['titleimg'];?>
 ">
+							<?php if ($_smarty_tpl->tpl_vars['item']->value['ss']==2){?>
+							<img class='finish' src="<?php echo @THEME;?>
+activity/img/finish.png">
+							<?php }?>
 						</div>
 						<div class='info'>
 							<div class='line'>
@@ -104,7 +115,7 @@ swiper/swiper-3.4.2.jquery.min.js'></script>
 	<script>        
 		$(function(){
 			var mySwiper = new Swiper ('.swiper-container', {
-				autoplay:2000,
+				autoplay:3000,
 				loop: true,
 				// 如果需要分页器
 				pagination: '.swiper-pagination',

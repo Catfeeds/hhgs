@@ -40,7 +40,7 @@ $(function(){
 	});
 	// 图片上传操作
 	$('.imgUpload').change(function(){
-		file('#upload','imgUpload','home');
+		file('#upload','imgUpload','carousel');
 	});
 
 	$('#submit').click(function(){

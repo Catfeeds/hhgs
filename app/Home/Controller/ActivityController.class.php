@@ -17,7 +17,7 @@
 			$p=I('POST.p');
 			$p=($p!=0)?$p:1;
 			if(isset($status)){
-				$s=base64_decode(str_replace(' ', '+', $status));				
+				$s=base64_decode(str_replace(' ', '+', $status));	
 			}
 			if($s=='进行中'||$s==''){
 				$map='status<>3 and status<>2 and UNIX_TIMESTAMP(concat(edate," ",etime))>UNIX_TIMESTAMP(now())';
@@ -46,9 +46,14 @@
 			$auid=I('GET.uid');
 			// 需要显示的信息
 			$ainfo=$this->act->where(array('uid'=>$auid))->find();
+			$time=$ainfo['edate'].' '.$ainfo['etime'];
+			if($ainfo['status']!=2&&$ainfo['status']!=3&&(strtotime($time)>time()))
+				$ainfo['ss']=1;
+			else
+				$ainfo['ss']=0;
 			$this->assign('ainfo',$ainfo);
-			$attend=M('w_act_attend');
 			// 已参加人数
+			$attend=M('w_act_attend');
 			$join=$attend->where(array('act_uid'=>$auid))->sum('carry_num');
 			$join+=$attend->where(array('act_uid'=>$auid))->count();
 			$this->assign('join',$join);
@@ -110,16 +115,17 @@
 								$mem->startTrans(); //开启事务处理，同步积分扣除与报名成功
 								if($uinfo['is_authen']){
 									// 判断是否需要缴费（积分或微信）
+									$exec1=true;
 									if($ainfo['costtype']==1){
 										// 积分消费对比积分值
-										$grade=M('w_grade');
+										$grade=D('Grade');
 										$score=$grade->field('score')->where(array('u_uid'=>$this->uid))->find();
 										if($score['score']<$ainfo['cost']){
 											echo message(306,'notice','积分不足');
 											return;
 										}else{
-											// 积分减少
-											$exec1=$grade->where(array('u_uid'=>$this->uid))->save(array('score'=>$score['score']-$ainfo['cost']));
+											// 积分减少		
+											$exec1=$this->degree_grade(4,0,$ainfo['cost'],'DEC');
 										}
 									}else if($ainfo['costtype']==2){
 										// 微信支付
@@ -133,10 +139,7 @@
 									$exec3=$this->create_qrcode($user_link);
 									// 更新二维码信息
 									$exec4=$attend->where(array('uid'=>$exec2))->save(array('qrcode'=>$exec3));
-									// 添加积分记录
-									$growth=M('w_growth')->add(array('u_uid'=>$this->uid,'type'=>1,'of'=>4,'number'=>$ainfo['cost'],'inc_dec'=>2));
-
-									if($exec1&&$exec2&&($exec3!='')&&$exec4&&$growth){
+									if($exec1&&$exec2&&($exec3!='')&&$exec4){
 										$mem->commit();
 										echo message(200,'success',$exec3);
 									}else{

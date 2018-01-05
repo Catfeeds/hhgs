@@ -56,6 +56,7 @@
 								<div style='display:flex;'>
 									<div id="filePicker">选择图片</div>&nbsp;&nbsp;<div id='reset' class='webuploader-pick' style='height: 40px;'>删除图片</div>
 								</div>
+								<div class='help-block'>最佳图片高度为156px</div>
 								<div id="fileList" class="uploader-list"></div>
 								<input id='images' type="hidden" name="images" value='{$info["titleimg"]}'>
 							</div>
@@ -100,8 +101,8 @@
 								<select id='costtype' name='costtype' class='form-control'>
 									<option value=0 {if $info['costtype'] eq 0}selected{/if}>免费</option>
 									<option value=1 {if $info['costtype'] eq 1}selected{/if}>积分</option>
-									<option value=2 {if $info['costtype'] eq 2}selected{/if}>微信支付</option>
-								</select>
+<!-- 									<option value=2 {if $info['costtype'] eq 2}selected{/if}>微信支付</option>
+ -->								</select>
 							</div>
 							<div class='col-xs-5 col-md-5'>
 								<input id='cost' class='form-control' type="number" name="cost" placeholder='报名费用不为空时填写所需花费' min=0 value="{$info['cost']}">
@@ -380,6 +381,9 @@
 						}else{
 							$('.error_report').show();
 							$('.error_report .text-danger').html(msg['data']);
+							{literal}
+							$('html,body').animate({scrollTop: 0}, 500);
+							{/literal}
 						}
 					}
 				});

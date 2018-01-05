@@ -4,7 +4,7 @@
 	class QrcodeModel{
 		protected $qrcode;
 		function __construct(){
-			Vendor('phpqrcode.phpqrcode');
+			Vendor('PHPQrcode.phpqrcode');
 			$this->qrcode=new \QRcode();
 		}
 		// 生成二维码
@@ -20,7 +20,7 @@
 				mkdir($file_dir);
 			}
 			$file_dir.='/'.date('YmdHis',time()).rand(100,999).'.png';
-			$this->qrcode::png($url_name,$file_dir,$level,$size, 2);
+			$this->qrcode->png($url_name,$file_dir,$level,$size, 2);
 			//已经生成的原始二维码图中添加二维码
 			$logo = false;//'upload/qrcode/qr_logo.jpg';	
 			if ($logo !== FALSE) { 

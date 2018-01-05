@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1.0">
+	<link href="{$smarty.const.THEMEADMIN}assets/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{$smarty.const.ORG}swiper/swiper-3.4.2.min.css">
 	<link rel="stylesheet" type="text/css" href="{$smarty.const.THEME}Activity/css/index.css">
 </head>
@@ -15,7 +16,7 @@
 				{foreach $carousel as $item}
 					<div class="swiper-slide">
 			        	<a href='{$item["link"]}'>
-			        		<img src="{$smarty.const.UPLOAD}carousel/{$item['img']}">
+			        		<img src="{$smarty.const.HOME}{$item['img']}">
 			        	</a>
 			        </div>
 				{/foreach}
@@ -24,16 +25,22 @@
 		    <div class="swiper-pagination"></div>
 		</div>
 		<div class='menu'>			
-			<div class='item' data-status='6L+b6KGM5Lit'>进行中</div>
-			<div class='item' data-status='5bey57uT5p2f'>已结束</div>
-			<div class='item' data-status='5oiR55qE5rS75Yqo'>我的活动</div>
+			<div class='item' data-status='6L+b6KGM5Lit'><i class="fa fa-diamond" aria-hidden="true"></i>进行中</div>
+			<div class='item' data-status='5bey57uT5p2f'><i class="fa fa-bookmark" aria-hidden="true"></i>已结束</div>
+			<div class='item' data-status='5oiR55qE5rS75Yqo'><i class="fa fa-user" aria-hidden="true"></i>我的活动</div>
 		</div>
 		<div class='list'>
+			{if $list eq null}
+			<p style='text-align: center;padding: 80px 0;background-color: transparent;'>更多活动尽情期待</p>
+			{/if}
 			{foreach $list as $item}
 				<a href="{$smarty.const.HOME}Activity/attend.html?uid={$item['uid']}">
 					<div class='list-i'>
 						<div class='img'>
 							<img src="{$smarty.const.UPLOAD}activity/{$item['titleimg']}">
+							{if $item['ss'] eq 2}
+							<img class='finish' src="{$smarty.const.THEME}Activity/img/finish.png">
+							{/if}
 						</div>
 						<div class='info'>
 							<div class='line'>
@@ -58,9 +65,9 @@
 	<script src="{$smarty.const.ORG}jquery/jquery-2.1.0.min.js"></script>
 	<script type="text/javascript" src='{$smarty.const.ORG}swiper/swiper-3.4.2.jquery.min.js'></script>
 	<script>        
-		$(function(){
+		$(function(e){
 			var mySwiper = new Swiper ('.swiper-container', {
-				autoplay:2000,
+				autoplay:3000,
 				loop: true,
 				// 如果需要分页器
 				pagination: '.swiper-pagination',
@@ -143,6 +150,17 @@
 					$('.category').removeClass('cate-top');
 				}
 			}); 
+
+			let search=(window.location.search).replace('?status=','');
+			$(".menu .item").each(function() {
+				let status=$(this).data('status');
+
+				if (status==search) {
+					$(this).addClass("active");
+				}
+				
+			});
+
 		});   
 	</script>
 </body>

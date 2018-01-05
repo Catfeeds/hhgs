@@ -11,7 +11,7 @@
 	<div class='container'>
 		<div class='content'>
 			<div class='headimg'>
-				<img src="{if $info['headimg'] eq ''}{$smarty.const.THEME}/Member/img/head-2.gif{else}{$info['headimg']}{/if}">
+				<img src="{if $info['headimg'] eq ''}{$smarty.const.THEME}/Member/img/head.png{else}{$info['headimg']}{/if}">
 			</div>
 			<form id='form' class='form' action="" method="post" enctype="multipart/form-data">
 				<p class='line'>

@@ -37,7 +37,12 @@
 				<p  class='p-label'>等级</p>
 			</div>
 			<div class='l-item'>
-				<p class='p-info'>{if $info['level'] eq null}0{else} {$info['level']}{/if}</p>
+				<p class='p-info'>
+				{if $info['level'] eq null}0
+				{else if $info['level'] gt 500}500+
+				{else}{$info['level']}
+				{/if}
+				</p>
 				<p  class='p-label'>成长值</p>
 			</div>
 		</div>

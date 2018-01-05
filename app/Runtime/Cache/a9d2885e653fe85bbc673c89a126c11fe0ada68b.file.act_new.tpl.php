@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-31 12:29:10
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-05 18:53:10
          compiled from "./ThemeAdmin/default/Activity/act_new.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4665023945a38c04c694d65-03255968%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a9d2885e653fe85bbc673c89a126c11fe0ada68b' => 
     array (
       0 => './ThemeAdmin/default/Activity/act_new.tpl',
-      1 => 1514470225,
+      1 => 1515068779,
       2 => 'file',
     ),
   ),
@@ -95,6 +95,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<div style='display:flex;'>
 									<div id="filePicker">选择图片</div>&nbsp;&nbsp;<div id='reset' class='webuploader-pick' style='height: 40px;'>删除图片</div>
 								</div>
+								<div class='help-block'>最佳图片高度为156px</div>
 								<div id="fileList" class="uploader-list"></div>
 								<input id='images' type="hidden" name="images" value='<?php echo $_smarty_tpl->tpl_vars['info']->value["titleimg"];?>
 '>
@@ -143,8 +144,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<select id='costtype' name='costtype' class='form-control'>
 									<option value=0 <?php if ($_smarty_tpl->tpl_vars['info']->value['costtype']==0){?>selected<?php }?>>免费</option>
 									<option value=1 <?php if ($_smarty_tpl->tpl_vars['info']->value['costtype']==1){?>selected<?php }?>>积分</option>
-									<option value=2 <?php if ($_smarty_tpl->tpl_vars['info']->value['costtype']==2){?>selected<?php }?>>微信支付</option>
-								</select>
+<!-- 									<option value=2 <?php if ($_smarty_tpl->tpl_vars['info']->value['costtype']==2){?>selected<?php }?>>微信支付</option>
+ -->								</select>
 							</div>
 							<div class='col-xs-5 col-md-5'>
 								<input id='cost' class='form-control' type="number" name="cost" placeholder='报名费用不为空时填写所需花费' min=0 value="<?php echo $_smarty_tpl->tpl_vars['info']->value['cost'];?>
@@ -439,6 +440,9 @@ Activity/act_new_post',
 						}else{
 							$('.error_report').show();
 							$('.error_report .text-danger').html(msg['data']);
+							
+							$('html,body').animate({scrollTop: 0}, 500);
+							
 						}
 					}
 				});

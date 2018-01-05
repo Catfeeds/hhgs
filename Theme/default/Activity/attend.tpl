@@ -36,34 +36,45 @@
 			</div>
 			<div class='form'>
 				<form id='form' class='form' action="" method="post" enctype="multipart/form-data">
-					<p class='bline'>
-						<span>我要报名</span>
-					</p>
-					<p class='line'>
-						<label>姓名</label>
-						<input id='name' name='name' type='text' value='{$uinfo["uname"]}'>
-					</p>
-					<p class='line'>
-						<label>手机号码</label>
-						<input id='phone' name='phone' type='tel' value='{$uinfo["phone_num"]}'>
-					</p>
-					<p class='line'>
-						<label>报名人数</label>
-						<select id='number' name='number'>
-							{section name=carrynum loop={$ainfo['carrynum']}}
-								<option {if $uinfo["carry_num"] eq $smarty.section.carrynum.index}selected{/if} value='{$smarty.section.carrynum.index}'>{$smarty.section.carrynum.index}</option>
-							{/section}
-						</select>
-					</p>
-					<p class='qrcode'>
-						{if $uinfo['qrcode']}
-						<img src="{$smarty.const.HOME}{$uinfo['qrcode']}">
+					{if $ainfo['ss'] eq 0}
+						<p class='bline'>
+							<span>已结束</span>
+						</p>
+					{else if $uinfo['qrcode']}
+						<p class='bline'>
+							<span>已报名</span>
+						</p>
+						<p class='qrcode'>
+							<img src="{$smarty.const.HOME}{$uinfo['qrcode']}">
+						</p>
+						<br><br>
+					{else}
+						<p class='bline'>
+							<span>我要报名</span>
+						</p>
+						<p class='line'>
+							<label>姓名</label>
+							<input id='name' name='name' type='text' value='{$uinfo["uname"]}'>
+						</p>
+						<p class='line'>
+							<label>手机号码</label>
+							<input id='phone' name='phone' type='tel' value='{$uinfo["phone_num"]}'>
+						</p>
+						<p class='line'>
+							<label>报名人数</label>
+							<select id='number' name='number'>
+								{section name=carrynum loop={$ainfo['carrynum']+1}}
+									<option {if $uinfo["carry_num"] eq $smarty.section.carrynum.index}selected{/if} value='{$smarty.section.carrynum.index}'>{$smarty.section.carrynum.index}</option>
+								{/section}
+							</select>
+						</p>					
+						<p id='error'></p>
+						{if $uinfo['uid'] eq ''}
+						<p class='btn_wrap'>
+							<button class='btn' type='submit'>提交报名</button>
+						</p>
 						{/if}
-					</p>
-					<p id='error'></p>
-					<p class='btn_wrap'>
-						<button class='btn' type='submit' {if $uinfo['uid'] neq ''}disabled>报名成功{else}>提交报名{/if}</button>
-					</p>
+					{/if}
 				</form>
 			</div>
 		</div>

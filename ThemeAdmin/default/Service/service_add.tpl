@@ -369,6 +369,9 @@
 						}else{
 							$('.error_report').show();
 							$('.error_report .text-danger').html(msg['data']);
+							{literal}
+							$('html,body').animate({scrollTop: 0}, 500);
+							{/literal}
 						}
 					}
 				});

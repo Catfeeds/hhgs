@@ -1,4 +1,18 @@
 {include file='../tpl/header.tpl' username={$username} id={$id} level={$userlevel} title='活动数据'}
+<style type="text/css">
+	.growth{
+		display: flex;
+		display: none;
+	}
+	.gowth_t,.growth_btn{
+		display: none;
+	}
+	.growth input{
+		width: 35px;
+		height: 25px;
+		margin: 0 2px;
+	}
+</style>
 <div class='main'>
 	<div class='row'>
 		<div class="col-lg-12">
@@ -18,7 +32,8 @@
 	<div class='row'>
 		<div class='col-md-12'>
 			<div style='padding:10px 0;'>
-				<button id='update_ls' class='btn btn-primary' data-uid="{$smarty.get.act_uid}">一键增加参与活动人员积分</button>
+				<button id='update_ls' class='btn btn-primary'>一键增加参与活动人员积分</button>
+				<button id='do_update_ls' class='btn btn-danger growth_btn' data-uid="{$smarty.get.act_uid}">开始执行</button>
 			</div>
 			<div class='panel panel-default'>
 				<div class='panel-body'>
@@ -32,11 +47,12 @@
 								<th>报名时间</th>
 								<th>是否到达</th>
 								<th>签到时间</th>
+								<th class='gowth_t'>成长值/活跃值</th>
 								<th>操作</th>
 							</tr>
 						</thead>
 						<tbody>
-							{foreach $list['list'] as $item}
+							{foreach $list as $item}
 								<tr>
 									<td>{$item['u_uid']}</td>
 									<td>{$item['uname']}</td>
@@ -51,6 +67,10 @@
 									{/if}
 									</td>
 									<td>{$item['arrival_time']|date_format:'%Y-%m-%d %H:%M:%S'}</td>
+									<td class='growth' data-uid="{$item['u_uid']}">
+										<input class='level' type="text" value='{$ls["level"]}' min=0>
+										<input class='score' type="text" value='{$ls["score"]}' min=0>
+									</td>
 									<td>
 										{if $item['is_arrival'] eq 0}
 										<button class='btn btn-sm btn-primary arrival' data-uid='{$item["uid"]}'>手动签到</button>
@@ -62,9 +82,6 @@
 							{/foreach}
 						</tbody>
 					</table>
-					<div class='text-center'>
-						{$list['page']}
-					</div>
 				</div>
 			</div>
 		</div>
@@ -93,13 +110,30 @@
 			});
 		});
 		$('#update_ls').click(function(){
+			$('.growth').show();
+			$('.gowth_t').show();
+			$('.growth_btn').show();
+		});
+		$('#do_update_ls').click(function(){
 			let act_uid=$(this).data('uid');
+			let ls={
+				'data':[]
+			};
+			$('.growth').each(function(){
+				let _this=$(this);
+				let uid=_this.data('uid');
+				let level=_this.find('.level').val();
+				let score=_this.find('.score').val();
+				ls.data.push(new Array(uid,level,score));
+			});
+			console.log(ls);
 			$.ajax({
 				type:'POST',
 				url:'{$smarty.const.ADMIN}Activity/update_ls',
 				dataType:'json',
 				data:{
-					'act_uid':act_uid
+					'act_uid':act_uid,
+					'data':ls,
 				},
 				success:function(msg){
 					if(msg['code']==200){

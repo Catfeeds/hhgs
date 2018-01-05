@@ -73,5 +73,27 @@
 			}
 			return $return_date;
 		}
+
+		// 积分与经验值增加
+		// param  $of 积分获取方式
+		// param  $level 经验值
+		// param  $score 积分值
+		// param  $INC_DEC 积分值是增加还是减少
+		function degree_grade($of,$level,$score,$INC_DEC='INC'){
+			// 执行积分和经验记录的增加
+			if($INC_DEC=='INC')
+				$inc_dec=1;
+			else
+				$inc_dec=2;
+			$growth=D('Growth');
+			$l=$growth->add(array('u_uid'=>$this->uid,'type'=>2,'of'=>$of,'number'=>$level,'inc_dec'=>$inc_dec));
+			$s=$growth->add(array('u_uid'=>$this->uid,'type'=>1,'of'=>$of,'number'=>$score,'inc_dec'=>$inc_dec));
+
+			// 更新总积分与经验值
+			$grade=D('Grade');
+			$g=$grade->add_sl($this->uid,$score,$level,$INC_DEC);
+			
+			return $l&&$s&&$g;		
+		}
 	}
 ?>

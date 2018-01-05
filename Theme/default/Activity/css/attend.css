@@ -42,6 +42,10 @@ body{
 	padding: 130px 0 0;
 	width: 90%;
 	margin: 0 auto;
+	overflow:hidden;
+}
+.detail img{
+	max-width: 100%!important;
 }
 .detail *{
 	background-color: transparent;
@@ -50,7 +54,7 @@ body{
 	font-size: 14px;
 }
 .detail .pcontent{
-	padding: 15px 8px;
+	padding: 15px 18px;
 	background-color: #fff;
 	border-radius: 5px;
 }
