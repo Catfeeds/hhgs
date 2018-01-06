@@ -239,7 +239,7 @@
 				}
 			});
 			// 年龄自动生成
-			$('#birth').blur(function(){
+			$('#birth').change(function(){
 				set_age($(this));
 			});
 			$('.close').click(function(){

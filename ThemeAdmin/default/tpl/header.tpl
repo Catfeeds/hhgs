@@ -107,7 +107,7 @@
 									</ul>
 								</li>
 								<li>
-									<a href="#"><i class="fa fa-shopping-cart"></i><span class="text"> 花园小铺</span> <span class="fa fa-angle-down pull-right"></span></a>
+									<a href="#"><i class="fa fa-shopping-cart"></i><span class="text"> 积分商城</span> <span class="fa fa-angle-down pull-right"></span></a>
 									<ul class="nav sub">
 										<li><a href="{$smarty.const.ADMIN}Shop/goods.html"><i class="fa fa-puzzle-piece"></i><span class="text"> 商品管理</span></a></li>
 										<li><a href="{$smarty.const.ADMIN}Shop/order.html"><i class="fa fa-paw"></i><span class="text"> 订单管理</span></a></li>

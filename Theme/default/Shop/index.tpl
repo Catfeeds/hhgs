@@ -15,7 +15,7 @@
 		        {foreach $carousel as $item}
 					<div class="swiper-slide">
 			        	<a href='{$item["link"]}'>
-			        		<img src="{$smarty.const.UPLOAD}carousel/{$item['img']}">
+			        		<img src="{$smarty.const.HOME}{$item['img']}">
 			        	</a>
 			        </div>
 				{/foreach}
@@ -29,7 +29,7 @@
 		</div>
 		<div class='content-list'>
 			{foreach $list as $item}
-				<a href="{$smarty.const.HOME}Shop/detail.html?uid={$item['uid']}">
+				<a href="{if $order}#{else}{$smarty.const.HOME}Shop/detail.html?uid={$item['uid']}{/if}">
 					<div class='list-item'>
 						<div class='img'>
 							<img src="{$smarty.const.UPLOAD}goods/{$item['thumbnail']}">
@@ -50,7 +50,7 @@
 							</div>
 						</div>
 						<div class='btn'>
-							<span>马上兑换</span>
+							<span>{if $order}已兑换{else}马上兑换{/if}</span>
 						</div>
 					</div>
 				</a>

@@ -62,6 +62,7 @@
 			</div>
 		</div>
 	</div>
+	<div class='tips'></div>
 	<script src="{$smarty.const.ORG}jquery/jquery-2.1.0.min.js"></script>
 	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 	<script type="text/javascript">
@@ -100,8 +101,10 @@
 					address:'地址不能为空',
 				},
 				errorPlacement:function(error,element){
-					// $('#error').html(error);
-					console.log(error);
+					$('.tips').html(error).show();
+					setTimeout(function(){
+						$('.tips').hide();
+					},2000);
 				},
 				submitHandler:function(){
 					$.ajax({
@@ -116,10 +119,16 @@
 						},
 						success:function(msg){
 							if(msg['code']==200){
-								alert('报名预约成功');
-								window.location.href=location.href;
+								$('.tips').html('报名预约成功').show();
+								setTimeout(function(){
+									$('.tips').hide();
+									window.location.href=location.href;
+								},2000);								
 							}else{
-								alert(msg['data']);
+								$('.tips').html(msg['data']).show();
+								setTimeout(function(){
+									$('.tips').hide();
+								},2000);
 							}
 						}
 					});

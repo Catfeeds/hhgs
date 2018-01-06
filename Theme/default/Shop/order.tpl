@@ -24,8 +24,8 @@
 				<div class='groups'>
 					<div class='item'>
 						<p>兑换数量</p>
-						<p>
-							<input id='number' name='number' type='number' value='1'>
+						<p style='text-align: right;'>
+							<input id='number' name='number' type='number' value='1'>个
 						</p>
 					</div>
 				</div>
@@ -61,6 +61,7 @@
 			</form>
 		</div>		
 	</div>
+	<div class='tips'></div>
 	<script src="{$smarty.const.ORG}jquery/jquery-2.1.0.min.js"></script>
 	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 	<script type="text/javascript">
@@ -98,7 +99,10 @@
 
 				},
 				errorPlacement:function(error,element){
-					console.log(error);
+					$('.tips').html(error).show();
+					setTimeout(function(){
+						$('.tips').hide();
+					},1000);
 				},
 				submitHandler:function(){
 					$.ajax({
@@ -112,16 +116,23 @@
 						},
 						success:function(msg){
 							if(msg['code']==200){
-								alert('兑换成功');
-								window.location.href=location.href;
+								$('.tips').html('兑换成功').show();
+								setTimeout(function(){
+									$('.tips').hide();
+									window.location.href=location.href;
+								},1500);
+								
 							}else{
-								console.log(msg['data']);
+								$('.tips').html(msg['data']).show();
+								setTimeout(function(){
+									$('.tips').hide();
+								},2000);
 							}
 						}
 					});
 				}
 			});
-			$('#number').blur(function(){
+			$('#number').keyup(function(){
 				let price=$('#price span i').html();
 				let num=$(this).val();
 				total=price*num;

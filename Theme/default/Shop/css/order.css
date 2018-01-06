@@ -83,3 +83,23 @@ img{
 	color: #fff;
 	padding:12px 25px;
 }
+#number{
+	border:1px solid rgba(199,199,199,0.2);
+	width: 30px;
+	text-align: center;
+	border-radius: 2px;
+}
+.tips{
+	display: none;
+	width: 60%;
+	border-radius: 5px;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	color: #fff;
+	top: 30%;
+	left: 20%;
+	text-align: center;
+	font-weight: 500;
+	font-size: 16px;
+	padding:30px 10px;
+}

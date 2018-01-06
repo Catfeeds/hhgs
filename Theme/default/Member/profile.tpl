@@ -95,6 +95,7 @@
 				</a>
 			</div>
 		</div>
+		<div style="padding: 20px;"></div>
 	</div>
 	<div id='cover' class='cover'>
 		<div class='message_box'>

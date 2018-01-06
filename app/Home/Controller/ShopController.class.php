@@ -15,6 +15,7 @@
 			$t=base64_decode(str_replace(' ', '+', $t));
 			if($t=='兑换记录'){	
 				$list=M('w_goods_order')->field('goods_id as uid,goods_name,goods_last,goods_img,goods_stime,goods_etime,goods_price')->where(array('u_uid'=>$this->uid))->join('w_goods on w_goods.uid=w_goods_order.goods_id')->select();
+				$this->assign('order',true);
 			}else
 				$list=$this->goods->field('uid,goods_name,goods_last,goods_img,goods_stime,goods_etime,goods_price')->where(array('goods_delete'=>0,'goods_status'=>1,'goods_etime'=>array(array('gt',time()),'','or')))->order('goods_degree desc')->select();
 			$list=array_map(array(__CLASS__,'get_thumbnail'), $list);
@@ -93,9 +94,9 @@
 									// 更新积分记录
 									$growth=M('w_growth')->add(array('u_uid'=>$this->uid,'type'=>1,'of'=>5,'number'=>$cost,'inc_dec'=>2));
 									// 减少库存更新乐观锁
-									$g=$this->goods->where(array('uid'=>$goods_info['uid']))->setInc('goods_last',$post['number']);
-									$l=$gl=$this->goods->where(array('uid'=>$goods_info['uid']))->save(array('goods_lock',date('Y-m-d H:i:s',time())));
-									if($exec1&&$grade&&$growth&&$g&&$l){
+									$g=$this->goods->where(array('uid'=>$goods_info['uid']))->setDec('goods_last',$post['number']);
+									$gl=$this->goods->where(array('uid'=>$goods_info['uid']))->save(array('goods_lock'=>date('Y-m-d H:i:s',time())));
+									if($exec1&&$grade&&$growth&&$g&&$gl){
 										$order->commit();
 										echo message(200,'success','兑换成功');
 									}else{
@@ -107,7 +108,7 @@
 							}else
 								echo message(305,'notice','积分不足，您最多可兑换'.floor($mem_info['score']/$goods_info['goods_price']).'个此商品');							
 						}else
-							echo message(303,'notice','此商品您已兑换过'.$sum.'次，还剩'.($goods_info['goods_convert']-$sum).'次兑换机会');					
+							echo message(303,'notice','此商品您已兑换过'.$sum.'次，还可以兑换'.($goods_info['goods_convert']-$sum).'个此商品');					
 					}else
 						echo message(302,'notice','您的等级不足，无法兑换此商品');
 				}else

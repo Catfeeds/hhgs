@@ -32,7 +32,7 @@
 					'score'		=>$data['score'],
 					'level'		=>$data['level'],
 					'detail'	=>$data['detail'],
-					'atime'		=>$data['atime'],
+					'atime'		=>time(),
 				);
 				if($data['uid']){
 					$exec=$this->service->where(array('uid'=>$data['uid']))->save($value);

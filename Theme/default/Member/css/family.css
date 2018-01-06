@@ -8,7 +8,7 @@ body{
 	background-color: #fff;
 	margin: 10px 15px;
 	min-height: 100px;
-	padding: 10px 15px;
+	padding:15px;
 	align-items : center;
 }
 .content a{
@@ -36,8 +36,8 @@ body{
 }
 
 .headimg{
-	width: 90px;
-	height: 90px;
+	width: 85px;
+	height: 85px;
 	background-color: rgb(242,232,211);
 	padding:3px;
 	border-radius: 50%;
@@ -57,7 +57,7 @@ body{
 }
 .family_mem .info{
 	padding-left: 10px;
-	letter-spacing: 1px;
+	/*letter-spacing: 1px;*/
 	flex: 1;
 }
 .family_mem .info p{

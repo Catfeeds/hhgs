@@ -261,7 +261,7 @@
 		for(var i=0;i<imagesList.length;i++){
 			if(imagesList[i]=='')
 				continue;
-			let $li = $('<div  class="file-item thumbnail">' +'<img data-url="'+imagesList[i]+'" src="{$smarty.const.UPLOAD}Service/'+imagesList[i]+'">' +'</div>');
+			let $li = $('<div  class="file-item thumbnail">' +'<img data-url="'+imagesList[i]+'" src="{$smarty.const.UPLOAD}service/'+imagesList[i]+'">' +'</div>');
 			$('#fileList').append($li);
 		}
 	});
