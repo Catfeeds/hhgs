@@ -109,7 +109,7 @@
 				</p>
 				<p id='authen' class='line'>
 					<label>业主认证</label>
-					<input  type='text' readonly value='{if $info["is_authen"] eq 1}已认证{else}未认证{/if}'>
+					<input  type='text' disabled value='{if $info["is_authen"] eq 1}已认证{else}未认证{/if}'>
 				</p>
 				<div class='cover'>
 					<div class='box'>

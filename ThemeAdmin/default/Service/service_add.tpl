@@ -82,7 +82,7 @@
 							<label class='col-md-1 col-xs-12'>支付方式</label>
 							<div class='col-xs-12 col-md-11'>
 								<select id='pay_way' name='pay_way' class='form-control'>
-									<option value=1 {if $info['pay_way'] eq 1}selected{/if}>积分</option>
+									<option value=1 {if $info['pay_way'] eq 1}selected{/if}>活跃值</option>
 								</select>
 							</div>
 						</div>
@@ -109,7 +109,7 @@
 							</div>
 						</div>
 						<div class='form-group'>
-							<label class='col-md-1 col-xs-12'>可获得积分</label>
+							<label class='col-md-1 col-xs-12'>可获得活跃值</label>
 							<div class='col-xs-12 col-md-11'>
 								<input id='score' class='form-control' type="number" name="score" value='{$info["score"]}'>
 							</div>
@@ -336,8 +336,8 @@
 				},
 				status:'请选择服务状态',
 				score:{
-					required:'请填写可获取积分',
-					digits:'可获取积分必须为整数类型',
+					required:'请填写可获取活跃值',
+					digits:'可获取活跃值必须为整数类型',
 				},
 				level:'required',
 			},

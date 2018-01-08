@@ -32,7 +32,7 @@
 	<div class='row'>
 		<div class='col-md-12'>
 			<div style='padding:10px 0;'>
-				<button id='update_ls' class='btn btn-primary'>一键增加参与活动人员积分</button>
+				<button id='update_ls' class='btn btn-primary'>一键增加参与活动人员奖励</button>
 				<button id='do_update_ls' class='btn btn-danger growth_btn' data-uid="{$smarty.get.act_uid}">开始执行</button>
 			</div>
 			<div class='panel panel-default'>
@@ -127,7 +127,7 @@
 				let score=_this.find('.score').val();
 				if(isNaN(level)||isNaN(score)){
 					$('.error_report').show();
-					$('.error_report .text-danger').html('成长值或积分值存在非数字类型，请仔细检查后重新执行');
+					$('.error_report .text-danger').html('成长值或活跃值值存在非数字类型，请仔细检查后重新执行');
 					exit=true;
 					return false;
 				}	

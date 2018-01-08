@@ -6,9 +6,10 @@ body{
 	width:100%;
 	min-height: 180px;
 }
-.header img{
+/*.header .swiper-slide{
 	height: 180px;
-}
+	overflow: hidden;
+}*/
 .menu{
 	display: flex;
 	background: #fff;

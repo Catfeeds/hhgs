@@ -25,6 +25,7 @@
 			<div class='panel panel-default'>
 				<div class='panel-body'>			
 					<a href="{$smarty.const.ADMIN}Carousel/post.html" class='btn btn-primary'>添加新的幻灯片</a>
+					<div class='help-block text-danger'>请务必保持同类型的幻灯片尺寸一致</div>
 					<table  class='table table-striped table-hover'>
 						<thead>
 							<tr>

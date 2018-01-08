@@ -12,7 +12,10 @@
 		}
 		// 用户登录
 		function login(){
-			$data=I('POST.');
+			// 若登录状态还在的话就不能进入注册页面
+			if($this->uid)
+				redirect(U('Member/profile'));
+			$data=I('POST.');			
 			if($data){
 				$openid=session('temp_openid');
 				$code=session('login_valicode');
@@ -43,21 +46,34 @@
 					}
 
 					// 对比新用户手机号码是否存在member表中
-					$is_mem=$this->mem->where(array('phone_num'=>$data['tel']))->count();
+					$is_mem=$this->mem->field('uid,phone_num')->where(array('phone_num'=>$data['tel']))->find();
 					$this->mem->startTrans();
-					if($is_mem)
-						// 已经存在
-						$uid=$this->mem->usave(array('phone_num'=>$data['tel']),$new_mem);
+					if($is_mem){
+						// $uid=$is_mem['uid'];
+						echo message(402,'notice','当前手机号以被注册并绑定其他微信账号');
+						return;
+					}
 					else
 						$uid=$this->mem->uadd($new_mem);
-					$grade=D('Grade')->add(array('u_uid'=>$uid,'level'=>0,'score'=>0));
+					// 写入初始成长值与活跃值信息
+					$grd=D('Grade');
+					$is_add=$grd->where(array('uid'=>$uid))->count();
+					if($is_add<1)
+						$grade=$grd->add(array('u_uid'=>$uid,'level'=>0,'score'=>0));
 					// 注册成功设定登录状态成功，并跳转回登录前页面
 					if($uid&&$grade){
 						$this->mem->commit();
 						session('jianye_user_uid',$uid);
 						// 登录成功跳回之前页面
-						$refer=explode('_', I('GET.refer'));
-						echo message(200,'success',json_encode($refer));
+						$refer=I('GET.refer');
+						// 注册成功后消除验证码session
+						session('login_valicode',null);
+						if($refer){
+							$refer=explode('_',$refer);
+							echo message(200,'success',json_encode($refer));
+						}
+						else
+							echo message(200,'success',json_encode(array('Member','profile')));
 					}else{
 						$this->mem->rollback();
 						echo message(301,'notice','注册失败，请稍后再试，或联系我们的客服');
@@ -71,7 +87,6 @@
 		// 用户个人中心
 		function profile(){
 			$mem=D('Member');
-			
 			$info=$mem->ufind(array('w_members.uid'=>$this->uid),'uname,is_authen,headimg,level,score','left join w_grade on w_grade.u_uid=w_members.uid');
 			if($info){
 				if($info['level']<50)

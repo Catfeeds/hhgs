@@ -1,4 +1,7 @@
 @import url('common.css');
+input[type="text"],input[type="tel"],input[type="number"]{
+  border-radius: 0;
+}
 body{
 	background-image: url(../img/bg.png);
 	background-size: cover;

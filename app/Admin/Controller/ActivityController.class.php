@@ -90,7 +90,7 @@
 			// 获取该活动的成长活跃值
 			$ls=$this->act->field('level,score,ls_update,status')->where(array('uid'=>$act_uid))->find();
 			if($ls['status']==0)
-				echo message(303,'notice','活动尚未结束，暂时无法更新用户积分');
+				echo message(303,'notice','活动尚未结束，暂时无法更新用户活跃值');
 			else if($ls['ls_update']){
 				echo message(302,'notice','成长值与活跃值已进行更新,请勿重复提交');
 			}else{			
@@ -99,7 +99,7 @@
 				$no_s=array(); //未变动人员活跃值批量增加数组
 				$no_c=array(); //未变动人员id列表
 				$y_c=array(); //已变动人员成长值活跃值列表
-				// 归类积分变动与未变动的人员数组
+				// 归类活跃值变动与未变动的人员数组
 				foreach($data['data'] as $v){
 					if(($ls['level']==$v[1])&&($ls['score']==$v[2])){
 						$no_l[]=array('u_uid'=>$v[0],'type'=>1,'of'=>4,'number'=>$ls['level']);
@@ -112,23 +112,23 @@
 				// 未变动人员id拼接字符串
 				$mem_str=implode(',', $no_c);
 
-				// 开始执行积分更新操作
+				// 开始执行活跃值更新操作
 				$grade=D('Grade');
 				$growth=D('Growth');
 				$grade->startTrans();
-				// 积分未变化的用户
+				// 活跃值未变化的用户
 				$level=$score=$l=$s=true;
 				if($no_c){
 					$level=$grade->where(array('u_uid'=>array('in',$mem_str)))->setInc('level',$ls['level']);
 					$score=$grade->where(array('u_uid'=>array('in',$mem_str)))->setInc('score',$ls['score']);
 
-					// 未变动积分增长记录修改 
+					// 未变动活跃值增长记录修改 
 					$l=$growth->addAll($no_l);
 					$s=$growth->addAll($no_s);
 				}
 				$unchanged=$level&&$score&&$l&&$s;
 
-				// 积分被手动修改后的用户
+				// 活跃值被手动修改后的用户
 				$changed=true;
 				if($y_c){
 					foreach ($y_c as $v) {
@@ -143,7 +143,7 @@
 					}
 				}
 
-				// 设置积分值已增加的标记
+				// 设置活跃值值已增加的标记
 				$update=$this->act->where(array('uid'=>$act_uid))->save(array('ls_update'=>1));
 				if($unchanged&&$changed&&$update){
 					$grade->commit();

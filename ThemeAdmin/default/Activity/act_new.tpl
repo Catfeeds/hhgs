@@ -100,7 +100,7 @@
 							<div class='col-xs-6 col-md-6'>
 								<select id='costtype' name='costtype' class='form-control'>
 									<option value=0 {if $info['costtype'] eq 0}selected{/if}>免费</option>
-									<option value=1 {if $info['costtype'] eq 1}selected{/if}>积分</option>
+									<option value=1 {if $info['costtype'] eq 1}selected{/if}>活跃值</option>
 <!-- 									<option value=2 {if $info['costtype'] eq 2}selected{/if}>微信支付</option>
  -->								</select>
 							</div>

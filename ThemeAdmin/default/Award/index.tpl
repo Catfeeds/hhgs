@@ -21,6 +21,15 @@
 				<div class='panel-body'>
 					<div class='form-horizontal'>
 						<div class='form-group'>
+							<label class='col-md-1 col-xs-12'>*</label>
+							<div class='col-xs-12 col-md-4'>
+								成长值
+							</div>
+							<div class='col-xs-12 col-md-4'>
+								活跃值
+							</div>
+						</div>						
+						<div class='form-group'>
 							<label class='col-md-1 col-xs-12'>个人信息完善</label>
 							<div class='col-xs-12 col-md-4'>
 								<input class='form-control lnumber' type="number"  placeholder='成长值' value='{$award[0]["lnumber"]}' title='成长值'>

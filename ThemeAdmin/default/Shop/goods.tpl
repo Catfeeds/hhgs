@@ -42,7 +42,7 @@
 									<td>{$item['goods_num']}</td>
 									<td>{$item['goods_last']}</td>
 									<td>{if $item['goods_status'] eq 1}上架{else}下架{/if}</td>
-									<td>{$item['goods_price']}{if $item['pay_type'] eq 1}积分{else}￥{/if}</td>
+									<td>{$item['goods_price']}{if $item['pay_type'] eq 1}活跃值{else}￥{/if}</td>
 									<td><i>Lv</i>&nbsp;<b>{$item['goods_level']}</b></td>
 									<td>{$item['atime']|date_format:'%Y-%m-%d'}</td>
 									<td>

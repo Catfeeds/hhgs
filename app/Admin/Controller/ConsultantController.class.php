@@ -28,11 +28,12 @@
 					'degree'	=>$data['degree'],
 					'phone_num'	=>$data['phone'],
 				);
-				if($uid){
-					$value['atime']=time();
+				if($uid){					
 					$exec=$this->cons->where(array('uid'=>$uid))->save($value);
-				}else
+				}else{
+					$value['atime']=time();
 					$exec=$this->cons->add($value);
+				}
 				if($exec)
 					echo message();
 				else

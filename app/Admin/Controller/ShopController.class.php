@@ -41,13 +41,13 @@
 					'goods_intro'	=>$data['intro'],
 					'goods_detail'	=>$data['detail'],
 					'goods_level'	=>$data['level'],
-					'goods_stime'	=>strtotime($data['stime']),
-					'goods_etime'	=>strtotime($data['etime']),
+					'goods_stime'	=>strtotime($data['sdate']),
+					'goods_etime'	=>strtotime($data['edate']),
 					'goods_convert'	=>$data['convert'],
 					'goods_status'	=>$data['status'],
 					'goods_degree'	=>$data['degree'],
 					'goods_lock'	=>date('Y-m-d H:i:s',time()),
-					'atime'			=>$data['atime'],
+					'atime'			=>time(),
 				);
 				if($data['uid']){
 					$exec=$this->goods->where(array('uid'=>$data['uid']))->save($value);

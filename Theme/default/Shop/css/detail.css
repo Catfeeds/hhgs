@@ -7,7 +7,7 @@ body{
 	color: #000;
 }
 .bottom{
-	position: absolute;
+	position: fixed;
 	color: #fff;
 	font-size: 14px;
 	background: -webkit-linear-gradient(left, rgb(207,166,108), rgb(238,210,170));

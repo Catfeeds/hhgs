@@ -9,6 +9,13 @@
 		public function __construct(){
 			parent::__construct();
 			$this->uid=session('jianye_user_uid');
+
+			// 查询下是否存在当前session中的用户
+			$mem=D('Member');
+			$is_reg=$mem->where(array('uid'=>$this->uid))->count();
+			if($is_reg<=0)
+				session('jianye_user_uid',null);
+
 			$openid=session('temp_openid');
 			// 微信相关操作model
 			$this->we_model=D('Wechat');
@@ -46,8 +53,6 @@
 			if($info['phone_num']&&$info['uname'])
 				session('jianye_user_uid',$info['uid']);
 			else{
-				// if(!$info['openid'])
-				// $userid=$mem->uadd(array('openid'=>$openid,'headimg'=>$headimgurl,'rg_time'=>time()));
 				session('temp_openid',$openid);
 				session('temp_headimg',$headimg);
 				if(!in_array(ACTION_NAME, $this->unlimit)){

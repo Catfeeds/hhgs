@@ -37,7 +37,7 @@
 						$mem->commit();
 						// 双方收到短信提示信息
 						$pa1=urlencode('#code#').'='.urlencode($data['code']).'&'.urlencode('#name#').'='.urlencode($cons_info['name']);
-						$this->sent_sms(2132774,17603879576,$pa1); // 客户
+						$this->sent_sms(2132774,$data['phone_num'],$pa1); // 客户
 						$pa2=urlencode('#code#').'='.urlencode($data['code']).'&'.urlencode('#time#').'='.urlencode($data['date'].' '.$data['time']);
 						$this->sent_sms(2132776,$cons_info['phone_num'],$pa2); // 置业顾问
 						echo message(200,'success',$data['code']);
@@ -86,6 +86,7 @@
 
 			$comment=M('w_cons_comment');
 			$count2=$comment->where(array('u_uid'=>$this->uid,'cons_uid'=>$cons_uid))->count();
+			$p['headimg']=str_replace(';', '', $p['headimg']);
 			if($count1>0&&$count2<1)
 				$p['comment']=1;
 			else

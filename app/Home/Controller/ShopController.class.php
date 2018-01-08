@@ -26,7 +26,8 @@
 			$uid=I('GET.uid');
 			$info=$this->goods->field('uid,goods_name,goods_detail,goods_price,goods_img')->where(array('uid'=>$uid,'goods_delete'=>0,'goods_status'=>1,'goods_etime'=>array(array('gt',time()),'','or')))->find();
 			$img_list=explode(';',$info['goods_img']);
-			$info['thumbnail']=array_shift($img_list);
+			array_shift($img_list);
+			$info['thumbnail']=$img_list;
 			$this->assign('info',$info);
 			$this->display();
 		}
@@ -68,7 +69,7 @@
 						$sum=$order->where(array('u_uid'=>$this->uid,'goods_uid'=>$goods_info['uid']))->sum('order_num');
 						$last=$goods_info['goods_convert']-$sum-$post['number'];
 						if($last>=0){
-							// 积分判断
+							// 活跃值判断
 							$cost=$post['number']*$goods_info['goods_price'];
 							if($mem_info['score']>=$cost){
 								// 乐观锁判断数据是否已被更新
@@ -89,9 +90,9 @@
 										'order_remarks'	=>$post['remarks'],
 									);
 									$exec1=$order->add($order_data);
-									// 更新积分
+									// 更新活跃值
 									$grade=M('w_grade')->where(array('u_uid'=>$this->uid))->setDec('score',$cost);
-									// 更新积分记录
+									// 更新活跃值记录
 									$growth=M('w_growth')->add(array('u_uid'=>$this->uid,'type'=>1,'of'=>5,'number'=>$cost,'inc_dec'=>2));
 									// 减少库存更新乐观锁
 									$g=$this->goods->where(array('uid'=>$goods_info['uid']))->setDec('goods_last',$post['number']);
@@ -106,7 +107,7 @@
 								}else
 									echo message(306,'notice','系统繁忙请稍后再试'); 
 							}else
-								echo message(305,'notice','积分不足，您最多可兑换'.floor($mem_info['score']/$goods_info['goods_price']).'个此商品');							
+								echo message(305,'notice','活跃值不足，您最多可兑换'.floor($mem_info['score']/$goods_info['goods_price']).'个此商品');							
 						}else
 							echo message(303,'notice','此商品您已兑换过'.$sum.'次，还可以兑换'.($goods_info['goods_convert']-$sum).'个此商品');					
 					}else
@@ -160,8 +161,10 @@
 				$img_arr=explode(';', $img_list);
 				$thumbnail='';
 				foreach ($img_arr as  $value) {
-					if($value!='')
+					if($value!=''){
 						$thumbnail=$value;
+						break;
+					}
 				}
 				$p['thumbnail']=$thumbnail;
 			}

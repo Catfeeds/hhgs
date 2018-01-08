@@ -112,59 +112,43 @@
 							$mem=D('Member');
 							$uinfo=$mem->field('is_authen')->where(array('uid'=>$this->uid))->find();
 							if($ainfo['isfree']==1){
-								$mem->startTrans(); //开启事务处理，同步积分扣除与报名成功
-								if($uinfo['is_authen']){
-									// 判断是否需要缴费（积分或微信）
-									$exec1=true;
-									if($ainfo['costtype']==1){
-										// 积分消费对比积分值
-										$grade=D('Grade');
-										$score=$grade->field('score')->where(array('u_uid'=>$this->uid))->find();
-										if($score['score']<$ainfo['cost']){
-											echo message(306,'notice','积分不足');
-											return;
-										}else{
-											// 积分减少		
-											$exec1=$this->degree_grade(4,0,$ainfo['cost'],'DEC');
-										}
-									}else if($ainfo['costtype']==2){
-										// 微信支付
-										// 微信支付逻辑暂时不做处理
-										$exec1=true;
-									}
-									// 此处进行报名操作									
-									$exec2=$attend->add($data);
-									//添加二维码
-									$user_link='http://'.$_SERVER['HTTP_HOST'].HOME.'/Writeoff/act_hexiao.html?act_attend='.base64_encode($exec2);
-									$exec3=$this->create_qrcode($user_link);
-									// 更新二维码信息
-									$exec4=$attend->where(array('uid'=>$exec2))->save(array('qrcode'=>$exec3));
-									if($exec1&&$exec2&&($exec3!='')&&$exec4){
-										$mem->commit();
-										echo message(200,'success',$exec3);
-									}else{
-										echo message(308,'error','未知错误');
-									}									
-								}else
-									echo message(304,'notice','只有认证业主才可以进行报名');
-								
-							}else{ //非业主情况下的报名逻辑
-								// 此处进行报名操作
-								$attend->startTrans();
-								$exec=$attend->add($data);
-								$user_link='http://'.$_SERVER['HTTP_HOST'].HOME.'/Writeoff/act_hexiao.html?act_attend='.base64_encode($exec);
-								$exec2=$this->create_qrcode($user_link);
-								$exec3=$attend->where(array('uid'=>$exec))->save(array('qrcode'=>$exec2));
-								$flag=$exec&&$exec2&&$exec3;
-								if($flag){
-									$attend->commit();
-									echo message(200,'success',$exec2);
-								}
-								else{
-									$attend->rollback();
-									echo message(307,'error','未知错误');
+								$mem->startTrans(); //开启事务处理，同步活跃值扣除与报名成功
+								if($uinfo['is_authen']==0){
+									echo message(304,'notice','只有认证业主才可以进行报名');	
+									return;		
 								}
 							}
+							// 判断是否需要缴费（活跃值或微信）
+							$exec1=true;
+							if($ainfo['costtype']==1){
+								// 活跃值消费对比活跃值值
+								$grade=D('Grade');
+								$score=$grade->field('score')->where(array('u_uid'=>$this->uid))->find();
+								if($score['score']<$ainfo['cost']){
+									echo message(306,'notice','活跃值不足');
+									return;
+								}else{
+									// 活跃值减少	并添加减少记录	
+									$exec1=$this->degree_grade(4,0,$ainfo['cost'],'DEC');
+								}
+							}else if($ainfo['costtype']==2){
+								// 微信支付
+								// 微信支付逻辑暂时不做处理
+								$exec1=true;
+							}
+							// 此处进行报名操作									
+							$exec2=$attend->add($data);
+							//添加二维码
+							$user_link='http://'.$_SERVER['HTTP_HOST'].HOME.'/Writeoff/act_hexiao.html?act_attend='.base64_encode($exec2);
+							$exec3=$this->create_qrcode($user_link);
+							// 更新二维码信息
+							$exec4=$attend->where(array('uid'=>$exec2))->save(array('qrcode'=>$exec3));
+							if($exec1&&$exec2&&($exec3!='')&&$exec4){
+								$mem->commit();
+								echo message(200,'success',$exec3);
+							}else{
+								echo message(308,'error','未知错误');
+							}	
 							
 						}else
 							echo message(305,'notice','您的家庭中已有其他成员报名过该活动');

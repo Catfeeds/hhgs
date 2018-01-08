@@ -30,7 +30,7 @@
 								// 用户等级判断
 								$ulevel=$this->get_level($uinfo['level']);
 								if($ulevel>=$sinfo['level']){
-									// 支付积分判断
+									// 支付活跃值判断
 									if($uinfo['score']>=$sinfo['cost']){
 										// 乐观锁
 										$lock=$this->service->field('slock')->where(array('uid'=>$uid))->find();
@@ -43,9 +43,12 @@
 											$l=$this->service->where(array('uid'=>$uid))->save(array('slock'=>date('Y-m-d H:i:s'),time()));											
 											// 添加服务记录
 											$sorder=M('w_service_order')->add(array('u_uid'=>$this->uid,'service_uid'=>$uid,'uname'=>$post['name'],'phone_num'=>$post['phone_num'],'order_date'=>$post['date'],'order_ampm'=>$post['time'],'address'=>$post['address'],'atime'=>time()));		
-											// 更新积分
-											$grade=M('w_grade')->where(array('u_uid'=>$this->uid))->setDec('score',$sinfo['cost']);
-											// 更新积分记录
+											// 更新活跃值
+											if($sinfo['cost']!=0)
+												$grade=M('w_grade')->where(array('u_uid'=>$this->uid))->setDec('score',$sinfo['cost']);
+											else
+												$grade=true;
+											// 更新活跃值记录
 											$growth=M('w_growth')->add(array('u_uid'=>$this->uid,'type'=>1,'of'=>6,'number'=>$sinfo['cost'],'inc_dec'=>2));
 											if($dec_num&&$l&&$sorder&&$grade&&$growth){
 												$this->service->commit();
@@ -58,7 +61,7 @@
 										}else
 											echo message(307,'notice','系统繁忙请稍后再试');										
 									}else		
-										echo message(306,'notice','积分不足，无法预约此服务');
+										echo message(306,'notice','活跃值不足，无法预约此服务');
 								}else
 									echo message(305,'notice','用户等级不足Lv'.$sinfo['level'].'，无法预约此服务');
 							}else

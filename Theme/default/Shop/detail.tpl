@@ -18,9 +18,11 @@
 		<div class='swiper-container header'>
 			<div class="swiper-wrapper">
 				{foreach $info['thumbnail'] as $img}
+					{if $img neq ''}
 					<div class="swiper-slide">
 			        	<img src="{$smarty.const.UPLOAD}goods/{$img}">
 			        </div>
+					{/if}
 				{/foreach}
 		    </div>
 		    <!-- 如果需要分页器 -->

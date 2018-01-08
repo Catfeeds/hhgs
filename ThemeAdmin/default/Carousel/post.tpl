@@ -36,7 +36,7 @@
 							<label class='col-md-1 col-xs-12'>图片</label>
 							<div class='col-xs-12 col-md-8'>
 								<button class='btn btn-primary upload'>上传幻灯片</button>
-								<div class='help-block'>最佳图片高度为180px</div>
+								<div class='help-block text-danger'>请务必保持同类型的幻灯片尺寸一致</div>
 							</div>
 						</div>
 						<div class='form-group'>

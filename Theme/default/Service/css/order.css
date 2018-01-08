@@ -122,9 +122,14 @@ p.bline span{
 	flex: 1;
 	overflow-x: hidden;
 }
-.wrp input{
+/*.wrp input{
 	position: absolute;
 	right: -26px;
+}*/
+.wrp #date{
+	direction: rtl;
+	position: absolute;
+    right: -20px;
 }
 p.btn_wrap{
 	background-color: transparent;

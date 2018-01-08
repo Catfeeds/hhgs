@@ -104,7 +104,7 @@
 							}else if(msg['code']==401){
 								$('.ajax_error').html('验证码输入错误');
 							}else
-								$('.ajax_error').html('服务器繁忙请稍后再试');
+								$('.ajax_error').html(msg['data']);
 						}
 					});
 				}
