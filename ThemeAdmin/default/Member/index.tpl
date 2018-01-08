@@ -39,7 +39,7 @@
 								<tr>
 									<td>{$item['uid']}</td>
 									<td>{$item['uname']}</td>
-									<td>{if $item['sex'] eq 1}男{else}女{/if}</td>
+									<td>{if $item['sex'] eq 1}男{else if $item['sex'] eq 2}女{/if}</td>
 									<td>{$item['phone_num']}</td>
 									<td>{$item['birth']|date_format:'%Y-%m-%d'}</td>
 									<td>{if $item['is_authen'] eq 1}<p class='text-success'>已认证</p>{else}<p class='text-danger'>未认证</p>{/if}</td>
