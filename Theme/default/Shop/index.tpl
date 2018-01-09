@@ -49,14 +49,14 @@
 								<span class='c2'>库存：{$item['goods_last']}</span>
 							</div>
 						</div>
-						<div class='btn'>
+						<div class='btn{if $order}aldeal{/if}'>
 							<span>{if $order}已兑换{else}马上兑换{/if}</span>
 						</div>
 					</div>
 				</a>
 			{/foreach}
 		</div>
-	</div>
+	</div>	
 	<script src="{$smarty.const.ORG}jquery/jquery-2.1.0.min.js"></script>
 	<script type="text/javascript" src='{$smarty.const.ORG}swiper/swiper-3.4.2.jquery.min.js'></script>
 	<script>        		
@@ -68,6 +68,20 @@
 				pagination: '.swiper-pagination',
 			});
 		});    
+	</script>
+	{include file='../tpl/message.tpl'}
+	<style type="text/css">
+		.message_cover{
+			z-index: 10;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$('.aldeal').click(function(){
+				$('.message_cover .content').html('您的礼品已经兑换，请到建业花园里项目物业中心领取');
+				$('.message_cover').show();
+			});
+		});
 	</script>
 </body>
 </html>

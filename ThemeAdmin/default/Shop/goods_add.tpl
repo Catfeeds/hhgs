@@ -116,6 +116,10 @@
 								</div>
 								<div id="fileList" class="uploader-list"></div>
 								<input id='images' type="hidden" name="images" value='{$goods["goods_img"]}'>
+								<div class='help-block'>
+									首图必须为正方形的缩略图，其余图片为长方形商品轮播图，除去缩略图外其余图片尺寸必须保持一致<br>
+									更换图片需要删除后重新上传(图片顺序：缩略图+轮播列表)
+								</div>
 							</div>
 						</div>
 						<div class='form-group'>
