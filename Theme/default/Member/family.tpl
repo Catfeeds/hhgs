@@ -17,7 +17,7 @@
 					<a href="{$smarty.const.HOME}Member/family_mem.html?memid={$l['uid']}">
 						<div class='family_mem'>			
 							<div class='elm headimg'>
-								<img src="{if $l['headimg'] eq null}{$smarty.const.THEME}/Member/img/head.png{else}$l['headimg'{/if}">
+								<img src="{if $l['headimg'] eq null}{$smarty.const.THEME}/Member/img/head.png{else}{$l['headimg']}{/if}">
 							</div>
 							<div class='elm info'>
 								<p>姓名：<span class='ispan'>{$l['uname']}</span> 性别：{if $l['sex'] eq 1}男{else}女{/if}</p>

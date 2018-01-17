@@ -15,4 +15,14 @@
 			$this->assign('list',array('list'=>$list,'page'=>$page->show()));
 			$this->display();
 		}
+
+		function delete(){
+			$uid=I('POST.uid');
+			$advice=M('w_advice');
+			$exec=$advice->where(array('uid'=>$uid))->delete();
+			if($exec)
+				echo message(200,'success','删除成功');
+			else
+				echo message(301,'failed','删除失败，请稍后再试');
+		}
 	}

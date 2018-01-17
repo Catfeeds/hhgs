@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2018-01-03 15:25:34
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-17 16:58:18
          compiled from "./ThemeAdmin/default/Advice/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17918853095a4c83e796b8f1-00279691%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '754b80f8c888b18a807d63c533ec0eb9b9bdbbc9' => 
     array (
       0 => './ThemeAdmin/default/Advice/index.tpl',
-      1 => 1514964332,
+      1 => 1516179495,
       2 => 'file',
     ),
   ),
@@ -59,6 +59,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<th>用户名称</th>
 								<th>意见建议</th>
 								<th>评论时间</th>
+								<th>操作</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -74,6 +75,10 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 </td>
 									<td><?php echo $_smarty_tpl->tpl_vars['item']->value['atime'];?>
 </td>
+									<td>
+										<button data-uid='<?php echo $_smarty_tpl->tpl_vars['item']->value["uid"];?>
+' class='del btn btn-info btn-sm'>删除</button>
+									</td>
 								</tr>
 							<?php } ?>
 						</tbody>
@@ -89,5 +94,32 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 </div>
 <link rel="stylesheet" type="text/css" href="<?php echo @THEMEADMIN;?>
 assets/css/public.css">
+<script type="text/javascript">
+	$(function(){
+		$('.del').click(function(){
+			if(!confirm('是否删除该条建议？'))
+				return;
+			let uid=$(this).data('uid');
+			let _this=$(this);
+			$.ajax({
+				type:'POST',
+				url:'<?php echo @ADMIN;?>
+Advice/delete',
+				dataType:'json',
+				data:{
+					'uid':uid,
+				},
+				success:function(msg){
+					if(msg['code']==200){
+						alert(msg['data']);
+						_this.parent().parent().remove();
+					}else
+						alert(msg['data']);
+				}
+
+			});
+		});
+	});
+</script>
 <?php echo $_smarty_tpl->getSubTemplate ('../tpl/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

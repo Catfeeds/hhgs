@@ -25,6 +25,7 @@
 								<th>用户名称</th>
 								<th>意见建议</th>
 								<th>评论时间</th>
+								<th>操作</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -33,6 +34,9 @@
 									<td>{$item['uname']}</td>
 									<td>{$item['content']}</td>
 									<td>{$item['atime']}</td>
+									<td>
+										<button data-uid='{$item["uid"]}' class='del btn btn-info btn-sm'>删除</button>
+									</td>
 								</tr>
 							{/foreach}
 						</tbody>
@@ -46,4 +50,30 @@
 	</div>
 </div>
 <link rel="stylesheet" type="text/css" href="{$smarty.const.THEMEADMIN}assets/css/public.css">
+<script type="text/javascript">
+	$(function(){
+		$('.del').click(function(){
+			if(!confirm('是否删除该条建议？'))
+				return;
+			let uid=$(this).data('uid');
+			let _this=$(this);
+			$.ajax({
+				type:'POST',
+				url:'{$smarty.const.ADMIN}Advice/delete',
+				dataType:'json',
+				data:{
+					'uid':uid,
+				},
+				success:function(msg){
+					if(msg['code']==200){
+						alert(msg['data']);
+						_this.parent().parent().remove();
+					}else
+						alert(msg['data']);
+				}
+
+			});
+		});
+	});
+</script>
 {include file='../tpl/footer.tpl'}

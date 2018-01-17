@@ -192,7 +192,7 @@
 					$puid=NULL;
 				$this->assign('hide',true);
 			}
-			$info_list=$family->where(array('w_family.p_uid'=>$puid,'is_authen'=>0))->field('w_members.uid,uname,sex,birth,phone_num,headimg,w_relation.relation')->join('join w_members on w_family.child_uid=w_members.uid')->join('join w_relation on w_family.relation=w_relation.uid')->select();
+			$info_list=$family->where(array('w_family.p_uid'=>$puid,'is_authen'=>0))->field('w_members.uid,uname,sex,birth,phone_num,headimg,w_relation.relation')->join('join w_members on w_family.child_uid=w_members.uid')->join('left join w_relation on w_family.relation=w_relation.uid')->select();
 			if($info_list)
 				$this->assign('list',$info_list);
 			$this->display();
@@ -219,17 +219,17 @@
 					// 家庭关系数据操作对象
 					$family=M('w_family');
 					if($memid){	//修改
-						$puid=$family->where(array('child_uid'=>$memid))->find();
-						if($puid['p_uid']==$this->uid){
-							$mem->startTrans();
-							$exec1=$mem->usave(array('uid'=>$memid),$value);
-							$exec2=$family->where(array('p_uid'=>$this->uid,'child_uid'=>$memid))->save(array('relation'=>$data['relation'],'a_time'=>time()));
-							$exec=$exec1&&$exec2;
-							if($exec)
-								$mem->commit();
-							else
-								$mem->rollback();
-						}
+						// $puid=$family->where(array('child_uid'=>$memid))->find();
+						// if($puid['p_uid']==$this->uid){
+						// 	$mem->startTrans();
+						// 	$exec1=$mem->usave(array('uid'=>$memid),$value);
+						// 	$exec2=$family->where(array('p_uid'=>$this->uid,'child_uid'=>$memid))->save(array('relation'=>$data['relation'],'a_time'=>time()));
+						// 	$exec=$exec1&&$exec2;
+						// 	if($exec)
+						// 		$mem->commit();
+						// 	else
+						// 		$mem->rollback();
+						// }
 					}else{	//添加
 						$value['rg_time']=time();
 						// 判断是否超过5个成员的限制	
@@ -237,9 +237,26 @@
 						if($fnum<$this->memcount){					
 							$mem->startTrans();
 							// 添加个人信息与关系
-							$exec1=$mem->uadd($value);
+							// 如果信息已存在则进行关系对应不在进行添加
+							$minfo=$mem->where(array('phone_num'=>$value['phone_num']))->find();
+							if(!$minfo)
+								$exec1=$mem->uadd($value);
+							else{
+								// 判断家庭成员的信息是否都存在都存在的时候直接返回对应的id值，否则对信息进行更新
+								$exec1=$minfo['uid'];
+								if($minfo['sex']=='')
+									$v['sex']=$value['sex'];
+								if($minfo['birth']=='')
+									$v['birth']=$value['birth'];
+								if($minfo['hobby']=='')
+									$v['hobby']=$value['hobby'];
+								if($minfo['trade']==0)
+									$v['trade']=$value['trade'];
+								$exec4=1;
+								if($v!=null)
+									$exec4=$mem->where(array('phone_num'=>$value['phone_num']))->save($v);
+							}
 							$exec2=$family->add(array('p_uid'=>$this->uid,'child_uid'=>$exec1,'relation'=>$data['relation'],'a_time'=>time()));
-
 							// 添加经验值与积分
 							// 家庭成员添加获取积分的次数
 							$exec3=1;
@@ -253,7 +270,7 @@
 								$score=($count+1)==$this->profilecount?$sl['snumber']+100:$sl['snumber'];
 								$exec3=$this->degree_grade(2,$level,$score);
 							}
-							$exec=$exec1&$exec2&&$exec3;
+							$exec=$exec1&$exec2&&$exec3&&$exec4;
 
 							// 数据提交与回滚
 							if($exec)
@@ -276,7 +293,7 @@
 				// 显示
 				if(isset($memid)){
 					// 判断条件  主用户的家庭成员并且未认证为业主
-					$info=$mem->ufind(array('w_members.uid'=>$memid,'w_members.is_authen'=>0,'w_family.p_uid'=>$this->uid),'uname,birth,phone_num,hobby,trade,relation','join w_family on w_family.child_uid=w_members.uid');
+					$info=$mem->ufind(array('w_members.uid'=>$memid,'w_members.is_authen'=>0,'w_family.p_uid'=>$this->uid),'w_members.uid as uid,headimg,uname,birth,phone_num,hobby,trade,relation','join w_family on w_family.child_uid=w_members.uid');
 					$this->assign('info',$info);
 					// 行业信息显示
 					$trade=M('w_trade')->select();
@@ -287,6 +304,21 @@
 				$re=$relation->select();
 				$this->assign('relation',$re);
 				$this->display();
+			}
+		}
+
+		// 删除家庭成员
+		function delete(){
+			// 是否为业主信息判断
+			$is_authen=$this->mem->ufind(array('uid'=>$this->uid),'is_authen');
+			if($is_authen['is_authen']){
+				$uid=I('POST.uid');
+				$family=M('w_family');
+				$exec=$family->where(array('child_uid'=>$uid))->delete();
+				if($exec)
+					echo message(200,'success','家庭成员删除成功');
+				else
+					echo message(301,'failed','家庭成员删除失败');
 			}
 		}
 		// 获取短信验证码

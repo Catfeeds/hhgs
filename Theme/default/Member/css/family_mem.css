@@ -52,7 +52,8 @@ body{
 }
 .wrp input{
 	position: absolute;
-	right: -26px;
+	right: -24px;
+	direction: rtl;
 }
 .btn{
 	padding:20px;

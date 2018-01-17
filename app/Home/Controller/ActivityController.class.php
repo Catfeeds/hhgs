@@ -114,7 +114,7 @@
 							if($ainfo['isfree']==1){
 								$mem->startTrans(); //开启事务处理，同步活跃值扣除与报名成功
 								if($uinfo['is_authen']==0){
-									echo message(304,'notice','只有认证业主才可以进行报名');	
+									echo message(304,'notice','游客身份无法进行报名');	
 									return;		
 								}
 							}

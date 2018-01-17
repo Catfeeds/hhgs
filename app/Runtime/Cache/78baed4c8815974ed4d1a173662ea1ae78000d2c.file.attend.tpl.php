@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2018-01-05 20:31:20
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-17 16:36:58
          compiled from "./ThemeAdmin/default/Activity/attend.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5269940615a3916972608b0-73302088%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '78baed4c8815974ed4d1a173662ea1ae78000d2c' => 
     array (
       0 => './ThemeAdmin/default/Activity/attend.tpl',
-      1 => 1515150784,
+      1 => 1515402794,
       2 => 'file',
     ),
   ),
@@ -68,7 +68,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<div class='row'>
 		<div class='col-md-12'>
 			<div style='padding:10px 0;'>
-				<button id='update_ls' class='btn btn-primary'>一键增加参与活动人员积分</button>
+				<button id='update_ls' class='btn btn-primary'>一键增加参与活动人员奖励</button>
 				<button id='do_update_ls' class='btn btn-danger growth_btn' data-uid="<?php echo $_GET['act_uid'];?>
 ">开始执行</button>
 			</div>
@@ -180,7 +180,7 @@ Activity/clock_in',
 				let score=_this.find('.score').val();
 				if(isNaN(level)||isNaN(score)){
 					$('.error_report').show();
-					$('.error_report .text-danger').html('成长值或积分值存在非数字类型，请仔细检查后重新执行');
+					$('.error_report .text-danger').html('成长值或活跃值值存在非数字类型，请仔细检查后重新执行');
 					exit=true;
 					return false;
 				}	

@@ -48,10 +48,16 @@
 					<label>兴趣爱好</label>
 					<input id='hobby' name='hobby' type='text' value='{$info["hobby"]}'>
 				</p>
-				<p class='btn'>
-					<button type='submit'>
-						<div class='sub_bg'>提交信息</div>
-					</button>
+				<p class='btn'>					
+					{if $info['uid']}						
+						<button id='delete' type='button' data-uid="{$info['uid']}">
+							<div class='sub_bg'>删除成员</div>
+						</button>
+					{else}
+						<button type='submit'>
+							<div class='sub_bg'>添加成员</div>
+						</button>
+					{/if}
 				</p>
 			</form>
 		</div>
@@ -117,6 +123,26 @@
 					}
 				});
 			}
+		});
+		$('#delete').click(function(){
+			if(!confirm('是否删除当前成员？'))
+				return false;
+			let uid=$(this).data('uid');
+			$.ajax({
+				type:'post',
+				url:'{$smarty.const.HOME}Member/delete',
+				dataType:'json',
+				data:{
+					'uid':uid,
+				},
+				success:function(msg){
+					if(msg['code']==200){
+						alert('删除成功');
+						window.location.href='{$smarty.const.HOME}Member/family.html';
+					}else
+						alert(msg['data']);
+				}
+			});
 		});
 	</script>
 </body>

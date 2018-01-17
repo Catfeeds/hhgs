@@ -14,7 +14,7 @@ body{
 	margin-bottom: 5px; 
 }
 .title .pn{
-	display: inline;
+	/*display: inline;*/
 	background-color: rgb(235,199,144);
 	color: #fff;
 	padding: 2px 4px;

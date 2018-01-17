@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2018-01-05 18:53:10
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-17 19:38:45
          compiled from "./ThemeAdmin/default/Activity/act_new.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4665023945a38c04c694d65-03255968%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a9d2885e653fe85bbc673c89a126c11fe0ada68b' => 
     array (
       0 => './ThemeAdmin/default/Activity/act_new.tpl',
-      1 => 1515068779,
+      1 => 1515402807,
       2 => 'file',
     ),
   ),
@@ -143,7 +143,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<div class='col-xs-6 col-md-6'>
 								<select id='costtype' name='costtype' class='form-control'>
 									<option value=0 <?php if ($_smarty_tpl->tpl_vars['info']->value['costtype']==0){?>selected<?php }?>>免费</option>
-									<option value=1 <?php if ($_smarty_tpl->tpl_vars['info']->value['costtype']==1){?>selected<?php }?>>积分</option>
+									<option value=1 <?php if ($_smarty_tpl->tpl_vars['info']->value['costtype']==1){?>selected<?php }?>>活跃值</option>
 <!-- 									<option value=2 <?php if ($_smarty_tpl->tpl_vars['info']->value['costtype']==2){?>selected<?php }?>>微信支付</option>
  -->								</select>
 							</div>

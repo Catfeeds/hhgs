@@ -17,7 +17,7 @@
 				<p class='pt'>{$sinfo['name']}</p>
 				<p class='pn'>{$sinfo['intro']}</p>
 			</div>
-			<div class='number'>本周可预约名额:<span>{$sinfo['number']}</span>名</div>
+			<div class='number'>本次剩余预约名额:<span>{$sinfo['last_number']}</span>名</div>
 			<div class='area'>
 				<span>服务区域</span>
 				<p>{$sinfo['area']}</p>

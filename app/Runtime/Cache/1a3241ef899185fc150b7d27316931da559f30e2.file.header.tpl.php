@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2018-01-05 20:31:28
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-17 16:36:59
          compiled from "/Applications/MAMP/htdocs/jianye_garden/ThemeAdmin/default/tpl/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7409233665a38b5dbb9a292-11855364%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1a3241ef899185fc150b7d27316931da559f30e2' => 
     array (
       0 => '/Applications/MAMP/htdocs/jianye_garden/ThemeAdmin/default/tpl/header.tpl',
-      1 => 1515155486,
+      1 => 1515227237,
       2 => 'file',
     ),
   ),
@@ -161,7 +161,7 @@ Consultant/cons_order.html"><i class="fa fa-bell"></i><span class="text"> 预约
 									</ul>
 								</li>
 								<li>
-									<a href="#"><i class="fa fa-shopping-cart"></i><span class="text"> 花园小铺</span> <span class="fa fa-angle-down pull-right"></span></a>
+									<a href="#"><i class="fa fa-shopping-cart"></i><span class="text"> 积分商城</span> <span class="fa fa-angle-down pull-right"></span></a>
 									<ul class="nav sub">
 										<li><a href="<?php echo @ADMIN;?>
 Shop/goods.html"><i class="fa fa-puzzle-piece"></i><span class="text"> 商品管理</span></a></li>
