@@ -158,4 +158,54 @@
 		function uploadImg(){
 			parent::uploadImg('activity');
 		}
+		// 对迟到和未签到的报名人员进行短信通知
+		function notice_sms(){
+			$attend=M('w_act_attend');
+			$act_uid=I('POST.uid');
+			$act_info=$this->act->field('edate,etime')->where(array('uid'=>$act_uid))->find();
+			$end_time=strtotime($act_info['edate'].' '.$act_info['etime']);
+			$list=$attend->field('arrival_time,phone_num,is_arrival')->where(array('act_uid'=>$act_uid))->select();
+			// 查询出迟到的和未签到的用户的
+			$late=array();
+			$absent=array();
+			foreach ($list as $item) {
+				$at=$item['arrival_time'];
+				if($item['is_arrival']==0)
+					$absent[]=$item['phone_num'];
+				elseif($at>$end_time)
+					$late[]=$item['phone_num'];
+			}
+			// 发送短信通知
+			$sms=D('Sms');
+			$temp_id=0;
+			// 迟到
+			$sms1=1;
+			if($late){
+				$phone=implode(',',$late);
+				$param1='【花园公社】由于您本次活动迟到，可能会影响参与您接下来的其他活动。';
+				$res1=$sms->send_phone_msg($phone,$temp_id,$param1);
+				if($res1->returnstatus!='Success')
+					$sms1=false;
+			}
+			// 未签到
+			$sms2=1;
+			if($absent){
+				$phone=implode(',',$absent);
+				$param2='【花园公社】由于您本次活动未签到，可能会影响参与您接下来的其他活动。';
+				$res2=$sms->send_phone_msg($phone,$temp_id,$param2);
+				if($res2->returnstatus!='Success')
+					$sms2=false;
+			}
+			$this->act->startTrans();
+			// 设置活动已通知
+			$exec=$this->act->where(array('uid'=>$act_uid))->save(array('notice'=>1));
+			if($sms1&&$sms2&&$exec){
+				$this->act->commit();
+				echo message(200,'success','通知成功');
+			}
+			else{
+				$this->act->rollback();
+				echo message(301,'failed','服务器数据连接出错,请稍后再试');
+			}
+		}
 	}

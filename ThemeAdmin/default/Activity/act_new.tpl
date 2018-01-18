@@ -85,7 +85,7 @@
 								<div class="radio">
 									<label>
 										<input type="radio" name="limit" class="limit" value="1" {if $info['isfree'] eq 1}checked{/if}>
-										仅业主
+										业主与家庭成员
 									</label>
 									&nbsp;&nbsp;&nbsp;
 									<label>

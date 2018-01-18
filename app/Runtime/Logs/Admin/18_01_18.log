@@ -1,0 +1,831 @@
+[ 2018-01-18T11:52:23+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003971s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000938s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0264s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0129s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0027s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025950s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001134s ]
+
+[ 2018-01-18T16:13:58+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000895s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0026s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0073s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055950s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000863s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001440s ]
+
+[ 2018-01-18T16:31:16+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0025s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067218s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001105s ]
+
+[ 2018-01-18T16:36:02+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001338s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050499s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000401s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000425s ]
+
+[ 2018-01-18T16:48:14+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011985s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000172s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2018-01-18T16:49:39+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/attend.html?act_uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `w_act_attend` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `w_act_attend` WHERE `act_uid` = '00000002'  [ RunTime:0.0010s ]
+SQL: SELECT `level`,`score`,`ls_update` FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011871s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011909s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000768s ]
+
+[ 2018-01-18T16:56:15+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001232s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001278s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010275s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010312s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000793s ]
+
+[ 2018-01-18T16:56:20+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001164s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0027s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011075s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011114s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000477s ]
+
+[ 2018-01-18T16:56:23+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2018-01-18T16:56:53+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0018s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053325s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2018-01-18T16:56:56+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/notice_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `w_act_attend` [ RunTime:0.0017s ]
+SQL: SELECT `arrival_time`,`phone_num`,`is_arrival` FROM `w_act_attend` WHERE `act_uid` = '00000002'  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000561s ]
+
+[ 2018-01-18T17:00:39+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.086264s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086320s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001128s ]
+
+[ 2018-01-18T17:00:57+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2018-01-18T17:01:12+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000543s ]
+
+[ 2018-01-18T17:02:46+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0017s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051249s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051287s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000237s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001362s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001414s ]
+
+[ 2018-01-18T17:26:36+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077867s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077909s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000815s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000862s ]
+
+[ 2018-01-18T17:26:38+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/notice_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `w_act_attend` [ RunTime:0.0019s ]
+SQL: SELECT `edate`,`etime` FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `arrival_time`,`phone_num`,`is_arrival` FROM `w_act_attend` WHERE `act_uid` = '00000002'  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000537s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000567s ]
+
+[ 2018-01-18T17:27:06+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/notice_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `w_act_attend` [ RunTime:0.0016s ]
+SQL: SELECT `edate`,`etime` FROM `w_activity` WHERE `uid` = '00000001' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `arrival_time`,`phone_num`,`is_arrival` FROM `w_act_attend` WHERE `act_uid` = '00000001'  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2018-01-18T17:28:22+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/notice_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000642s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `w_act_attend` [ RunTime:0.0018s ]
+SQL: SELECT `edate`,`etime` FROM `w_activity` WHERE `uid` = '00000001' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `arrival_time`,`phone_num`,`is_arrival` FROM `w_act_attend` WHERE `act_uid` = '00000001'  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2018-01-18T17:48:02+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000736s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021972s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000925s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000970s ]
+
+[ 2018-01-18T17:48:06+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/notice_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `w_act_attend` [ RunTime:0.0022s ]
+SQL: SELECT `edate`,`etime` FROM `w_activity` WHERE `uid` = '00000001' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `arrival_time`,`phone_num`,`is_arrival` FROM `w_act_attend` WHERE `act_uid` = '00000001'  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: phone /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 185 行.
+NOTIC: [8] Undefined variable: phone /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 193 行.
+SQL: UPDATE `w_activity` SET `notice`='1' WHERE `uid` = '00000001' [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000786s ]
+
+[ 2018-01-18T17:48:31+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/notice_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `w_act_attend` [ RunTime:0.0017s ]
+SQL: SELECT `edate`,`etime` FROM `w_activity` WHERE `uid` = '00000001' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `arrival_time`,`phone_num`,`is_arrival` FROM `w_act_attend` WHERE `act_uid` = '00000001'  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: phone /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 185 行.
+NOTIC: [8] Undefined variable: phone /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 193 行.
+SQL: UPDATE `w_activity` SET `notice`='1' WHERE `uid` = '00000001' [ RunTime:0.0024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000579s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2018-01-18T17:50:48+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/notice_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `w_act_attend` [ RunTime:0.0018s ]
+SQL: SELECT `edate`,`etime` FROM `w_activity` WHERE `uid` = '00000001' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `arrival_time`,`phone_num`,`is_arrival` FROM `w_act_attend` WHERE `act_uid` = '00000001'  [ RunTime:0.0002s ]
+SQL: UPDATE `w_activity` SET `notice`='1' WHERE `uid` = '00000001' [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000974s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001034s ]
+
+[ 2018-01-18T17:51:14+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022365s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022409s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000780s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000832s ]
+
+[ 2018-01-18T17:52:03+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0022s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070854s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070889s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2018-01-18T17:52:17+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0024s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010730s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000849s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000899s ]
+
+[ 2018-01-18T17:52:20+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/notice_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `w_act_attend` [ RunTime:0.0022s ]
+SQL: SELECT `edate`,`etime` FROM `w_activity` WHERE `uid` = '00000001' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `arrival_time`,`phone_num`,`is_arrival` FROM `w_act_attend` WHERE `act_uid` = '00000001'  [ RunTime:0.0004s ]
+SQL: UPDATE `w_activity` SET `notice`='1' WHERE `uid` = '00000001' [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2018-01-18T17:52:55+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0023s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011392s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011432s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000852s ]
+
+[ 2018-01-18T17:53:01+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/notice_sms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `w_act_attend` [ RunTime:0.0019s ]
+SQL: SELECT `edate`,`etime` FROM `w_activity` WHERE `uid` = '00000001' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `arrival_time`,`phone_num`,`is_arrival` FROM `w_act_attend` WHERE `act_uid` = '00000001'  [ RunTime:0.0003s ]
+SQL: UPDATE `w_activity` SET `notice`='1' WHERE `uid` = '00000001' [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000894s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2018-01-18T18:07:16+08:00 ] 127.0.0.1 /jianye_garden/Admin/Shop/goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000869s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000869s ]
+NOTIC: [2] Declaration of Admin\Controller\ShopController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ShopController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_goods` [ RunTime:0.0018s ]
+SQL: SELECT `uid`,`goods_name`,`goods_last`,`goods_num`,`pay_type`,`goods_price`,`goods_level`,`goods_stime`,`goods_status`,`atime` FROM `w_goods` WHERE `goods_delete` = 0 ORDER BY goods_degree desc,goods_status,uid desc LIMIT 0,20   [ RunTime:0.0068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_goods` WHERE `goods_delete` = 0 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.090407s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.090462s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006578s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001345s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001457s ]
+
+[ 2018-01-18T18:07:17+08:00 ] 127.0.0.1 /jianye_garden/Admin/Shop/goods_add.html?goods_uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+NOTIC: [2] Declaration of Admin\Controller\ShopController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ShopController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_goods` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `w_goods` WHERE `uid` = '00000002' AND `goods_delete` = 0 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.091117s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.091162s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000640s ]
+
+[ 2018-01-18T18:07:40+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0019s ]
+SQL: SELECT *,UNIX_TIMESTAMP(concat(date," ",time)) as s,UNIX_TIMESTAMP(concat(edate," ",etime)) as e FROM `w_activity` ORDER BY status,edate desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_activity` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059287s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000484s ]
+
+[ 2018-01-18T18:07:41+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011253s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000952s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001005s ]
+
+[ 2018-01-18T18:07:50+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000171s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009097s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2018-01-18T18:08:09+08:00 ] 127.0.0.1 /jianye_garden/Admin/Activity/act_new.html?uid=00000002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [2] Declaration of Admin\Controller\ActivityController::uploadImg() should be compatible with Admin\Controller\BaseController::uploadImg($path = 'thumbnail') /Applications/MAMP/htdocs/jianye_garden/app/Admin/Controller/ActivityController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `w_activity` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `w_activity` WHERE `uid` = '00000002' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007452s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000409s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2018-01-18T18:21:27+08:00 ] 127.0.0.1 /jianye_garden/Admin/Advice/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000933s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_advice` [ RunTime:0.0021s ]
+SQL: SELECT w_advice.*,w_members.uname FROM `w_advice` INNER JOIN w_members on w_members.uid=w_advice.u_uid  ORDER BY atime desc LIMIT 0,20   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_advice` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023077s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001182s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001236s ]
+
+[ 2018-01-18T18:21:28+08:00 ] 127.0.0.1 /jianye_garden/Admin/Advice/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_advice` [ RunTime:0.0014s ]
+SQL: SELECT w_advice.*,w_members.uname FROM `w_advice` INNER JOIN w_members on w_members.uid=w_advice.u_uid  ORDER BY atime desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_advice` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007445s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2018-01-18T18:21:29+08:00 ] 127.0.0.1 /jianye_garden/Admin/Advice/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+SQL: SHOW COLUMNS FROM `w_users` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `w_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `w_advice` [ RunTime:0.0016s ]
+SQL: SELECT w_advice.*,w_members.uname FROM `w_advice` INNER JOIN w_members on w_members.uid=w_advice.u_uid  ORDER BY atime desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `w_advice` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008701s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000559s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000590s ]
+

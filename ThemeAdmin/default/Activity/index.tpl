@@ -50,6 +50,9 @@
 									<td>{$item['edate']}&nbsp;&nbsp;{$item['etime']}</td>
 									<td>{$item['atime']|date_format:'%Y-%m-%d %H:%M:%S'}</td>
 									<td>
+										{if $item['notice'] eq 0}
+										<button data-uid="{$item['uid']}" class='notice btn btn-sm btn-success' title='短信通知未签到和迟到的用户'>通知</button>
+										{/if}
 										<a  class='btn btn-primary btn-sm' href="{$smarty.const.ADMIN}Activity/act_new.html?uid={$item['uid']}">编辑</a>
 										<a  class='btn btn-warning btn-sm' href="{$smarty.const.ADMIN}Activity/attend.html?act_uid={$item['uid']}">数据</a>
 									</td>
@@ -67,3 +70,28 @@
 </div>
 <link rel="stylesheet" type="text/css" href="{$smarty.const.THEMEADMIN}assets/css/public.css">
 {include file='../tpl/footer.tpl'}
+<script type="text/javascript">
+	$(function(){
+		$('.notice').click(function(){
+			if(!confirm('是否对迟到和未签到的用户进行短信通知？'))
+				return;
+			let uid=$(this).data('uid');
+			$.ajax({
+				type:'POST',
+				url:'{$smarty.const.ADMIN}Activity/notice_sms',
+				dataType:'json',
+				data:{
+					'uid':uid,
+				},
+				success:function(msg){
+					if(msg['code']==200){
+						alert(msg['data']);
+						location.reload();
+					}
+					else
+						alert(mesg['data']);
+				}
+			});
+		});
+	});
+</script>

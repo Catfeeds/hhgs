@@ -327,9 +327,10 @@
 			$sms=D('Sms');
 			$temp_id=2090242;
 			$code=rand(1000,9999);
-			$param=urlencode('#code#').'='.urlencode($code);
+			// $param=urlencode('#code#').'='.urlencode($code);
+			$param='【花园公社】您的验证码是'.$code.'。如非本人操作，请忽略本短信';
 			$res=$sms->send_phone_msg($phone,$temp_id,$param);
-			if($res->code==0){
+			if($res->returnstatus=='Success'){
 				session('login_valicode',$code);
 				echo message();
 			}else

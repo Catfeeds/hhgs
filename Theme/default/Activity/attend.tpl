@@ -144,7 +144,7 @@
 						},
 						success:function(msg){
 							if(msg['code']==200){
-								$('.message_box .img').html('<img src="{$smarty.const.HOME}"'+msg['data']+'>');
+								$('.message_box #img').html('<img src="{$smarty.const.HOME}"'+msg['data']+'>');
 								$('.message_box .content').html('报名成功,请妥善保管您的签到二维码');
 								$('.cover').show();
 							}else{

@@ -98,7 +98,7 @@
 					if($isfull<$ainfo['limitnum']){
 						// 判断家庭成员是否已经有过报名记录
 						$family=M('w_family');		
-						$parent=$family->field('p_uid')->where(array('child_uid'=>$this->uid))->find();
+						$parent=$family->field('p_uid,is_authen')->where(array('child_uid'=>$this->uid))->join(' w_members on w_members.uid=w_family.p_uid')->find();
 						$cmem=$family->field('child_uid')->where(sprintf('p_uid=%s or p_uid=%s',$this->uid,($parent['p_uid']==''?0:$parent['p_uid'])))->select();//业主查询自己的成员
 						// 合并家庭成员为一维数组
 						$members=array();
@@ -106,14 +106,14 @@
 							$members[]=$value['child_uid'];
 						}
 						// 查询家庭成员是否报名过此活动
-						$mem_join=$attend->where(array('u_uid'=>array('in',implode(',',$members))))->count();
+						$mem_join=$attend->where(array('u_uid'=>array('in',implode(',',$members)),'act_uid'=>$ainfo['uid']))->count();
 						if($mem_join<=0){
 							// 判断是否只能业主报名
 							$mem=D('Member');
 							$uinfo=$mem->field('is_authen')->where(array('uid'=>$this->uid))->find();
 							if($ainfo['isfree']==1){
 								$mem->startTrans(); //开启事务处理，同步活跃值扣除与报名成功
-								if($uinfo['is_authen']==0){
+								if($uinfo['is_authen']==0&&$parent['is_authen']==0){
 									echo message(304,'notice','游客身份无法进行报名');	
 									return;		
 								}

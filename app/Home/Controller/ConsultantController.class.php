@@ -36,9 +36,11 @@
 					if($exec1&&$exec2){
 						$mem->commit();
 						// 双方收到短信提示信息
-						$pa1=urlencode('#code#').'='.urlencode($data['code']).'&'.urlencode('#name#').'='.urlencode($cons_info['name']);
+						// $pa1=urlencode('#code#').'='.urlencode($data['code']).'&'.urlencode('#name#').'='.urlencode($cons_info['name']);
+						$pa1='【花园公社】预约成功，您的预约码为'.$data['code'].',置业顾问是'.$cons_info['name'].'，请凭预约码与手机号现场核销';
 						$this->sent_sms(2132774,$data['phone_num'],$pa1); // 客户
-						$pa2=urlencode('#code#').'='.urlencode($data['code']).'&'.urlencode('#time#').'='.urlencode($data['date'].' '.$data['time']);
+						// $pa2=urlencode('#code#').'='.urlencode($data['code']).'&'.urlencode('#time#').'='.urlencode($data['date'].' '.$data['time']);
+						$pa2='【花园公社】有客户对您进行了预约，预约号码为'.$data['code'].',预约时间为'.$data['date'].' '.$data['time'];
 						$this->sent_sms(2132776,$cons_info['phone_num'],$pa2); // 置业顾问
 						echo message(200,'success',$data['code']);
 					}else{
@@ -98,7 +100,7 @@
 		private function sent_sms($temp_id,$phone,$param){
 			$sms=D('Sms');
 			$res=$sms->send_phone_msg($phone,$temp_id,$param);
-			if($res->code==0){
+			if($res->returnstatus=='Success'){
 				return true;
 			}else
 				return false;

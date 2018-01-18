@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-31 12:29:07
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-18 18:07:40
          compiled from "./ThemeAdmin/default/Activity/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12832496925a38c01c11b676-06702815%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '56ceb7cb08b7c18d2ca35aa10003e9e0635f0bf5' => 
     array (
       0 => './ThemeAdmin/default/Activity/index.tpl',
-      1 => 1514470225,
+      1 => 1516269253,
       2 => 'file',
     ),
   ),
@@ -95,6 +95,10 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 									<td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['item']->value['atime'],'%Y-%m-%d %H:%M:%S');?>
 </td>
 									<td>
+										<?php if ($_smarty_tpl->tpl_vars['item']->value['notice']==0){?>
+										<button data-uid="<?php echo $_smarty_tpl->tpl_vars['item']->value['uid'];?>
+" class='notice btn btn-sm btn-success' title='短信通知未签到和迟到的用户'>通知</button>
+										<?php }?>
 										<a  class='btn btn-primary btn-sm' href="<?php echo @ADMIN;?>
 Activity/act_new.html?uid=<?php echo $_smarty_tpl->tpl_vars['item']->value['uid'];?>
 ">编辑</a>
@@ -118,4 +122,30 @@ Activity/attend.html?act_uid=<?php echo $_smarty_tpl->tpl_vars['item']->value['u
 <link rel="stylesheet" type="text/css" href="<?php echo @THEMEADMIN;?>
 assets/css/public.css">
 <?php echo $_smarty_tpl->getSubTemplate ('../tpl/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-<?php }} ?>
+
+<script type="text/javascript">
+	$(function(){
+		$('.notice').click(function(){
+			if(!confirm('是否对迟到和未签到的用户进行短信通知？'))
+				return;
+			let uid=$(this).data('uid');
+			$.ajax({
+				type:'POST',
+				url:'<?php echo @ADMIN;?>
+Activity/notice_sms',
+				dataType:'json',
+				data:{
+					'uid':uid,
+				},
+				success:function(msg){
+					if(msg['code']==200){
+						alert(msg['data']);
+						location.reload();
+					}
+					else
+						alert(mesg['data']);
+				}
+			});
+		});
+	});
+</script><?php }} ?>

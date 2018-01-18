@@ -27,6 +27,17 @@
 						// 时间判断
 						if(strtotime($sinfo['stime'])<=time()){
 							if(strtotime($sinfo['etime'])>=time()){
+								// 判断是否是业主或业主的家庭成功
+								$family=M('w_family');		
+								$parent=$family->field('p_uid,is_authen')->where(array('child_uid'=>$this->uid))->join(' w_members on w_members.uid=w_family.p_uid')->find();
+								$mem=D('Member');
+								$uinfo=$mem->field('is_authen')->where(array('uid'=>$this->uid))->find();
+								if($uinfo['is_authen']==0&&$parent['is_authen']==0){
+									echo message(309,'notice','游客身份无法进行报名');	
+									return;		
+								}
+
+
 								// 用户等级判断
 								$ulevel=$this->get_level($uinfo['level']);
 								if($ulevel>=$sinfo['level']){

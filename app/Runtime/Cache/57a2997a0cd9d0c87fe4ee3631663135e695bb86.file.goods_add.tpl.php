@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-28 17:05:46
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-18 18:07:17
          compiled from "./ThemeAdmin/default/Shop/goods_add.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3612950435a41b0fe2a70b1-36327375%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '57a2997a0cd9d0c87fe4ee3631663135e695bb86' => 
     array (
       0 => './ThemeAdmin/default/Shop/goods_add.tpl',
-      1 => 1514424009,
+      1 => 1515467562,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a41b0fe2a831')) {function content_5a41b0fe2a831($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/alidata/www/api/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5a41b0fe2a831')) {function content_5a41b0fe2a831($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/jianye_garden/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 <?php $_tmp1=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 <?php $_tmp2=ob_get_clean();?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['userlevel']->value;?>
@@ -161,6 +161,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<div id="fileList" class="uploader-list"></div>
 								<input id='images' type="hidden" name="images" value='<?php echo $_smarty_tpl->tpl_vars['goods']->value["goods_img"];?>
 '>
+								<div class='help-block'>
+									首图必须为正方形的缩略图，其余图片为长方形商品轮播图，除去缩略图外其余图片尺寸必须保持一致<br>
+									更换图片需要删除后重新上传(图片顺序：缩略图+轮播列表)
+								</div>
 							</div>
 						</div>
 						<div class='form-group'>
@@ -414,6 +418,9 @@ Shop/goods_add',
 						}else{
 							$('.error_report').show();
 							$('.error_report .text-danger').html(msg['data']);
+							
+							$('html,body').animate({scrollTop: 0}, 500);
+							
 						}
 					}
 				});
