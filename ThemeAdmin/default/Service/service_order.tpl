@@ -48,7 +48,7 @@
 									<td>{$item['order_date']}&nbsp;{if $item['order_ampm'] eq 1}上午{else}下午{/if}</td>
 									<td>{$item['address']}</td>
 									<td class='status'>{if $item['status'] eq 1}已处理{else}未处理{/if}</td>
-									<td>{$item['atime']}</td>
+									<td>{$item['atime']|date_format:'%Y-%m-%d %H:%M:%S'}</td>
 									<td>
 										<button data-uid='{$item["uid"]}' class='btn btn-info btn-sm deal' {if $item['status'] eq 1} disabled>已处理{else}>处理{/if}</button>
 									</td>

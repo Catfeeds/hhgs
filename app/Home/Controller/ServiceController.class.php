@@ -18,7 +18,7 @@
 			$uid=I('GET.uid');
 			$post=I('POST.');
 			$sinfo=$this->service->where(array('uid'=>$uid))->find();
-			$uinfo=D('Member')->field('w_members.uid,uname,phone_num,level,score')->where(array('w_members.uid'=>$this->uid))->join('w_grade on w_grade.u_uid=w_members.uid','left')->find();
+			$uinfo=D('Member')->field('w_members.uid,uname,phone_num,level,score,is_authen')->where(array('w_members.uid'=>$this->uid))->join('w_grade on w_grade.u_uid=w_members.uid','left')->find();
 			if($post){
 				// 状态判断
 				if($sinfo['status']==1){
@@ -31,7 +31,7 @@
 								$family=M('w_family');		
 								$parent=$family->field('p_uid,is_authen')->where(array('child_uid'=>$this->uid))->join(' w_members on w_members.uid=w_family.p_uid')->find();
 								$mem=D('Member');
-								$uinfo=$mem->field('is_authen')->where(array('uid'=>$this->uid))->find();
+								// $uuinfo=$mem->field('is_authen')->where(array('uid'=>$this->uid))->find();
 								if($uinfo['is_authen']==0&&$parent['is_authen']==0){
 									echo message(309,'notice','游客身份无法进行报名');	
 									return;		
