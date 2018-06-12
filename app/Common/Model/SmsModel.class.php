@@ -4,9 +4,9 @@
 	// 云片短信接口
 	class SmsModel{
 		// protected $apikey='';
-        protected $userid=6659;
-        protected $account='huayuangongshe';
-        protected $password='huayuangongshe';
+        protected $userid=1987;
+        protected $account='23';
+        protected $password='123456';
         //云片发送短信
         // function send_phone_msg($phone,$tpl_id,$param){
         //     //修改为您的apikey(https://www.yunpian.com)登陆官网后获取

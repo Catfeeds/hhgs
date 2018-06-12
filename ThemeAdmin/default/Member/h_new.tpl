@@ -36,6 +36,7 @@
 					5、sheet数量最多为一个<br>
 					6、每次导入不要超过500条数据
 					</p>
+					<p><a href='{$smarty.const.THEMEADMIN}Member/业主信息模板.xlsx'>excel模板下载</a></p>
 				</div>
 			</div>
 			<div class='panel panel-default'>

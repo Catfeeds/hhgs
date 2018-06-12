@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-31 19:47:55
+<?php /* Smarty version Smarty-3.1.6, created on 2018-02-10 10:58:55
          compiled from "./ThemeAdmin/default/Carousel/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14935235855a40e6e90094b0-89018547%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '527f34ea66766046d50a37057b57b41bc475d739' => 
     array (
       0 => './ThemeAdmin/default/Carousel/index.tpl',
-      1 => 1514470222,
+      1 => 1515408696,
       2 => 'file',
     ),
   ),
@@ -61,6 +61,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class='panel-body'>			
 					<a href="<?php echo @ADMIN;?>
 Carousel/post.html" class='btn btn-primary'>添加新的幻灯片</a>
+					<div class='help-block text-danger'>请务必保持同类型的幻灯片尺寸一致</div>
 					<table  class='table table-striped table-hover'>
 						<thead>
 							<tr>
