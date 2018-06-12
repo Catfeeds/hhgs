@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-29 19:40:06
+<?php /* Smarty version Smarty-3.1.6, created on 2018-01-19 19:00:48
          compiled from "./ThemeAdmin/default/Member/h_new.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20172540755a3f65336c0605-54183763%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '29cd47ed40b1e299f8053ad7e6187c48fcab4662' => 
     array (
       0 => './ThemeAdmin/default/Member/h_new.tpl',
-      1 => 1514547599,
+      1 => 1516359647,
       2 => 'file',
     ),
   ),
@@ -71,6 +71,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					5、sheet数量最多为一个<br>
 					6、每次导入不要超过500条数据
 					</p>
+					<p><a href='<?php echo @THEMEADMIN;?>
+Member/业主信息模板.xlsx'>excel模板下载</a></p>
 				</div>
 			</div>
 			<div class='panel panel-default'>
@@ -254,6 +256,9 @@ card.js'></script>
 						}else{
 							$('.error_report').show();
 							$('.error_report .text-danger').html(msg['data']);
+							
+							$('html,body').animate({scrollTop: 0}, 500);
+							
 						}
 					}
 				});
