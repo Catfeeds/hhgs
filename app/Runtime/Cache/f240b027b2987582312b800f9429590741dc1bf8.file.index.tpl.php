@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2018-04-12 10:51:37
+<?php /* Smarty version Smarty-3.1.6, created on 2017-12-29 09:30:09
          compiled from "./ThemeAdmin/default/Member/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8678371875a3e2fd68eeca7-13172466%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f240b027b2987582312b800f9429590741dc1bf8' => 
     array (
       0 => './ThemeAdmin/default/Member/index.tpl',
-      1 => 1515235064,
+      1 => 1514470226,
       2 => 'file',
     ),
   ),
@@ -80,7 +80,7 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 </td>
 									<td><?php echo $_smarty_tpl->tpl_vars['item']->value['uname'];?>
 </td>
-									<td><?php if ($_smarty_tpl->tpl_vars['item']->value['sex']==1){?>男<?php }elseif($_smarty_tpl->tpl_vars['item']->value['sex']==2){?>女<?php }?></td>
+									<td><?php if ($_smarty_tpl->tpl_vars['item']->value['sex']==1){?>男<?php }else{ ?>女<?php }?></td>
 									<td><?php echo $_smarty_tpl->tpl_vars['item']->value['phone_num'];?>
 </td>
 									<td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['item']->value['birth'],'%Y-%m-%d');?>

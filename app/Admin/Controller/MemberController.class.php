@@ -23,7 +23,7 @@
 		function info(){
 			$uid=I('GET.uid');
 			// 查询个人信息
-			$info=$this->mem->field('w_members.*,w_trade.name as tradename')->where(array('w_members.uid'=>$uid))->join('w_trade on w_trade.uid=w_members.trade','left')->find();
+			$info=$this->mem->field('w_members.*,w_trade.name as tradename')->where(array('w_members.uid'=>$uid))->join('w_trade on w_trade.uid=w_members.trade')->find();
 			$this->assign('info',$info);
 			// 查询家庭成员信息
 			$family=M('w_family');
@@ -35,7 +35,7 @@
 		function h_list(){
 			$p=I('GET.p');
 			$authen=M('w_autheninfo');
-			$list=$authen->field('w_autheninfo.*,w_consultant.name as cons_name')->page($p,20)->join('w_consultant on w_consultant.uid=w_autheninfo.consultant','left')->order('atime desc')->select();
+			$list=$authen->field('w_autheninfo.*,w_consultant.name as cons_name')->page($p,20)->join('w_consultant on w_consultant.uid=w_autheninfo.consultant')->order('atime desc')->select();
 			$count=$authen->count();
 			$page=new \Think\Page($count,20);
 			$this->assign('list',array('list'=>$list,'page'=>$page->show()));
@@ -160,7 +160,7 @@
 				 //循环注册未认证的业主信息， 
 				foreach ($un_authen as $value) {
 					// 比对认证信息表
-					$ainfo=$authen->field('uid,name,birth,idcard,area,houseinfo,consultant')->where(array('phone_num'=>$value['phone_num']))->order('atime desc')->find();
+					$ainfo=$authen->field('uid,name,birth,idcard,area,houseinfo,consultant')->where(array('phone_num'=>$value['phone_num']))->find();
 					if(!$ainfo)
 						continue;
 					// 符合认证条件更新用户的信息

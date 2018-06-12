@@ -23,6 +23,6 @@
 		}
 		// 单项查询
 		function ufind($map,$field='*'){
-			return $this->field($field)->where($map)->order('atime desc')->find();
+			return $this->field($field)->where($map)->find();
 		}
 	}
