@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2018-04-12 11:12:20
+<?php /* Smarty version Smarty-3.1.6, created on 2018-06-14 11:35:23
          compiled from "./ThemeAdmin/default/Consultant/cnew.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2524040955a3f44c75293d8-98395463%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2d58f9322aa22efdfeeaef8f4cb820d83612c9dc' => 
     array (
       0 => './ThemeAdmin/default/Consultant/cnew.tpl',
-      1 => 1514470222,
+      1 => 1528947315,
       2 => 'file',
     ),
   ),
@@ -130,6 +130,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<label class='col-md-1 col-xs-12'></label>
 							<div class='col-xs-12 col-md-11'>
 								<button type='submit' class='btn btn-danger'>提交数据</button>
+								<?php if ($_smarty_tpl->tpl_vars['info']->value['uid']){?>
+								<button type='button' class='delete btn btn-warning'>删除置业顾问</button>
+								<?php }?>
 							</div>
 						</div>
 					</form>
@@ -399,6 +402,33 @@ headimg/'+imagesList[i]+'">' +'</div>');
 					}
 				});
 			},
+		});
+
+
+		// 置业顾问删除
+		$('.delete').click(function(){
+			if(!confirm('是否删除该置业顾问？'))
+				return;
+
+			let uid=$('#uid').val();
+			$.ajax({
+				type:'POST',
+				url:'<?php echo @ADMIN;?>
+Consultant/delete_consultant',
+				dataType:'json',
+				data:{
+					'uid':uid,
+				},
+				success:function(msg){
+					if(msg.code==200){
+						alert('删除成功');
+						window.location.href='<?php echo @ADMIN;?>
+Consultant'
+					}else{
+						alert('删除失败');
+					}
+				}
+			});
 		});
 	})
 </script>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-12-29 09:30:12
+<?php /* Smarty version Smarty-3.1.6, created on 2018-06-14 12:49:51
          compiled from "./ThemeAdmin/default/Member/info.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4174456585a3e366f5c7940-56801125%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ae37c94fb6ca87635099f8a14788b6db166c61b0' => 
     array (
       0 => './ThemeAdmin/default/Member/info.tpl',
-      1 => 1514470226,
+      1 => 1528951693,
       2 => 'file',
     ),
   ),
@@ -23,8 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'id' => 0,
     'userlevel' => 0,
     'info' => 0,
-    'flist' => 0,
+    'cons_list' => 0,
     'item' => 0,
+    'flist' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -56,6 +57,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class='panel panel-default'>
 				<div class='panel-heading'>个人信息</div>
 				<div class='panel-body'>
+					<input type='hidden' id='uid' value='<?php echo $_smarty_tpl->tpl_vars['info']->value['uid'];?>
+'>
 					<table class="table table-striped table-hover">
 						<tr>
 							<td>姓名:</td>
@@ -134,8 +137,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</tr>
 						<tr>
 							<td>置业顾问:</td>
-							<td><?php echo $_smarty_tpl->tpl_vars['info']->value['pro_consultant'];?>
-</td>
+							<td>
+								<div style='display: flex;'>
+									<select id='cons' class='form-control'>
+									<?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['cons_list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars['item']->value){
+$_smarty_tpl->tpl_vars['item']->_loop = true;
+?>
+										<option <?php if ($_smarty_tpl->tpl_vars['info']->value['pro_consultant']==$_smarty_tpl->tpl_vars['item']->value['uid']){?>selected<?php }?> value='<?php echo $_smarty_tpl->tpl_vars['item']->value['uid'];?>
+'><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+</option>
+									<?php } ?>
+									</select>&nbsp;&nbsp;
+									<button id='cons_update' class='btn btn-primary btn-sm'>设置置业顾问</button>
+								</div>
+							</td>
 							<td>注册时间:</td>
 							<td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['info']->value['rg_time'],'%Y-%m-%d %H:%M:%S');?>
 </td>
@@ -182,5 +199,32 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 </div>
 <link rel="stylesheet" type="text/css" href="<?php echo @THEMEADMIN;?>
 assets/css/public.css">
+<script type="text/javascript">
+	$(function(){
+		$('#cons_update').click(function(){
+			let cons=$('#cons').val();
+			if(!confirm('是否修改置业顾问？'))
+				return;
+			$.ajax({
+				type:'POST',
+				dataType:'json',
+				url:'<?php echo @ADMIN;?>
+Member/cons_update',
+				data:{
+					'uid':$('#uid').val(),
+					'cons_uid':cons,
+				},
+				success:function(msg){
+					if(msg.code==200){
+						alert('修改成功');
+						window.location.reload();
+					}else{
+						alert('修改失败');
+					}
+				}
+			});
+		});
+	});
+</script>
 <?php echo $_smarty_tpl->getSubTemplate ('../tpl/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

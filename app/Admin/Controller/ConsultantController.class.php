@@ -47,6 +47,14 @@
 				$this->display();
 			}
 		}
+		function delete_consultant(){
+			$uid=I('POST.uid');
+			$exec=$this->cons->where(array('uid'=>$uid))->delete();
+			if($exec)
+				echo message(200,'success','删除成功');
+			else
+				echo message(301,'failed','删除失败');
+		}
 		// 获取评论信息
 		function get_comment($cons_uid,$p=1){
 			$comment=M('w_cons_comment');

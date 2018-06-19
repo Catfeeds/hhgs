@@ -86,6 +86,9 @@
 							<label class='col-md-1 col-xs-12'></label>
 							<div class='col-xs-12 col-md-11'>
 								<button type='submit' class='btn btn-danger'>提交数据</button>
+								{if $info['uid']}
+								<button type='button' class='delete btn btn-warning'>删除置业顾问</button>
+								{/if}
 							</div>
 						</div>
 					</form>
@@ -340,6 +343,31 @@
 					}
 				});
 			},
+		});
+
+
+		// 置业顾问删除
+		$('.delete').click(function(){
+			if(!confirm('是否删除该置业顾问？'))
+				return;
+
+			let uid=$('#uid').val();
+			$.ajax({
+				type:'POST',
+				url:'{$smarty.const.ADMIN}Consultant/delete_consultant',
+				dataType:'json',
+				data:{
+					'uid':uid,
+				},
+				success:function(msg){
+					if(msg.code==200){
+						alert('删除成功');
+						window.location.href='{$smarty.const.ADMIN}Consultant'
+					}else{
+						alert('删除失败');
+					}
+				}
+			});
 		});
 	})
 </script>

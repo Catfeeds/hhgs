@@ -20,6 +20,7 @@
 			<div class='panel panel-default'>
 				<div class='panel-heading'>个人信息</div>
 				<div class='panel-body'>
+					<input type='hidden' id='uid' value='{$info.uid}'>
 					<table class="table table-striped table-hover">
 						<tr>
 							<td>姓名:</td>
@@ -85,7 +86,16 @@
 						</tr>
 						<tr>
 							<td>置业顾问:</td>
-							<td>{$info['pro_consultant']}</td>
+							<td>
+								<div style='display: flex;'>
+									<select id='cons' class='form-control'>
+									{foreach $cons_list as $item}
+										<option {if $info.pro_consultant==$item.uid}selected{/if} value='{$item.uid}'>{$item.name}</option>
+									{/foreach}
+									</select>&nbsp;&nbsp;
+									<button id='cons_update' class='btn btn-primary btn-sm'>设置置业顾问</button>
+								</div>
+							</td>
 							<td>注册时间:</td>
 							<td>{$info['rg_time']|date_format:'%Y-%m-%d %H:%M:%S'}</td>
 						</tr>
@@ -121,4 +131,30 @@
 	</div>
 </div>
 <link rel="stylesheet" type="text/css" href="{$smarty.const.THEMEADMIN}assets/css/public.css">
+<script type="text/javascript">
+	$(function(){
+		$('#cons_update').click(function(){
+			let cons=$('#cons').val();
+			if(!confirm('是否修改置业顾问？'))
+				return;
+			$.ajax({
+				type:'POST',
+				dataType:'json',
+				url:'{$smarty.const.ADMIN}Member/cons_update',
+				data:{
+					'uid':$('#uid').val(),
+					'cons_uid':cons,
+				},
+				success:function(msg){
+					if(msg.code==200){
+						alert('修改成功');
+						window.location.reload();
+					}else{
+						alert('修改失败');
+					}
+				}
+			});
+		});
+	});
+</script>
 {include file='../tpl/footer.tpl'}

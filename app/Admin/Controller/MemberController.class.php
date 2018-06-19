@@ -29,7 +29,24 @@
 			$family=M('w_family');
 			$flist=$family->field('uname,birth,hobby,phone_num,w_relation.relation as relation,w_trade.name as tradename')->where(array('p_uid'=>$uid))->join('w_members on w_members.uid=w_family.child_uid','left')->join('w_trade on w_trade.uid=w_members.trade','left')->join('w_relation on w_relation.uid=w_family.relation')->select();
 			$this->assign('flist',$flist);
+
+			// 读取置业顾问信息
+			$consultant=M('w_consultant');
+			$cons_list=$consultant->select();
+			$this->assign('cons_list',$cons_list);
+
 			$this->display();
+		}
+		// 置业顾问修改
+		function cons_update(){
+			$uid=I('POST.uid');
+			$cons_uid=I('POST.cons_uid');
+			$exec=$this->mem->where(array('uid'=>$uid))->save(array('pro_consultant'=>$cons_uid));
+			if($exec)
+				echo message(200,'success','置业顾问修改成功');
+			else
+				echo message(301,'failed','置业顾问修改失败');
+
 		}
 		// 后台导入业主信息列表
 		function h_list(){
